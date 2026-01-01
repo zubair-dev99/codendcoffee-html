@@ -1,0 +1,2099 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeNdCoffee</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/allServices.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CORRECTED Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#0000FF",
+              black: "#0A2540",
+            },
+            screens: {
+              "3xl": "1600px",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            maxWidth: {
+              1100: "1200px",
+              // 1400: "1400px",
+            },
+            // CONTAINER CORRECTLY PLACED INSIDE EXTEND
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: "1rem",
+                sm: "1rem",
+                md: "2rem",
+                lg: "3rem",
+                xl: "2rem",
+                "2xl": "2rem",
+              },
+              screens: {
+                sm: "100%",
+                md: "100%",
+                lg: "1100px",
+                xl: "1100px",
+                "2xl": "1200px",
+                // "3xl": "1750px",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Vendor scripts -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"
+      defer
+    ></script> -->
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <!-- App JS -->
+    <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/allServices.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Anchor for Header "Home" link -->
+    <div id="home"></div>
+
+    <!-- ===== Header ===== -->
+    <header
+      id="mainHeader"
+      class="header-container bg-transparent relative top-0 z-50 transition-all duration-300 ease-in-out"
+    >
+      <div class="container py-0 transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center">
+          <!-- ========== LOGO WITH BORDER IMAGES ON BOTH SIDES ========== -->
+
+          <!-- Logo -->
+          <div class="w-[110px] h-[40px] cursor-pointer border-lines">
+            <img
+              src="./assets/images/CodeNdCoffee1.png"
+              alt="Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- ========== DESKTOP NAVIGATION (Perfectly Center) ========== -->
+          <nav class="hidden lg:flex items-center justify-center space-x-1">
+            <a
+              href="#home"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Home
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#portfolio"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Portfolio
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#about"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                About
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#blogs"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Blogs
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#case-studies"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Case Studies
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#contact"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Contact
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+          </nav>
+
+          <!-- CTA BUTTON with Image Icon -->
+          <div class="hidden lg:flex items-center z-10">
+            <a
+              href="#contact"
+              class="bg-dark hover:bg-[#0000FF] text-white px-4 md:px-5 lg:px-6 py-2 w-[180px] md:w-[200px] lg:w-[220px] rounded-sm font-semibold font-['poppins'] text-[13px] md:text-[14px] lg:text-[15px] transition-all transform hover:scale-105 shadow-md hover:shadow-lg flex justify-center items-center space-x-2"
+            >
+              <span class="whitespace-nowrap">Start your Project</span>
+              <img
+                src="./assets/images/Vector4.png"
+                alt="Logo"
+                class="w-2 h-2 object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- ========== MOBILE MENU BUTTON ========== -->
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden flex flex-col space-y-1.5 p-2 z-10"
+          >
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+
+        <!-- ========== MOBILE MENU DRAWER ========== -->
+        <div
+          id="mobileMenu"
+          class="lg:hidden fixed inset-x-0 top-16 bg-white shadow-xl transform transition-all duration-300 ease-in-out overflow-hidden max-h-0"
+        >
+          <div class="container mx-auto px-4 pb-4">
+            <!-- Mobile Navigation -->
+            <div class="flex flex-col space-y-1 py-4">
+              <a
+                href="#home"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Home</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#portfolio"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Portfolio</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#about"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >About</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#blogs"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 20l9-7-9-7-9 7 9 7z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Blogs</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#case-studies"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 8h10M7 12h6m-6 4h10"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Case Studies</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#contact"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Contact</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+            </div>
+
+            <!-- Mobile CTA Button -->
+            <div class="mt-4 pt-4 border-t border-gray-100">
+              <a
+                href="#contact"
+                class="bg-dark hover:bg-[#0000FF] text-white px-6 py-3 w-full rounded-sm font-semibold font-['poppins'] text-[15px] transition-all transform hover:scale-105 shadow-md hover:shadow-lg flex justify-center items-center space-x-2"
+              >
+                <span class="whitespace-nowrap">Start your Project</span>
+                <img
+                  src="./assets/images/Vector4.png"
+                  alt="Logo"
+                  class="w-2 h-2 object-contain ml-2"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== AllServices ===== -->
+
+    <main id="AllServices" class="sm:pt-[100px] pt-[44px]">
+      <h2
+        class="lg:text-[48px] text-[26px] font-bold text-[#0A2540] text-center lg:leading-[65px] leading-[42px] font-['poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
+      >
+        What We Offer
+      </h2>
+      <p
+        class="md:w-[512px] w-full mx-auto text-[15px] font-normal text-[#6C777D] text-center leading-[23px] font-['poppins'] sm:pt-[20px] pt-[12px] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp animation-delay-200"
+      >
+        Codencoffee transforms your ideas into powerful digital products through
+        expert development, creative design, and smart, scalable technology
+        solutions.
+      </p>
+
+      <div class="container">
+        <!-- Hidden checkbox for state management -->
+
+        <input type="checkbox" id="show-more-toggle" class="hidden" />
+        <div
+          id="servicesGrid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-8 gap-4 sm:pt-[65px] pt-[30px]"
+        >
+          <!-- ...............card1........ -->
+
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:p-2 p-1 sm:pb-0 pb-7 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service1.png"
+                alt="Service Image"
+                class="w-[110px] h-[100px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[46px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Web<br />
+              Development
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Web Development
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-start text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[110px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              We build web solutions to help to execute your business operations
+              smooth, fast and efficiently. We build web solutions to help to
+              execute your business operations smooth, fast and efficiently. We
+              build web solutions to help to execute your business operations
+              smooth, fast and efficiently.
+            </p>
+          </div>
+
+          <!-- ...............card2........ -->
+          <div
+            class="service-card group bg-white sm:h-[660px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service2.png"
+                alt="Service Image"
+                class="w-[72px] h-[107px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Mobile App<br />
+              Development
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Mobile App Development
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[130px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our mobile app development services include creating custom iOS
+              and Android apps for businesses and individuals. We design and
+              develop user-friendly and feature-rich mobile apps.
+            </p>
+          </div>
+
+          <!-- ...............card3........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service3.png"
+                alt="Service Image"
+                class="w-[98px] h-[102px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Performance &<br />
+              Speed
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Performance & Speed
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              We enhance the position of your site and optimize its performance
+              so you will get more business and extra targeted customers.
+            </p>
+          </div>
+
+          <!-- ...............card4........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service4.png"
+                alt="Service Image"
+                class="w-[95px] h-[95px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Search Engine<br />
+              Optimization
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Search Engine Optimization
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our Search Engine Optimization services include on-page and
+              off-page optimization, keyword research, content optimization, and
+              technical SEO.
+            </p>
+          </div>
+
+          <!-- ...............card5........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service555.png"
+                alt="Service Image"
+                class="w-[105px] h-[97px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[30px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              UI/UX &<br />
+              Graphics Design
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[30px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              UI/UX & Graphics Design
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              We turn complex concepts into simple functional products easier to
+              use and dazzling to look at. This outcomes in raising sales,
+              adoption rates & simple on boarding.
+            </p>
+          </div>
+
+          <!-- ...............card6........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service6.png"
+                alt="Service Image"
+                class="w-[122px] h-[103px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Digital<br />
+              Marketing
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Digital Marketing
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our digital marketing services include SEO, PPC, social media
+              marketing, email marketing, and content marketing. We help
+              businesses improve their online visibility, drive traffic,
+              generate leads, and increase revenue.
+            </p>
+          </div>
+          <!-- ...............card7........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service7.png"
+                alt="Service Image"
+                class="w-[108px] h-[108px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              REST API<br />
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              REST API
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our REST API services include designing, developing, and
+              maintaining custom APIs for businesses and individuals. We help
+              businesses create APIs that integrate with their applications,
+              websites, and other systems
+            </p>
+          </div>
+          <!-- ...............card8........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service8.png"
+                alt="Service Image"
+                class="w-[97px] h-[102px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Google<br />
+              Analytics
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Google Analytics
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our Google Analytics services include setting up and configuring
+              Google Analytics, tracking website or application performance, and
+              providing regular reporting and analysis.
+            </p>
+          </div>
+          <!-- ...............card9........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service9.png"
+                alt="Service Image"
+                class="w-[108px] h-[108px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Code<br />
+              Optimization
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Code Optimization
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Our Code Optimization services include identifying and fixing
+              performance issues, reducing load times, and optimizing code for
+              scalability.
+            </p>
+          </div>
+          <!-- ...............card10........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service10.png"
+                alt="Service Image"
+                class="w-[87px] h-[92px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Content<br />
+              Management<br />
+              Systems (CMS)
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Content Management Systems (CMS)
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              CMS Migration Services: Migrating content between different CMS
+              platforms. Headless CMS Solutions: Implementing and customizing
+              headless CMS systems.
+            </p>
+          </div>
+          <!-- ...............card11........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service11.png"
+                alt="Service Image"
+                class="w-[112px] h-[66px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              DevOps and<br />
+              CI/CD
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              DevOps and CI/CD
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              CI/CD Pipeline Setup: Automating code deployment processes.
+              Infrastructure as Code (IaC): Automating infrastructure management
+              using tools like Terraform or AWS CloudFormation. Monitoring and
+              Logging: Setting up monitoring tools and log management for apps
+              and websites.
+            </p>
+          </div>
+          <!-- ...............card12........ -->
+          <div
+            class="service-card group bg-white sm:h-[560px] h-auto sm:pb-0 pb-7 p-2 rounded-[13px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="h-[200px] w-full bg-[#F5F7FF] rounded-[13px] flex justify-center items-center transition-all duration-300 relative overflow-hidden"
+            >
+              <!-- Gradient overlay for smooth transition -->
+              <div
+                class="absolute inset-0 bg-[linear-gradient(to_top,#0000FF_-50%,#0000FF_0%,#BDBCFE_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-out"
+              ></div>
+
+              <img
+                src="./assets/images/allservices/service12.png"
+                alt="Service Image"
+                class="w-[84px] h-[100px] transition-all duration-300 group-hover:brightness-0 group-hover:invert relative z-10"
+              />
+            </div>
+            <h3
+              class="sm:block hidden sm:text-[31px] text-[16px] pt-[23px] px-[40px] font-bold leading-[46px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Security<br />
+              Services
+            </h3>
+            <h3
+              class="sm:hidden block sm:text-[31px] text-[16px] pt-[23px] sm:px-[40px] px-[16px] font-bold sm:leading-[39px] leading-[19px] font-['poppins'] text-[#212121] transition-all duration-300"
+            >
+              Security Services
+            </h3>
+            <p
+              class="text-[#919191] sm:text-[15px] text-[13px] sm:px-[40px] px-[16px] font-light sm:mt-5 mt-3 sm:leading-[23px] leading-[18px] font-['poppins'] sm:h-[137px] h-auto overflow-y-auto scrollbar-none transition-all duration-300"
+            >
+              Website/Application Security Audits: Conducting security audits to
+              identify vulnerabilities. SSL/TLS Implementation: Securing
+              websites with SSL/TLS certificates. Data Encryption: Implementing
+              data encryption for stored and transmitted data.
+            </p>
+          </div>
+        </div>
+
+        <!-- Toggle Button Container -->
+        <div class="toggle-container mt-10 text-center">
+          <label for="show-more-toggle" class="toggle-btn inline-block">
+            <div
+              class="w-[140px] h-[44px] bg-dark text-white rounded-[2px] flex items-center justify-center font-semibold text-[15px] font-['poppins'] shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <span
+                class="show-more-text flex items-center justify-center gap-2"
+              >
+                Show More
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </span>
+              <span
+                class="show-less-text flex items-center justify-center gap-2"
+              >
+                Show Less
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 15l7-7 7 7"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+      <!-- ..............blue section div................ -->
+      <section
+        class="bg-dark lg:h-[550px] h-[400px] lg:pt-[100px] pt-[70px] lg:pb-0 pb-[40px] sm:mt-[100px] mt-[44px] mb-[320px]"
+      >
+        <div
+          class="flex w-fit mx-auto items-center px-4 py-2 rounded-sm border border-[#fff] text-white text-[16px] font-light font-['poppins']"
+        >
+          See To Believe
+        </div>
+        <h2
+          class="sm:text-[50px] text-[34px] font-bold text-center mt-[24px] text-white sm:leading-[65px] leading-[42px] font-['poppins']"
+        >
+          We Have All The Features
+        </h2>
+
+        <div
+          class="container mt-[54px] overflow-hidden relative lg:pt-4 pt-12"
+          data-infinite-carousel
+          data-carousel-enable-below="1024"
+          data-carousel-items="2"
+          data-carousel-autoplay="true"
+          data-carousel-delay="3200"
+        >
+          <!-- Mobile controls (top-right) -->
+          <div
+            class="lg:hidden absolute top-0 left-1/2 -translate-x-1/2 z-10 flex items-center gap-[14px]"
+          >
+            <!-- Previous -->
+            <button
+              type="button"
+              aria-label="Previous"
+              data-carousel-prev
+              class="w-[32px] h-[32px] rounded-full group flex justify-center items-center bg-white/30 backdrop-blur-sm hover:bg-[#0000ff] transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg"
+            >
+              <img
+                src="./assets/images/allservices/whiteleft.png"
+                alt=""
+                class="w-[16px] h-[16px] transition-transform duration-300 group-hover:-translate-x-[1px]"
+              />
+            </button>
+
+            <!-- Next -->
+            <button
+              type="button"
+              aria-label="Next"
+              data-carousel-next
+              class="w-[32px] h-[32px] rounded-full group flex justify-center items-center bg-white/30 backdrop-blur-sm hover:bg-[#0000ff] transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg"
+            >
+              <img
+                src="./assets/images/allservices/Vector1.png"
+                alt=""
+                class="w-[16px] h-[16px] transition-transform duration-300 group-hover:translate-x-[1px]"
+              />
+            </button>
+          </div>
+
+          <div
+            data-carousel-track
+            class="flex flex-nowrap lg:grid lg:grid-cols-3 gap-[8px] sm:gap-[18px] pb-[100px]"
+          >
+            <!-- .............card1.................. -->
+            <div
+              class="group relative bg-white sm:h-[442px] h-[260px] lg:pt-[46px] pt-[22px] lg:px-[30px] px-[10px] rounded-[11px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 shrink-0"
+            >
+              <div
+                class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+              ></div>
+              <div class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto">
+                <img
+                  src="./assets/images/allservices/servicetick.png"
+                  alt="Care Icon1"
+                  class="lg:w-[46px] w-[22px] lg:h-[46px] h-[22px] mx-auto transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3
+                class="sm:text-[17px] text-[12px] font-['poppins'] text-center font-bold text-[#212121] sm:leading-[27px] leading-[20px] lg:pt-[28px] pt-[12px] transition-colors duration-300 group-hover:text-[#0000ff]"
+              >
+                Pristine Quality
+              </h3>
+              <p
+                class="relative text-[#919191] sm:text-[15px] text-[10px] min-h-[180px] sm:h-[270px] h-[180px] overflow-y-auto text-center pb-6 font-light font-['poppins'] sm:leading-[25px] leading-[18px] lg:pt-[28px] pt-[8px] scrollbar-hide"
+              >
+                Exceeding Expectations At CodeNdCoffee, we are dedicated to
+                delivering pristine quality in every project. Our commitment to
+                excellence ensures that each solution not only meets but exceeds
+                industry standards. Experience top-tier results with our blend
+                of innovation and meticulous craftsmanship.
+              </p>
+            </div>
+            <!-- .............card2.................. -->
+
+            <div
+              class="group relative bg-white sm:h-[442px] h-[260px] lg:pt-[46px] pt-[18px] lg:px-[30px] px-[10px] rounded-[11px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 shrink-0"
+            >
+              <div
+                class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+              ></div>
+              <div class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto">
+                <img
+                  src="./assets/images/allservices/servicecup.png"
+                  alt="Care Icon1"
+                  class="sm:w-[51px] w-[24px] sm:h-[55px] h-[25px] transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3
+                class="sm:text-[17px] text-[12px] font-['poppins'] text-center font-bold text-[#212121] sm:leading-[27px] leading-[20px] lg:pt-[28px] pt-[12px] transition-colors duration-300 group-hover:text-[#0000ff]"
+              >
+                Heavily Awarded
+              </h3>
+              <p
+                class="relative text-[#919191] sm:text-[15px] text-[10px] min-h-[180px] sm:h-[270px] h-[180px] overflow-y-auto text-center pb-6 font-light font-['poppins'] sm:leading-[25px] leading-[18px] lg:pt-[28px] pt-[8px] scrollbar-hide"
+              >
+                Recognized Excellence CodeNdCoffee’s dedication to exceptional
+                service and innovation has earned us numerous awards and
+                accolades. Our reputation for delivering outstanding results is
+                backed by industry recognition. Choose a partner celebrated for
+                its excellence and proven success.
+              </p>
+            </div>
+            <!-- .............card3.................. -->
+            <div
+              class="group relative bg-white sm:h-[442px] h-[260px] lg:pt-[46px] pt-[18px] lg:px-[30px] px-[10px] rounded-[11px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 shrink-0"
+            >
+              <div
+                class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+              ></div>
+              <div
+                class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+              ></div>
+              <div
+                class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+              ></div>
+              <div class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto">
+                <img
+                  src="./assets/images/allservices/serviceeye.png"
+                  alt="Care Icon1"
+                  class="lg:w-[56px] w-[26px] lg:h-[40px] h-[20px] transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
+              <h3
+                class="sm:text-[17px] text-[12px] font-['poppins'] text-center font-bold text-[#212121] sm:leading-[27px] leading-[20px] lg:pt-[28px] pt-[12px] transition-colors duration-300 group-hover:text-[#0000ff]"
+              >
+                See To Believe
+              </h3>
+              <p
+                class="relative text-[#919191] sm:text-[15px] text-[10px] min-h-[180px] sm:h-[270px] h-[180px] overflow-y-auto text-center pb-6 font-light font-['poppins'] sm:leading-[25px] leading-[18px] lg:pt-[28px] pt-[8px] scrollbar-hide"
+              >
+                We Have All The Features Discover the full range of features
+                offered by CodeNdCoffee, crafted to enhance your digital
+                presence. From state-of-the-art web and mobile app development
+                to strategic digital marketing, our services are designed to
+                drive your success. Explore how our features can propel your
+                business forward.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ..............FAQ's................ -->
+
+      <section class="container grid grid-cols-1 lg:grid-cols-2">
+        <div>
+          <h2
+            class="sm:text-[50px] text-[34px] font-bold text-[#212121] w-[399px] sm:leading-[65px] leading-[42px] font-['poppins']"
+          >
+            We're here to answer all your questions
+          </h2>
+          <a
+            class="inline-flex mt-[38px] items-center justify-center w-full sm:w-[190px] h-[43px] font-['Poppins'] text-sm rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-[1.02] hover:shadow-lg"
+            href="#contact"
+          >
+            Get in Touch
+            <img
+              src="./assets/images/Group105.png"
+              alt="Arrow"
+              class="w-4 h-3.5 ml-2"
+            />
+          </a>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="space-y-4" id="faqContainer">
+          <!-- FAQ Item 1 -->
+          <div
+            onclick="toggleFaq(this, 1)"
+            id="faq1-question"
+            aria-expanded="false"
+            aria-controls="faq1-answer"
+            class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+            role="region"
+            aria-labelledby="faq1-question"
+          >
+            <button
+              class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span
+                class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[95%] w-full pr-4"
+              >
+                What industries does CodeNdCoffee typically serve?
+              </span>
+              <span class="icon-plus text-[#212121]" aria-hidden="true">
+                <i class="fas fa-plus"></i>
+              </span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq1-answer"
+              role="region"
+              aria-hidden="true"
+            >
+              <div
+                class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+              >
+                <p>
+                  CodeNdCoffee works with a diverse range of industries,
+                  including e-commerce, healthcare, finance, education, and
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div
+            onclick="toggleFaq(this, 2)"
+            id="faq2-question"
+            aria-expanded="false"
+            aria-controls="faq2-answer"
+            class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+            role="region"
+            aria-labelledby="faq2-question"
+          >
+            <button
+              class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span
+                class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[92%] w-full pr-4"
+              >
+                How does CodeNdCoffee ensure the quality of its software
+                products?
+              </span>
+              <span class="icon-plus text-[#212121]" aria-hidden="true">
+                <i class="fas fa-plus"></i>
+              </span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq2-answer"
+              role="region"
+              aria-hidden="true"
+            >
+              <div
+                class="pt-[20px] text-[#656565] text-[15px] font-light font-['poppins'] leading-relaxed sm:w-[90%] w-full"
+              >
+                <p>
+                  CodeNdCoffee works with a diverse range of industries,
+                  including e-commerce, healthcare, finance, education, and
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div
+            onclick="toggleFaq(this, 3)"
+            id="faq3-question"
+            aria-expanded="false"
+            aria-controls="faq3-answer"
+            class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+            role="region"
+            aria-labelledby="faq3-question"
+          >
+            <button
+              class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span
+                class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[95%] w-full pr-4"
+              >
+                Can CodeNdCoffee support existing projects or only new
+                developments?
+              </span>
+              <span class="icon-plus text-[#212121]" aria-hidden="true">
+                <i class="fas fa-plus"></i>
+              </span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq3-answer"
+              role="region"
+              aria-hidden="true"
+            >
+              <div
+                class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+              >
+                <p>
+                  CodeNdCoffee works with a diverse range of industries,
+                  including e-commerce, healthcare, finance, education, and
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div
+            onclick="toggleFaq(this, 4)"
+            id="faq4-question"
+            aria-expanded="false"
+            aria-controls="faq4-answer"
+            class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+            role="region"
+            aria-labelledby="faq4-question"
+          >
+            <button
+              class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span
+                class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[96%] w-full pr-4"
+              >
+                What is the typical project timeline for CodeNdCoffee?
+              </span>
+              <span class="icon-plus text-[#212121]" aria-hidden="true">
+                <i class="fas fa-plus"></i>
+              </span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq4-answer"
+              role="region"
+              aria-hidden="true"
+            >
+              <div
+                class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+              >
+                <p>
+                  CodeNdCoffee works with a diverse range of industries,
+                  including e-commerce, healthcare, finance, education, and
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div
+            onclick="toggleFaq(this, 5)"
+            id="faq5-question"
+            aria-expanded="false"
+            aria-controls="faq5-answer"
+            class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+            role="region"
+            aria-labelledby="faq5-question"
+          >
+            <button
+              class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+            >
+              <span
+                class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[98%] w-full"
+              >
+                How can I get a quote for a project with CodeNdCoffee?
+              </span>
+              <span class="icon-plus text-[#212121]" aria-hidden="true">
+                <i class="fas fa-plus"></i>
+              </span>
+            </button>
+            <div
+              class="faq-answer"
+              id="faq5-answer"
+              role="region"
+              aria-hidden="true"
+            >
+              <div
+                class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+              >
+                <p>
+                  CodeNdCoffee works with a diverse range of industries,
+                  including e-commerce, healthcare, finance, education, and
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ..............Quality design................ -->
+      <section class="relative overflow-hidden">
+        <div
+          class="flex justify-center items-center sm:mt-[100px] mt-[50px] pb-[50px] relative"
+        >
+          <!-- Background Images - Modified for full width flow -->
+          <div
+            class="absolute inset-0 flex justify-between items-center z-0 overflow-hidden"
+          >
+            <!-- Left Image - Full width container -->
+            <div
+              class="absolute left-0 top-0 h-full flex items-center justify-end"
+            >
+              <img
+                src="./assets/images/allservices/newBlue1.png"
+                alt="Background Decoration Left"
+                class="w-[210px] 2xl:w-[300px] h-[170px] object-contain duration-300"
+              />
+            </div>
+
+            <!-- Right Image - Full width container -->
+            <div
+              class="absolute right-0 top-0 h-full flex items-center justify-start"
+            >
+              <img
+                src="./assets/images/allservices/newBlue.png"
+                alt="Background Decoration Right"
+                class="w-[210px] 2xl:w-[300px] h-[170px] object-contain duration-300"
+              />
+            </div>
+          </div>
+
+          <!-- Content Container - Centered over background images -->
+          <div class="container mx-auto relative z-10 quality-slider-root" data-infinite-carousel data-carousel-items="1" data-carousel-enable-below="768" data-carousel-autoplay="false">
+            <!-- Mobile nav -->
+            <div class="quality-slider-nav lg:hidden flex items-center justify-center gap-4 mb-4">
+              <button type="button" aria-label="Previous" data-carousel-prev class="quality-nav-btn">
+              <img src="./assets/images/allservices/whiteleft.png" alt="" class="w-[16px] h-[16px]" />
+              </button>
+              <button type="button" aria-label="Next" data-carousel-next class="quality-nav-btn">
+              <img src="./assets/images/allservices/Vector1.png" alt="" class="w-[16px] h-[16px]" />
+              </button>
+            </div>
+
+            <div data-carousel-track class="quality-slider-track flex flex-nowrap gap-3 sm:gap-[23px]">
+              <!-- Card 1 -->
+              <div
+                class="quality-slide rounded-[11px] lg:h-[250px] md:h-auto h-auto px-[43px] py-[40px] border border-white/70 bg-dark backdrop-blur-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all duration-300"
+              >
+                <h3
+                  class="text-white font-['poppins'] text-lg sm:text-xl lg:text-[17px] leading-tight font-bold pb-4"
+                >
+                  Quality Design
+                </h3>
+                <p
+                  class="text-white text-sm sm:text-base lg:text-[15px] font-['poppins'] font-light leading-relaxed"
+                >
+                  Our design philosophy revolves around creating intuitive and
+                  engaging experiences. We focus on blending functionality with
+                  aesthetics to produce visually stunning and user-friendly
+                  solutions. Your satisfaction with both the look and feel of
+                  our designs is our top priority.
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div
+                class="quality-slide rounded-[11px] lg:h-[250px] md:h-auto h-auto px-[43px] py-[40px] border border-white/70 bg-dark backdrop-blur-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all duration-300"
+              >
+                <h3
+                  class="text-white font-['poppins'] text-lg sm:text-xl lg:text-[17px] leading-tight font-bold pb-4"
+                >
+                  High Performance
+                </h3>
+                <p
+                  class="text-white text-sm sm:text-base lg:text-[15px] font-['poppins'] font-light leading-relaxed"
+                >
+                  Performance is at the core of what we deliver. We ensure that
+                  all our solutions are optimized for speed and efficiency,
+                  providing a seamless experience for users. Our commitment to
+                  high performance means you get reliable and responsive results
+                  every time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MarqueeSlide ===== -->
+      <section class="lg:pt-[150px] pt-[0px] overflow-hidden">
+        <div
+          class="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[2deg] marquee-wrapper flex items-center relative overflow-hidden"
+        >
+          <div
+            class="marquee-track flex items-center space-x-6 sm:space-x-10 whitespace-nowrap"
+          >
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/allservices/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/allservices/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/allservices/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/allservices/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-dark shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[-1deg] marquee-wrapper flex items-center relative overflow-hidden"
+        >
+          <div
+            class="marquee-track-reverse flex items-center space-x-4 sm:space-x-10 whitespace-nowrap"
+          >
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/allservices/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/allservices/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/allservices/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/allservices/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <section
+      id="Footer"
+      class="bg-dark lg:mt-[145px] mt-[40px] md:block hidden"
+    >
+      <!-- Main container with auto padding -->
+      <div class="container mx-auto">
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 sm:gap-[40px] gap-2"
+        >
+          <!-- ..........1st Column - Contact Info........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <!-- Logo -->
+            <img
+              src="./assets/images/whiteLogo.png"
+              alt="Footer Logo"
+              class="xl:w-[170px] lg:w-[160px] md:w-[150px] sm:w-[140px] w-[130px] xl:h-[65px] lg:h-[60px] md:h-[55px] sm:h-[50px] h-[45px] mx-auto sm:mx-0"
+            />
+
+            <!-- Contact Us Heading -->
+            <h2
+              class="sm:pt-[50px] pt-[35px] text-white font-['poppins'] font-bold xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] leading-[26px]"
+            >
+              Contact Us
+            </h2>
+
+            <!-- Phone -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/call.png"
+                  alt="Call Icon"
+                  class="xl:w-[20px] lg:w-[19px] md:w-[18px] sm:w-[17px] w-[16px] xl:h-[20px] lg:h-[19px] md:h-[18px] sm:h-[17px] h-[16px]"
+                />
+              </div>
+              <a
+                href="tel:+13075337903"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+              >
+                +1 3075337903
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/mail.png"
+                  alt="Mail Icon"
+                  class="xl:w-[22px] lg:w-[21px] md:w-[20px] sm:w-[19px] w-[18px] xl:h-[15px] lg:h-[14.5px] md:h-[14px] sm:h-[13.5px] h-[13px]"
+                />
+              </div>
+              <a
+                href="mailto:info@codendcoffee.com"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+              >
+                info@codendcoffee.com
+              </a>
+            </div>
+
+            <!-- Follow Us Heading -->
+            <h2
+              class="sm:pt-[50px] pt-[30px] text-white font-['poppins'] font-semibold xl:text-[23px] lg:text-[22.5px] md:text-[22px] sm:text-[21.5px] text-[21px] leading-[26px]"
+            >
+              Follow Us
+            </h2>
+
+            <!-- Social Icons -->
+            <div class="pt-[15px] flex justify-start items-center gap-3">
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/facebook.png"
+                  alt="Facebook Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/linkedin.png"
+                  alt="Linkedin Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/insta.png"
+                  alt="Instagram Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- ..........2nd Column - What we do........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              What we do
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px] sm:w-[90%] w-full">
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Web Development
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  App Development
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Digital Marketing
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Search Engine Optimization
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  DevOps
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Security Services
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Code Optimization
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  UI UX
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <!-- ..........3rd Column - Discover........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Discover
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px]">
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Portfolio
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Services
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  About
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Contact
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Blogs
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Privacy Policy
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Terms and Conditions
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <!-- ..........4th Column - Our location........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Our location
+            </h3>
+
+            <p
+              class="sm:pt-[31px] pt-[10px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px]"
+            >
+              CODENDCOFFEE LLC
+            </p>
+            <p
+              class="pt-[1px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px] w-full"
+            >
+              5830 E 2nd St, Ste 7000 Casper, Wyoming 82609 US
+            </p>
+
+            <img
+              src="./assets/images/map.png"
+              alt="Map Image"
+              class="pt-[22px] rounded-lg w-full h-auto"
+            />
+            <img
+              src="./assets/images/review.png"
+              alt="Google Review Image"
+              class="pt-[18px] rounded-lg w-full h-auto"
+            />
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p
+          class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
+        >
+          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          reserved.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-dark lg:mt-[145px] mt-[40px] md:hidden block">
+      <div class="container pt-[50px]">
+        <img
+          src="./assets/images/whiteLogo.png"
+          alt="Footer Logo"
+          class="mx-auto w-[154px] h-[60px]"
+        />
+        <div class="grid-cols-2 grid gap-6">
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              What we do
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px] sm:w-[90%] w-full">
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Web Development
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  App Development
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Digital Marketing
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Search Engine Optimization
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  DevOps
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Security Services
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Code Optimization
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  UI UX
+                </li>
+              </a>
+            </ul>
+          </div>
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Discover
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px]">
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Portfolio
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Services
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  About
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Contact
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Blogs
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Privacy Policy
+                </li>
+              </a>
+              <a href="#">
+                <li
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer"
+                >
+                  Terms and Conditions
+                </li>
+              </a>
+            </ul>
+          </div>
+
+          <div>
+            <h2
+              class="sm:pt-[50px] pt-[35px] text-white font-['poppins'] font-bold xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] leading-[26px]"
+            >
+              Contact Us
+            </h2>
+
+            <!-- Phone -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/call.png"
+                  alt="Call Icon"
+                  class="xl:w-[20px] lg:w-[19px] md:w-[18px] sm:w-[17px] w-[16px] xl:h-[20px] lg:h-[19px] md:h-[18px] sm:h-[17px] h-[16px]"
+                />
+              </div>
+              <a
+                href="tel:+13075337903"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+              >
+                +1 3075337903
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/mail.png"
+                  alt="Mail Icon"
+                  class="xl:w-[22px] lg:w-[21px] md:w-[20px] sm:w-[19px] w-[18px] xl:h-[15px] lg:h-[14.5px] md:h-[14px] sm:h-[13.5px] h-[13px]"
+                />
+              </div>
+              <a
+                href="mailto:info@codendcoffee.com"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+              >
+                info@codendcoffee.com
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h2
+              class="sm:pt-[50px] pt-[30px] text-white font-['poppins'] font-semibold xl:text-[23px] lg:text-[22.5px] md:text-[22px] sm:text-[21.5px] text-[21px] leading-[26px]"
+            >
+              Follow Us
+            </h2>
+
+            <!-- Social Icons -->
+            <div class="pt-[15px] flex justify-start items-center gap-3">
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/facebook.png"
+                  alt="Facebook Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/linkedin.png"
+                  alt="Linkedin Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/insta.png"
+                  alt="Instagram Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Our location
+            </h3>
+
+            <p
+              class="sm:pt-[31px] pt-[10px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px]"
+            >
+              CODENDCOFFEE LLC
+            </p>
+            <p
+              class="pt-[1px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px] w-full"
+            >
+              5830 E 2nd St, Ste 7000 Casper, Wyoming 82609 US
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="./assets/images/map.png"
+              alt="Map Image"
+              class="pt-[22px] rounded-lg w-full h-auto"
+            />
+            <img
+              src="./assets/images/review.png"
+              alt="Google Review Image"
+              class="pt-[18px] rounded-lg w-full h-auto"
+            />
+          </div>
+        </div>
+        <!-- Copyright -->
+        <p
+          class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
+        >
+          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          reserved.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>

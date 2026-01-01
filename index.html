@@ -1,0 +1,2876 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeNdCoffee</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CORRECTED Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#0000FF",
+              black: "#0A2540",
+            },
+            screens: {
+              "3xl": "1600px",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            maxWidth: {
+              1100: "1200px",
+              // 1400: "1400px",
+            },
+            // CONTAINER CORRECTLY PLACED INSIDE EXTEND
+            container: {
+              center: true,
+              padding: {
+                DEFAULT: "1rem",
+                sm: "1rem",
+                md: "2rem",
+                lg: "3rem",
+                xl: "2rem",
+                "2xl": "2rem",
+              },
+              screens: {
+                sm: "100%",
+                md: "100%",
+                lg: "1100px",
+                xl: "1100px",
+                "2xl": "1200px",
+                // "3xl": "1750px",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- App JS -->
+    <script src="./assets/js/app.js" defer></script>
+  </head>
+  <body>
+    <!-- Anchor for Header "Home" link -->
+    <div id="home"></div>
+
+    <!-- ===== Header ===== -->
+    <header
+      id="mainHeader"
+      class="header-container bg-transparent relative top-0 z-50 transition-all duration-300 ease-in-out"
+    >
+      <div class="container py-0 transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center">
+          <!-- ========== LOGO WITH BORDER IMAGES ON BOTH SIDES ========== -->
+
+          <!-- Logo -->
+          <div class="w-[110px] h-[40px] cursor-pointer border-lines">
+            <img
+              src="./assets/images/CodeNdCoffee1.png"
+              alt="Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- ========== DESKTOP NAVIGATION (Perfectly Center) ========== -->
+          <nav class="hidden lg:flex items-center justify-center space-x-1">
+            <a
+              href="#home"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Home
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#portfolio"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Portfolio
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#about"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                About
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#blogs"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Blogs
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#case-studies"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Case Studies
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+
+            <a
+              href="#contact"
+              class="nav-link px-3 md:px-4 py-2 rounded-lg transition-all relative group"
+            >
+              <span
+                class="font-['Poppins'] font-semibold text-[14px] text-[#6C777D] whitespace-nowrap hover:text-dark transition-all"
+              >
+                Contact
+              </span>
+              <span
+                class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-dark group-hover:w-[30px] group-hover:left-1/4 transition-all duration-300"
+              ></span>
+            </a>
+          </nav>
+
+          <!-- CTA BUTTON with Image Icon -->
+          <div class="hidden lg:flex items-center z-10">
+            <a
+              href="#contact"
+              class="bg-dark hover:bg-[#0000FF] text-white px-4 md:px-5 lg:px-6 py-2 w-[180px] md:w-[200px] lg:w-[220px] rounded-sm font-semibold font-['poppins'] text-[13px] md:text-[14px] lg:text-[15px] transition-all transform hover:scale-105 shadow-md hover:shadow-lg flex justify-center items-center space-x-2"
+            >
+              <span class="whitespace-nowrap">Start your Project</span>
+              <img
+                src="./assets/images/Vector4.png"
+                alt="Logo"
+                class="w-2 h-2 object-contain"
+              />
+            </a>
+          </div>
+
+          <!-- ========== MOBILE MENU BUTTON ========== -->
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden flex flex-col space-y-1.5 p-2 z-10"
+          >
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+            <span
+              class="w-6 h-0.5 bg-gray-700 rounded transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+
+        <!-- ========== MOBILE MENU DRAWER ========== -->
+        <div
+          id="mobileMenu"
+          class="lg:hidden fixed inset-x-0 top-16 bg-white shadow-xl transform transition-all duration-300 ease-in-out overflow-hidden max-h-0"
+        >
+          <div class="container mx-auto px-4 pb-4">
+            <!-- Mobile Navigation -->
+            <div class="flex flex-col space-y-1 py-4">
+              <a
+                href="#home"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Home</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#portfolio"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Portfolio</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#about"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >About</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#blogs"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 20l9-7-9-7-9 7 9 7z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Blogs</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#case-studies"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 8h10M7 12h6m-6 4h10"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Case Studies</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+
+              <a
+                href="#contact"
+                class="mobile-nav-link flex items-center space-x-3 px-4 py-3 rounded-lg hover:bg-blue-50 transition-all relative group"
+              >
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <span
+                  class="font-['Poppins'] font-medium text-[16px] hover:text-dark transition-all"
+                  >Contact</span
+                >
+                <span
+                  class="absolute bottom-1 left-4 w-0 h-0.5 bg-dark group-hover:w-[calc(100%-2rem)] transition-all duration-300"
+                ></span>
+              </a>
+            </div>
+
+            <!-- Mobile CTA Button -->
+            <div class="mt-4 pt-4 border-t border-gray-100">
+              <a
+                href="#contact"
+                class="bg-dark hover:bg-[#0000FF] text-white px-6 py-3 w-full rounded-sm font-semibold font-['poppins'] text-[15px] transition-all transform hover:scale-105 shadow-md hover:shadow-lg flex justify-center items-center space-x-2"
+              >
+                <span class="whitespace-nowrap">Start your Project</span>
+                <img
+                  src="./assets/images/Vector4.png"
+                  alt="Logo"
+                  class="w-2 h-2 object-contain ml-2"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section
+      id="hero"
+      class="relative overflow-hidden pt-10 sm:pt-9 lg:pt-[100px]"
+    >
+      <!-- Background decorative image -->
+      <img
+        src="./assets/images/double.png"
+        alt=""
+        class="absolute -right-16 sm:-right-[200px] sm:bottom-[20px] bottom-[100px] w-[200px] h-[205px] sm:w-[400px] sm:h-[265px] md:w-[700px] md:h-[371px] 2xl:w-[900px] 2xl:h-[400px] opacity-70 md:opacity-100"
+      />
+
+      <div class="container grid grid-cols-12 items-center relative">
+        <!-- Left Content Column -->
+        <div
+          class="lg:col-span-7 md:col-span-6 col-span-12 space-y-4 sm:space-y-6 relative z-10"
+        >
+          <h1
+            class="font-bold lg:text-[50px] text-[30px] font-['poppins'] text-[#0A2540] leading-[50px] lg:leading-[80px] text-start sm:text-left"
+          >
+            Building Smarter<br class="hidden lg:block" />
+            E-Commerce and<br class="hidden lg:block" />
+            Real Estate Solutions
+          </h1>
+
+          <p
+            class="text-[#6C777D] font-medium font-['Poppins'] text-sm md:text-base max-w-[570px] text-start leading-[23px] sm:text-left"
+          >
+            We help brands unlock growth with high-performance digital
+            ecosystems, optimized e-commerce experiences, and technology that
+            streamlines operations and drives long-term success.
+          </p>
+
+          <div
+            class="flex flex-row gap-3 pt-2 sm:pt-4 justify-center sm:justify-start"
+          >
+            <a
+              class="inline-flex items-center justify-center w-full sm:w-[166px] h-[43px] font-['Poppins'] text-sm rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-[1.02] hover:shadow-lg"
+              href="#contact"
+            >
+              Let's Build
+              <img
+                src="./assets/images/Group105.png"
+                alt="Arrow"
+                class="w-4 h-3.5 ml-2"
+              />
+            </a>
+            <a
+              class="inline-flex items-center justify-center w-full sm:w-[205px] h-[43px] rounded-sm border border-dark font-['Poppins'] text-sm text-[#0A2540] font-semibold hover:bg-[#0000CC] hover:text-white transition-all hover:scale-[1.02] hover:shadow-lg"
+              href="#portfolio"
+            >
+              View Our Portfolio
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column with Background Image and Card -->
+        <div
+          class="relative lg:col-span-5 md:col-span-6 col-span-12 mt-6 md:mt-0"
+        >
+          <!-- Card Container - FIXED SHADOW ISSUE -->
+          <div
+            class="relative z-10 bg-white/40 backdrop-blur-md border rounded-xl overflow-visible shadow-sm w-full max-w-md mx-auto sm:max-w-none"
+          >
+            <!-- Tabs Container -->
+            <div
+              class="flex flex-wrap sm:flex-wrap justify-center sm:justify-start border-b overflow-x-auto flex-nowrap"
+            >
+              <button
+                class="hero-tab-btn py-3 text-[12px] font-['poppins'] font-medium text-[#686868] hover:bg-[#0000FF] rounded-tl-xl transition-colors flex-1 sm:flex-none min-w-[100px] text-center"
+                data-tabs-group="hero"
+                data-tab-trigger="hero-ai"
+              >
+                AI
+              </button>
+
+              <button
+                class="hero-tab-btn py-3 text-[12px] font-['poppins'] font-medium text-[#686868] hover:bg-[#0000FF] transition-colors flex-1 sm:flex-none min-w-[100px] text-center"
+                data-tabs-group="hero"
+                data-tab-trigger="hero-ecommerce"
+              >
+                E-Commerce
+              </button>
+
+              <button
+                class="hero-tab-btn py-3 text-xs font-['poppins'] font-medium text-[#686868] hover:bg-[#0000FF] transition-colors rounded-tr-xl sm:rounded-none flex-1 sm:flex-none min-w-[100px] text-center"
+                data-tabs-group="hero"
+                data-tab-trigger="hero-realestate"
+              >
+                Real Estate
+              </button>
+
+              <button
+                class="sm:block hidden hero-tab-btn py-3 text-xs font-['poppins'] font-medium text-[#686868] hover:bg-[#0000FF] rounded-tr-xl sm:rounded-tr-none transition-colors flex-1 sm:flex-none min-w-[100px] text-center"
+                data-tabs-group="hero"
+                data-tab-trigger="hero-fintech"
+              >
+                Fintech
+              </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="p-4 sm:p-6 pb-6">
+              <div
+                class="hero-tab-panel w-full h-[370px] hidden"
+                data-tab-panel="hero-ai"
+              >
+                <img
+                  src="./assets/images/shopping.png"
+                  alt="Shopping Image"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <!-- E-Commerce Tab -->
+              <div
+                class="hero-tab-panel w-full h-[370px] hidden"
+                data-tab-panel="hero-ecommerce"
+              >
+                <img
+                  src="./assets/images/shopping2.png"
+                  alt="Shopping Image"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+
+              <!-- Real Estate Tab -->
+              <div
+                class="hero-tab-panel w-full h-[370px] hidden"
+                data-tab-panel="hero-realestate"
+              >
+                <img
+                  src="./assets/images/shopping.png"
+                  alt="Shopping Image"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+
+              <!-- Fintech Tab -->
+              <div
+                class="hero-tab-panel w-full h-[370px] hidden"
+                data-tab-panel="hero-fintech"
+              >
+                <img
+                  src="./assets/images/shopping2.png"
+                  alt="Shopping Image"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== StartOff ===== -->
+    <section id="startOff" class="bg-white relative">
+      <div
+        class="container grid lg:grid-cols-12 grid-cols-6 gap-6 items-center pt-[100px]"
+      >
+        <div
+          class="space-y-6 sm:col-span-6 col-span-12 lg:mx-0 mx-auto counter-section order-2 sm:order-1"
+          data-counter-section="stats"
+        >
+          <!-- Image container with relative positioning -->
+          <div class="relative sm:inline-block flex justify-center">
+            <div class="relative">
+              <!-- Main Image with mobile enhancement -->
+              <div class="relative overflow-hidden rounded-xl">
+                <img
+                  src="./assets/images/staff.png"
+                  alt="Team members"
+                  class="sm:w-[320px] w-[280px] h-[280px] sm:w-[360px] sm:h-[360px] rounded-xl relative z-10 shadow-xl"
+                />
+                <!-- Mobile-only overlay -->
+              </div>
+
+              <!-- Desktop Gradient Box - EXACTLY AS BEFORE -->
+              <div
+                class="group/gradient bg-[linear-gradient(to_right,#0000FF_28%,#0000FF_40%,#BDBCFE_100%)] border-[10px] border-white rounded-2xl p-4 sm:p-6 absolute z-20 top-[85%] -right-[40px] sm:-right-[120px] -translate-y-1/2"
+              >
+                <div class="stat-item">
+                  <div class="flex justify-between items-center">
+                    <p
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.4)_100%)] text-white px-2 py-1"
+                    >
+                      <span class="counter" data-target="200" data-start="0"
+                        >0</span
+                      >+ Custom Development
+                    </p>
+                  </div>
+                </div>
+
+                <div class="stat-item mt-4 sm:mt-6">
+                  <div class="flex justify-between items-center">
+                    <p
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.4)_100%)] text-white"
+                    >
+                      <span class="counter" data-target="100" data-start="0"
+                        >0</span
+                      >+ IT consultancy
+                    </p>
+                    <p
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] w-[30px] h-[30px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.4)_100%)] text-white"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="stat-item mt-4 sm:mt-6">
+                  <div class="flex justify-between items-center">
+                    <p
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_40%,rgba(255,255,255,0.4)_100%)] text-white mb-4 sm:mb-6"
+                    >
+                      <span class="counter" data-target="30" data-start="0"
+                        >0</span
+                      >+ Trending technologies
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="space-y-4 sm:col-span-6 col-span-12 sm:ml-6 ml-0 order-1 sm:order-2"
+        >
+          <div
+            class="inline-flex items-center px-4 py-2 rounded-sm border-[#919191] border text-[#919191] text-[16px] font-light font-['poppins']"
+          >
+            Who We Are
+          </div>
+          <h2
+            class="lg:text-[43px] text-[34px] font-bold font-['poppins'] text-[#212121] lg:leading-[62px] leading-[45px]"
+          >
+            Start Off on the Right Foot, Scale Without Limits
+          </h2>
+          <div class="flex flex-wrap gap-2 pt-[20px]">
+            <button
+              class="mission-tab-btn is-active border-dark border px-2 sm:w-[120px] w-[80px] h-[34px] text-dark font-['poppins'] sm:text-[15px] text-[12px] font-medium leading-[26px]"
+              data-tabs-group="mission"
+              data-tab-trigger="mission-mission"
+            >
+              Mission
+            </button>
+            <button
+              class="mission-tab-btn border-dark border px-2 sm:w-[115px] w-[80px] h-[34px] text-dark font-['poppins'] sm:text-[15px] text-[12px] font-medium leading-[26px]"
+              data-tabs-group="mission"
+              data-tab-trigger="mission-vision"
+            >
+              Vision
+            </button>
+            <button
+              class="mission-tab-btn border-dark border px-2 text-dark sm:w-[170px] w-[140px] h-[34px] font-['poppins'] sm:text-[15px] text-[12px] font-medium leading-[26px]"
+              data-tabs-group="mission"
+              data-tab-trigger="mission-commitment"
+            >
+              Our Commitment
+            </button>
+          </div>
+          <div class="mission-tab-panel" data-tab-panel="mission-mission">
+            <p
+              class="text-[#919191] text-[15px] font-['poppins'] pt-[30px] font-light leading-relaxed h-[120px] overflow-y-auto scrollbar-none"
+            >
+              Our mission is to simplify growth for E-Commerce and Real Estate
+              businesses by creating solutions that are scalable, intelligent,
+              and results-driven. We focus on removing complexity so you can
+              focus on scaling your success. Our mission is to simplify growth
+              for E-Commerce and Real Estate businesses by creating solutions
+              that are scalable, intelligent, and results-driven. We focus on
+              removing complexity so you can focus on scaling your success.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#services"
+                class="inline-flex items-center justify-center sm:w-[200px] mt-[20px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                >View Services
+                <img
+                  src="./assets/images/Group105.png"
+                  alt="Arrow"
+                  class="w-[16px] h-[14px] ml-2"
+              /></a>
+            </div>
+          </div>
+          <div class="mission-tab-panel hidden" data-tab-panel="mission-vision">
+            <p
+              class="text-[#919191] text-[15px] font-['poppins'] pt-[30px] font-light leading-relaxed h-[140px] overflow-y-auto scrollbar-none"
+            >
+              We envision digital ecosystems where commerce, property, and
+              finance experiences feel effortless - powered by reliable
+              platforms, automation, and meaningful data.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#portfolio"
+                class="inline-flex items-center justify-center sm:w-[200px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                >See Case Studies
+                <img
+                  src="./assets/images/Group105.png"
+                  alt="Arrow"
+                  class="w-[16px] h-[14px] ml-2"
+              /></a>
+            </div>
+          </div>
+          <div
+            class="mission-tab-panel hidden"
+            data-tab-panel="mission-commitment"
+          >
+            <p
+              class="text-[#919191] text-[15px] font-['poppins'] pt-[30px] font-light leading-relaxed h-[140px] overflow-y-auto scrollbar-none"
+            >
+              We commit to transparent delivery, measurable performance, and
+              design that respects both users and business goals. Every launch
+              comes with support and iteration baked in.
+            </p>
+            <div class="mt-6">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center sm:w-[200px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+                >View Services
+                <img
+                  src="./assets/images/Group105.png"
+                  alt="Arrow"
+                  class="w-[16px] h-[14px] ml-2"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OurSoftware ===== -->
+    <section class="bg-white">
+      <div class="container pt-[120px] mx-auto">
+        <div class="md:flex grid justify-between items-center gap-6">
+          <h2
+            class="lg:text-[48px] text-[28px] font-bold text-[#212121] lg:leading-[65px] leading-[42px] font-['poppins']"
+          >
+            Our Software<br />
+            Development Services
+          </h2>
+
+          <button
+            id="viewAllServicesBtn"
+            class="flex items-center justify-center lg:w-[250px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 hover:shadow-lg cursor-pointer"
+          >
+            View all our Services
+            <img
+              src="./assets/images/Group105.png"
+              alt="Arrow"
+              class="w-[16px] h-[14px] ml-2"
+            />
+          </button>
+        </div>
+
+        <div
+          class="mt-14 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 gap-3 lg:h-[300px] sm:h-auto"
+        >
+          <div
+            class="group sm:p-7 p-3 rounded-2xl shadow-md bg-white sm:h-[300px] h-[310px] hover:h-[346px] transition-all duration-500 cursor-pointer hover:bg-[linear-gradient(to_top,#0000FF_40%,#0000FF_10%,#BDBCFE_100%)]"
+          >
+            <div class="mb-4 relative w-fit pt-[18px] sm:pt-0">
+              <img
+                src="./assets/images/group1.png"
+                class="w-[40px] h-[40px] transition-all duration-500 group-hover:invert group-hover:brightness-200"
+              />
+              <div
+                class="absolute -bottom-2 -right-2 bg-[#002BFF]/40 w-[22px] h-[20px] rounded-[2px]"
+              ></div>
+            </div>
+
+            <h3
+              class="sm:text-[18px] text-[16px] pt-[23px] font-semibold leading-[26px] font-['poppins'] text-[#212121] group-hover:text-white transition-all"
+            >
+              Web<br />
+              Development
+            </h3>
+
+            <p
+              class="text-[#919191] sm:text-[13px] text-[11px] font-medium sm:leading-[23px] leading-[18px] font-['poppins'] h-[124px] overflow-y-auto scrollbar-none group-hover:text-white transition-all mt-2"
+            >
+              We build web solutions to help to execute your business operations
+              smooth, fast and efficiently.
+            </p>
+          </div>
+
+          <div
+            class="group sm:p-7 p-3 rounded-2xl shadow-md bg-white sm:h-[300px] h-[310px] hover:h-[346px] transition-all duration-500 cursor-pointer hover:bg-[linear-gradient(to_top,#0000FF_40%,#0000FF_10%,#BDBCFE_100%)]"
+          >
+            <div class="mb-4 relative w-fit pt-[18px] sm:pt-0">
+              <img
+                src="./assets/images/second.png"
+                alt="Blue Second image"
+                class="w-[30px] h-[46px] transition-all duration-500 group-hover:invert group-hover:brightness-200"
+              />
+              <div
+                class="absolute -bottom-2 -right-2 bg-[#002BFF]/40 w-[22px] h-[20px] rounded-[2px]"
+              ></div>
+            </div>
+
+            <h3
+              class="sm:text-[18px] text-[16px] pt-[23px] font-semibold leading-[26px] font-['poppins'] text-[#212121] group-hover:text-white transition-all"
+            >
+              Mobile App Development
+            </h3>
+
+            <p
+              class="text-[#919191] sm:text-[13px] text-[11px] font-medium sm:leading-[23px] leading-[18px] font-['poppins'] h-[124px] overflow-y-auto scrollbar-none group-hover:text-white transition-all mt-2"
+            >
+              Our mobile app development services include creating custom iOS
+              and Android apps for businesses and individuals.
+            </p>
+          </div>
+
+          <div
+            class="group sm:p-7 p-3 rounded-2xl shadow-md bg-white sm:h-[300px] h-[310px] hover:h-[346px] transition-all duration-500 cursor-pointer hover:bg-[linear-gradient(to_top,#0000FF_40%,#0000FF_10%,#BDBCFE_100%)]"
+          >
+            <div class="mb-4 relative w-fit pt-[18px] sm:pt-0">
+              <img
+                src="./assets/images/group3.png"
+                alt="Blue Group image"
+                class="w-[40px] h-[40px] transition-all duration-500 group-hover:invert group-hover:brightness-200"
+              />
+              <div
+                class="absolute -bottom-2 -right-2 bg-[#002BFF]/40 w-[22px] h-[20px] rounded-[2px]"
+              ></div>
+            </div>
+
+            <h3
+              class="sm:text-[18px] text-[16px] pt-[23px] font-semibold leading-[26px] font-['poppins'] text-[#212121] group-hover:text-white transition-all"
+            >
+              Performance &<br />
+              Speed
+            </h3>
+
+            <p
+              class="text-[#919191] sm:text-[13px] text-[11px] font-medium sm:leading-[23px] leading-[18px] font-['poppins'] h-[124px] overflow-y-auto scrollbar-none group-hover:text-white transition-all mt-2"
+            >
+              We enhance the position of your site and optimize its performance
+              so you will get more business and extra targeted customers.
+            </p>
+          </div>
+
+          <div
+            class="group sm:p-7 p-3 rounded-2xl shadow-md bg-white sm:h-[300px] h-[310px] hover:h-[346px] transition-all duration-500 cursor-pointer hover:bg-[linear-gradient(to_top,#0000FF_40%,#0000FF_10%,#BDBCFE_100%)]"
+          >
+            <div class="mb-4 relative w-fit pt-[18px] sm:pt-0">
+              <img
+                src="./assets/images/group4.png"
+                alt="Blue Group image"
+                class="w-[38px] h-[38px] transition-all duration-500 group-hover:invert group-hover:brightness-200"
+              />
+              <div
+                class="absolute -bottom-2 -right-2 bg-[#002BFF]/40 w-[22px] h-[20px] rounded-[2px]"
+              ></div>
+            </div>
+
+            <h3
+              class="sm:text-[18px] text-[16px] pt-[23px] font-semibold leading-[26px] font-['poppins'] text-[#212121] group-hover:text-white transition-all"
+            >
+              Search Engine Optimizations
+            </h3>
+
+            <p
+              class="text-[#919191] sm:text-[13px] text-[11px] font-medium sm:leading-[23px] leading-[18px] font-['poppins'] h-[124px] overflow-y-auto scrollbar-none group-hover:text-white transition-all mt-2"
+            >
+              Our Search Engine Optimization services include on-page and
+              off-page optimization, keyword research, content optimization, and
+              technical SEO.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OurClients ===== -->
+    <section
+      class="lg:pt-[120px] pt-[60px] sm:pb-[100px] pb-[50px] bg-white overflow-hidden"
+    >
+      <div class="container max-w-[808px] px-4 mx-auto">
+        <h2
+          class="lg:text-[48px] text-[26px] font-bold text-[#212121] text-center lg:leading-[65px] leading-[42px] font-['poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
+        >
+          Our Partners & Clients
+        </h2>
+
+        <p
+          class="text-[14px] font-normal text-[#5f5f5f] text-center leading-[27px] font-['poppins'] pt-[17px] italic transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp animation-delay-200"
+        >
+          Trusted by Businesses Worldwide
+        </p>
+
+        <p
+          class="text-[14px] font-normal text-[#919191] text-center leading-[27px] font-['poppins'] sm:max-w-[600px] w-full mx-auto pt-2 transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp animation-delay-400"
+        >
+          From emerging startups to established global brands, we build
+          long-term partnerships that make businesses stronger, smarter, and
+          more scalable.
+        </p>
+
+        <div class="w-full mt-6 sm:mt-8 lg:mt-10">
+          <div class="max-w-[1280px] mx-auto">
+            <div class="grid grid-cols-3 gap-6 justify-items-center">
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <img
+                      src="./assets/images/client1.png"
+                      alt="Client Logo"
+                      class="w-full max-w-[80px] sm:max-w-[160px] xl:max-w-[190px] h-auto mx-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <img
+                      src="./assets/images/client2.png"
+                      alt="Client Logo"
+                      class="w-full max-w-[80px] sm:max-w-[160px] xl:max-w-[190px] h-auto mx-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <img
+                      src="./assets/images/client3.png"
+                      alt="Client Logo"
+                      class="w-full max-w-[80px] sm:max-w-[160px] xl:max-w-[190px] h-auto mx-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <img
+                      src="./assets/images/client4.png"
+                      alt="Client Logo"
+                      class="w-full max-w-[80px] sm:max-w-[160px] xl:max-w-[190px] h-auto mx-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <img
+                      src="./assets/images/client5.png"
+                      alt="Client Logo"
+                      class="w-full max-w-[80px] sm:max-w-[160px] xl:max-w-[190px] h-auto mx-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-container group w-[100px] sm:w-full rounded-lg overflow-hidden"
+              >
+                <div
+                  class="bg-[linear-gradient(180deg,#8383FF_0%,#FFFFFF_100%)] p-[1px] rounded-lg w-full h-[60px] sm:min-h-[140px] flex items-center justify-center transition-all duration-300"
+                >
+                  <div
+                    class="bg-white w-full h-full flex items-center justify-center rounded-lg"
+                  >
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="text-[10px] sm:text-sm md:text-[15px] xl:text-[15px] font-semibold text-dark group-hover:text-blue-600 transition-colors duration-300"
+                      >
+                        + Many more
+                      </span>
+                      <img
+                        src="./assets/images/arrow.png"
+                        alt="Arrow"
+                        class="h-2 w-4 sm:h-4 sm:w-8 xl:h-[20px] xl:w-[38px] transition-transform duration-300 group-hover:translate-x-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CareAbout ===== -->
+    <section class="bg-dark lg:h-[460px] h-auto pb-16">
+      <div class="container mx-auto">
+        <div
+          class="grid lg:grid-cols-12 grid-cols-6 gap-3 sm:pt-[100px] pt-[50px]"
+        >
+          <div class="sm:col-span-5 col-span-12">
+            <h2
+              class="sm:text-[50px] text-[34px] font-bold text-white sm:leading-[65px] leading-[42px] font-['poppins']"
+            >
+              What We Care About
+            </h2>
+            <p
+              class="text-[15px] font-['poppins'] font-light leading-[27px] text-white sm:max-w-[400px] w-full"
+            >
+              We build technology with intention. Every product we create is
+              shaped by values that focus on clarity, growth, and long term
+              impact. Your success is the measure of our work.
+            </p>
+
+            <a
+              class="inline-flex items-center justify-center mb-[48px] mt-[23px] w-[170px] h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-transparent border border-white text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+              href="#contact"
+            >
+              Work With Us
+            </a>
+          </div>
+
+          <div class="sm:col-span-7 col-span-12">
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-[10px]"
+            >
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] rounded-[12px] h-[235px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon1.png"
+                  alt="Care Icon1"
+                  class="w-[24px] h-[24px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Scalability First
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  Systems built to grow with your business.
+                </p>
+              </div>
+
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] h-[235px] rounded-[12px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon2.png"
+                  alt="Care Icon2"
+                  class="w-[21px] h-[29px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Innovation at the Core
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  AI, automation, and modern practices that keep you ahead.
+                </p>
+              </div>
+
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] h-[235px] rounded-[12px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon3.png"
+                  alt="Care Icon3"
+                  class="w-[26px] h-[28px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Business Impact
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  Every decision guided by real, measurable results.
+                </p>
+              </div>
+
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] h-[235px] rounded-[12px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon4.png"
+                  alt="Care Icon4"
+                  class="w-[31px] h-[28px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Transparency and Trust
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  Clear communication and a collaborative partnership.
+                </p>
+              </div>
+
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] h-[235px] rounded-[12px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon5.png"
+                  alt="Care Icon5"
+                  class="w-[24px] h-[24px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Search Engine Optimization
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  SEO practices that strengthen visibility and performance.
+                </p>
+              </div>
+
+              <div
+                class="group relative bg-white pt-[24px] px-[20px] h-[235px] rounded-[12px] shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              >
+                <div
+                  class="absolute top-0 left-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute top-0 right-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-150 group-hover:h-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 w-0 h-[2px] bg-[#0000ff] transition-all duration-500 delay-300 group-hover:w-full"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 w-[2px] h-0 bg-[#0000ff] transition-all duration-500 delay-450 group-hover:h-full"
+                ></div>
+
+                <img
+                  src="./assets/images/icon6.png"
+                  alt="Care Icon6"
+                  class="w-[21px] h-[29px] transition-transform duration-300 group-hover:scale-110"
+                />
+                <h3
+                  class="text-[15px] font-['poppins'] font-bold text-[#212121] sm:leading-[27px] leading-[20px] pt-[10px] transition-colors duration-300 group-hover:text-[#0000ff]"
+                >
+                  Continuous Support
+                </h3>
+                <p
+                  class="text-[#919191] sm:text-[13px] text-[12px] font-medium font-['poppins'] sm:leading-[23px] leading-[18px] sm:pt-[10px] pt-[6px]"
+                >
+                  Long term assistance through updates, optimization, and
+                  scaling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== simpleSteps ===== -->
+    <section id="simpleSteps" class="sm:py-24 py-6 bg-white">
+      <div class="container lg:pt-[110px] pt-[20px]">
+        <div
+          class="flex justify-center items-center mx-auto w-fit px-2 py-2 rounded-sm border-[#919191] border text-[#919191] text-[16px] font-light font-['poppins']"
+        >
+          Simple Steps to Kickstart Your Journey
+        </div>
+
+        <h2
+          class="sm:text-[48px] text-[30px] pt-5 font-bold text-[#212121] text-center sm:leading-[65px] leading-[42px] font-['poppins']"
+        >
+          How do We start?
+        </h2>
+        <p
+          class="text-[16px] font-normal font-['poppins'] mx-auto text-center pt-4 text-[#919191]"
+        >
+          A very successful project begins with clarity, trust, and the right
+          roadmap.
+        </p>
+        <p
+          class="text-[16px] font-normal font-['poppins'] mx-auto text-center pt-1 text-[#919191]"
+        >
+          At CodeNdCoffee, we understand that technology can feel overwhelming,
+          especially when it involves E-Commerce platforms, supplier systems, AI
+          automations, or real estate applications.
+        </p>
+        <p
+          class="text-[16px] font-normal font-['poppins'] mx-auto text-center pt-1 text-[#919191]"
+        >
+          That's why we've built a refined process that takes away the guesswork
+          and replaces it with a step-by-step journey designed to deliver
+          measurable results without unnecessary complexity.
+        </p>
+
+        <p
+          class="text-[16px] font-normal font-['poppins'] mx-auto text-center pt-1 text-[#919191]"
+        >
+          Our approach starts with listening - understanding your business, your
+          goals, and your challenges in detail. We don't rush into code or
+          design; instead, we dive deep into your workflows, your customer
+          expectations, and the opportunities that technology can unlock for
+          you.
+        </p>
+        <p
+          class="text-[16px] font-normal font-['poppins'] mx-auto text-center pt-1 pb-4 text-[#919191]"
+        >
+          From there, we create a strategy that aligns with your objectives, so
+          you always know the "why" behind every solution.
+        </p>
+      </div>
+
+      <div
+        class="flex justify-center items-center sm:mt-[60px] mt-[0px] relative"
+      >
+        <img
+          src="./assets/images/newBlue1.png"
+          alt="Background Group Icon"
+          class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
+        />
+        <div
+          class="bg-[#002BFF]/40 min-[1751px]:bg-white w-full h-[50px] sm:block hidden mt-[30px]"
+        ></div>
+        <img
+          src="./assets/images/newBlue.png"
+          alt="Background Group Icon"
+          class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
+        />
+
+        <div class="container mx-auto sm:absolute sm:top-0 p-3 sm:p-0">
+          <div class="grid grid-cols-3 sm:gap-3 gap-2">
+            <div
+              class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
+            >
+              <div
+                class="bg-dark sm:w-[50px] w-[20px] sm:h-[50px] h-[20px] flex justify-center items-center mx-auto rounded-[2px] sm:mt-[43px] mt-[18px]"
+              >
+                <img
+                  src="./assets/images/search.png"
+                  alt="Search icon"
+                  class="sm:w-[28px] w-[10px] sm:h-[28px] h-[10px]"
+                />
+              </div>
+              <h3
+                class="text-black font-['poppins'] sm:text-[17px] text-[12px] sm:leading-[27px] leading-[18px] font-bold text-center pt-[20px]"
+              >
+                Discovery & Strategy
+              </h3>
+              <p
+                class="text-[#6C6C6C] sm:text-[15px] text-[10px] font-['poppins'] font-medium sm:leading-[23px] leading-[18px] text-center sm:pt-[20px] pt-[10px] mb-[40px]"
+              >
+                We dive deep to understand your business, identify
+                opportunities, and define how digital solutions can create the
+                most impact.
+              </p>
+            </div>
+
+            <div
+              class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
+            >
+              <div
+                class="bg-dark sm:w-[50px] w-[20px] sm:h-[50px] h-[20px] flex justify-center items-center mx-auto rounded-[2px] sm:mt-[43px] mt-[18px]"
+              >
+                <img
+                  src="./assets/images/two.png"
+                  alt="Search icon"
+                  class="sm:w-[28px] w-[10px] sm:h-[28px] h-[10px]"
+                />
+              </div>
+              <h3
+                class="text-black font-['poppins'] sm:text-[17px] text-[12px] sm:leading-[27px] leading-[18px] font-bold text-center pt-[20px]"
+              >
+                Design & Develop
+              </h3>
+              <p
+                class="text-[#6C6C6C] sm:text-[15px] text-[10px] font-['poppins'] font-medium sm:leading-[23px] leading-[18px] text-center sm:pt-[20px] pt-[10px] mb-[40px]"
+              >
+                We turn strategy into user-friendly, scalable solutions -
+                dashboards, AI tools, marketplace integrations, and more -
+                bringing your vision to life.
+              </p>
+            </div>
+
+            <div
+              class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
+            >
+              <div
+                class="bg-dark sm:w-[50px] w-[20px] sm:h-[50px] h-[20px] flex justify-center items-center mx-auto rounded-[2px] sm:mt-[43px] mt-[18px]"
+              >
+                <img
+                  src="./assets/images/up.png"
+                  alt="Search icon"
+                  class="sm:w-[28px] w-[10px] sm:h-[28px] h-[10px]"
+                />
+              </div>
+              <h3
+                class="sm:block hidden text-black font-['poppins'] sm:text-[17px] text-[12px] sm:leading-[27px] leading-[18px] font-bold text-center pt-[20px]"
+              >
+                Launch & Grow
+              </h3>
+              <h3
+                class="sm:hidden block text-black font-['poppins'] sm:text-[17px] text-[12px] sm:leading-[27px] leading-[18px] font-bold text-center pt-[20px]"
+              >
+                Launch &<br />
+                Grow
+              </h3>
+              <p
+                class="text-[#6C6C6C] sm:text-[15px] text-[10px] font-['poppins'] font-medium sm:leading-[23px] leading-[18px] text-center sm:pt-[20px] pt-[10px] mb-[40px]"
+              >
+                After launch, we monitor and optimize your platform, ensuring
+                smooth growth as your business expands and evolves.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:block hidden">
+          <a
+            class="flex items-center absolute sm:-bottom-[160px] bottom-0 left-1/2 -translate-x-1/2 justify-center w-[250px] h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-105 hover:shadow-lg"
+            href="#contact"
+          >
+            View all our Services
+            <img
+              src="./assets/images/Group105.png"
+              alt="Arrow"
+              class="w-[16px] h-[14px] ml-2"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feedback ===== -->
+    <section id="Feedback" class="bg-white">
+      <div class="lg:p-0 p-3">
+        <h2
+          class="sm:text-[48px] text-[30px] mx-auto lg:w-[34%] w-full lg:pt-[160px] pt-[40px] font-bold text-[#212121] text-center sm:leading-[65px] leading-[42px] font-['poppins']"
+        >
+          Recent feedback <br />
+          from our clients
+        </h2>
+
+        <div
+          class="flex justify-center items-center gap-[15px] sm:pt-[60px] pt-[20px] sm:pb-[20px] -pb-[50px]"
+        >
+          <button
+            id="feedback-prev-btn"
+            class="relative bg-[#F6F5F7] flex justify-center items-center p-3 cursor-pointer hover:bg-dark transition-colors group"
+          >
+            <img
+              src="./assets/images/Vector2.png"
+              alt="Previous Arrow"
+              class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
+            />
+            <img
+              src="./assets/images/whiteleft.png"
+              alt="Previous Arrow White"
+              class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          </button>
+
+          <button
+            id="feedback-next-btn"
+            class="relative bg-[#F5F5F5] flex justify-center items-center p-3 cursor-pointer hover:bg-dark transition-colors group"
+          >
+            <img
+              src="./assets/images/newright.png"
+              alt="Next Arrow"
+              class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
+            />
+            <img
+              src="./assets/images/Vector1.png"
+              alt="Next Arrow White"
+              class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          </button>
+        </div>
+
+        <div class="relative overflow-hidden">
+          <div
+            id="feedback-slider-track"
+            class="feedback-slider-track flex transition-transform duration-500 ease-in-out"
+          >
+            <div class="feedback-slide flex-shrink-0">
+              <article
+                class="testimonial-card feedback-card bg-white border border-gray-200 rounded-2xl shadow-sm transition-all duration-500 relative"
+              >
+                <div class="relative z-10">
+                  <div class="relative">
+                    <p
+                      class="text-[#757575] font-['poppins'] font-light leading-[27px] sm:pt-[55px] pt-[40px] lg:px-[85px] px-2 h-[160px] overflow-y-auto scrollbar-none"
+                    >
+                      Working with CodeNdCoffee has been a pleasure. They
+                      created a custom website tailored to our needs and
+                      provided invaluable ongoing support.
+                    </p>
+
+                    <div
+                      class="pointer-events-none absolute bottom-0 left-0 w-full h-[50px] bg-gradient-to-t from-white to-transparent"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex sm:justify-between justify-start items-center sm:ml-[80px] ml-0"
+                  >
+                    <div
+                      class="feedback-profile flex items-center sm:gap-4 gap-2"
+                    >
+                      <img
+                        class="rounded-full sm:h-[90px] h-[60px] sm:w-[90px] w-[60px] sm:ml-0 ml-2 object-cover"
+                        src="./assets/images/man1.png"
+                        alt="Jack S"
+                      />
+                      <div>
+                        <h5
+                          class="text-[#1C1C1C] font-semibold font-['poppins'] leading-[25px] pb-[9px]"
+                        >
+                          Jack S
+                        </h5>
+                        <span
+                          class="text-[16px] font-medium font-['poppins'] leading-[25px] text-[#757575]"
+                          >Health & Wellness Coach.</span
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-start items-center sm:gap-[52px] gap-[12px] sm:mr-[70px] mr-[4px]"
+                    >
+                      <img
+                        src="./assets/images/comma1.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px]"
+                      />
+                      <img
+                        src="./assets/images/comma2.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px] mt-[52px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="feedback-slide flex-shrink-0">
+              <article
+                class="testimonial-card feedback-card bg-white border border-dark rounded-2xl shadow-sm transition-all duration-500 relative"
+              >
+                <div class="relative z-10">
+                  <div class="relative">
+                    <p
+                      class="text-[#757575] font-['poppins'] font-light leading-[27px] sm:pt-[55px] pt-[40px] lg:px-[85px] px-2 h-[160px] overflow-y-auto scrollbar-none"
+                    >
+                      Their SEO expertise significantly improved our online
+                      presence and the responsive team is dedicated to
+                      delivering exceptional results. Their SEO expertise
+                      significantly improved our online presence and the
+                      responsive team is dedicated to delivering exceptional
+                      results. Their SEO expertise significantly improved our
+                      online presence and the responsive team is dedicated to
+                      delivering exceptional results.
+                    </p>
+
+                    <div
+                      class="pointer-events-none absolute bottom-0 left-0 w-full h-[50px] bg-gradient-to-t from-white to-transparent"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex sm:justify-between justify-start items-center sm:ml-[80px] ml-0"
+                  >
+                    <div
+                      class="feedback-profile flex items-center sm:gap-4 gap-2"
+                    >
+                      <img
+                        class="rounded-full sm:h-[90px] h-[60px] sm:w-[90px] w-[60px] sm:ml-0 ml-2 object-cover"
+                        src="./assets/images/man1.png"
+                        alt="Jack S"
+                      />
+                      <div>
+                        <h5
+                          class="text-[#1C1C1C] font-semibold font-['poppins'] leading-[25px] pb-[9px]"
+                        >
+                          Sarah M
+                        </h5>
+                        <span
+                          class="text-[16px] font-medium font-['poppins'] leading-[25px] text-[#757575]"
+                          >Marketing Director</span
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-start items-center sm:gap-[52px] gap-[12px] sm:mr-[70px] mr-[4px]"
+                    >
+                      <img
+                        src="./assets/images/comma1.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px]"
+                      />
+                      <img
+                        src="./assets/images/comma2.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px] mt-[52px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="feedback-slide flex-shrink-0">
+              <article
+                class="testimonial-card feedback-card bg-white border border-dark rounded-2xl shadow-sm transition-all duration-500 relative"
+              >
+                <div class="relative z-10">
+                  <div class="relative">
+                    <p
+                      class="text-[#757575] font-['poppins'] font-light leading-[27px] sm:pt-[55px] pt-[40px] lg:px-[85px] px-2 h-[160px] overflow-y-auto scrollbar-none"
+                    >
+                      CodeNdCoffee exceeded my expectations with their
+                      user-friendly, SEO-optimized website. I highly recommend
+                      their services for anyone looking to enhance their online
+                      presence.
+                    </p>
+
+                    <div
+                      class="pointer-events-none absolute bottom-0 left-0 w-full h-[50px] bg-gradient-to-t from-white to-transparent"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex sm:justify-between justify-start items-center sm:ml-[80px] ml-0"
+                  >
+                    <div
+                      class="feedback-profile flex items-center sm:gap-4 gap-2"
+                    >
+                      <img
+                        class="rounded-full sm:h-[90px] h-[60px] sm:w-[90px] w-[60px] sm:ml-0 ml-2 object-cover"
+                        src="./assets/images/man1.png"
+                        alt="Jack S"
+                      />
+                      <div>
+                        <h5
+                          class="text-[#1C1C1C] font-semibold font-['poppins'] leading-[25px] pb-[9px]"
+                        >
+                          Sam Murray
+                        </h5>
+                        <span
+                          class="text-[16px] font-medium font-['poppins'] leading-[25px] text-[#757575]"
+                          >Startup Founder</span
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-start items-center sm:gap-[52px] gap-[12px] sm:mr-[70px] mr-[4px]"
+                    >
+                      <img
+                        src="./assets/images/comma1.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px]"
+                      />
+                      <img
+                        src="./assets/images/comma2.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px] mt-[52px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="feedback-slide flex-shrink-0">
+              <article
+                class="testimonial-card feedback-card bg-white border border-dark rounded-2xl shadow-sm transition-all duration-500 relative"
+              >
+                <div class="relative z-10">
+                  <div class="relative">
+                    <p
+                      class="text-[#757575] font-['poppins'] font-light leading-[27px] sm:pt-[55px] pt-[40px] lg:px-[85px] px-2 h-[160px] overflow-y-auto scrollbar-none"
+                    >
+                      The team at CodeNdCoffee transformed our digital presence.
+                      Their attention to detail and creative solutions helped us
+                      stand out in a competitive market.
+                    </p>
+
+                    <div
+                      class="pointer-events-none absolute bottom-0 left-0 w-full h-[50px] bg-gradient-to-t from-white to-transparent"
+                    ></div>
+                  </div>
+
+                  <div
+                    class="flex sm:justify-between justify-start items-center sm:ml-[80px] ml-0"
+                  >
+                    <div
+                      class="feedback-profile flex items-center sm:gap-4 gap-2"
+                    >
+                      <img
+                        class="rounded-full sm:h-[90px] h-[60px] sm:w-[90px] w-[60px] sm:ml-0 ml-2 object-cover"
+                        src="./assets/images/man1.png"
+                        alt="Jack S"
+                      />
+                      <div>
+                        <h5
+                          class="text-[#1C1C1C] font-semibold font-['poppins'] leading-[25px] pb-[9px]"
+                        >
+                          Michael R
+                        </h5>
+                        <span
+                          class="text-[16px] font-medium font-['poppins'] leading-[25px] text-[#757575]"
+                          >Business Owner</span
+                        >
+                      </div>
+                    </div>
+
+                    <div
+                      class="flex justify-start items-center sm:gap-[52px] gap-[12px] sm:mr-[70px] mr-[4px]"
+                    >
+                      <img
+                        src="./assets/images/comma1.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px]"
+                      />
+                      <img
+                        src="./assets/images/comma2.png"
+                        alt="Commas Icon"
+                        class="sm:w-[28px] w-[16px] sm:h-[21px] h-[10px] mt-[52px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featuring (as-is from components/Featuring.html) ===== -->
+    <section id="Featuring" class="bg-white">
+      <div class="container lg:pt-[0px] lg:pt-[70px] pt-[0px]">
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+        >
+          <h2
+            class="hidden sm:block font-['Poppins'] font-bold text-[#212121] text-[34px] md:text-[40px] lg:text-[48px] leading-[42px] md:leading-[50px] lg:leading-[58px] xl:leading-[65px]"
+          >
+            Featuring Our Work with<br
+              class="xl:block lg:block md:block sm:hidden"
+            />
+            Renowned Industry Leaders
+          </h2>
+
+          <h2
+            class="sm:hidden block font-['Poppins'] font-bold text-[#212121] text-[30px] leading-[36px]"
+          >
+            Featuring Our Work with Renowned Industry Leaders
+          </h2>
+
+          <a
+            class="inline-flex items-center justify-center h-[45px] w-full md:w-[250px] bg-dark text-white rounded-sm text-[14px] font-['Poppins'] font-semibold transition-all hover:bg-[#0000CC] hover:scale-[1.05] shadow-md hover:shadow-lg"
+            href="#contact"
+          >
+            Contact Us
+            <img
+              src="./assets/images/Group105.png"
+              alt="Arrow"
+              class="ml-2 w-[16px] h-[14px]"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-center items-center sm:gap-3 gap-1 w-full lg:pt-[53px] md:pt-[40px] pt-[30px]"
+      >
+        <div class="sm:block">
+          <img
+            src="./assets/images/double.png"
+            alt="Arrow Icon"
+            class="lg:w-[160px] md:w-[140px] sm:w-[120px] w-[80px] lg:h-[80px] md:h-[70px] sm:h-[60px] h-[50px]"
+          />
+        </div>
+
+        <div
+          class="bg-dark overflow-hidden flex items-center w-full lg:h-[80px] md:h-[70px] sm:h-[60px] h-[50px]"
+        >
+          <div
+            class="marquee lg:space-x-[120px] md:space-x-[80px] sm:space-x-[50px] space-x-[20px]"
+          >
+            <img
+              src="./assets/images/project1.png"
+              class="lg:w-[190px] md:w-[170px] sm:w-[150px] w-[100px] lg:h-[52px] md:h-[46px] sm:h-[40px] h-[30px] mt-2"
+              alt="Project 1"
+            />
+            <img
+              src="./assets/images/project2.png"
+              class="lg:w-[244px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[46px] md:h-[42px] sm:h-[36px] h-[28px] mt-2"
+              alt="Project 2"
+            />
+            <img
+              src="./assets/images/project3.png"
+              class="lg:w-[243px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[60px] md:h-[54px] sm:h-[45px] h-[35px]"
+              alt="Project 3"
+            />
+            <img
+              src="./assets/images/project4.png"
+              class="lg:w-[232px] md:w-[210px] sm:w-[170px] w-[110px] lg:h-[70px] md:h-[63px] sm:h-[52px] h-[42px]"
+              alt="Project 4"
+            />
+
+            <img
+              src="./assets/images/project1.png"
+              class="lg:w-[190px] md:w-[170px] sm:w-[150px] w-[100px] lg:h-[52px] md:h-[46px] sm:h-[40px] h-[30px] mt-2"
+              alt="Project 1"
+            />
+            <img
+              src="./assets/images/project2.png"
+              class="lg:w-[244px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[46px] md:h-[42px] sm:h-[36px] h-[28px] mt-2"
+              alt="Project 2"
+            />
+            <img
+              src="./assets/images/project3.png"
+              class="lg:w-[243px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[60px] md:h-[54px] sm:h-[45px] h-[35px]"
+              alt="Project 3"
+            />
+            <img
+              src="./assets/images/project4.png"
+              class="lg:w-[232px] md:w-[210px] sm:w-[170px] w-[110px] lg:h-[70px] md:h-[63px] sm:h-[52px] h-[42px]"
+              alt="Project 4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ProjectSlider ===== -->
+    <section class="bg-white">
+      <div class="container mx-auto lg:pt-[100px] pt-[40px]">
+        <div
+          class="lg:flex md:flex sm:grid grid justify-between items-center gap-6 pt-[27px]"
+        >
+          <div class="order-2 sm:order-1 sm:block hidden sm:mt-8 mt-0">
+            <a
+              class="inline-flex items-center justify-center sm:w-[150px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+              href="#contact"
+            >
+              View all
+              <img
+                src="./assets/images/Group105.png"
+                alt="Arrow"
+                class="w-[16px] h-[14px] ml-2"
+              />
+            </a>
+          </div>
+
+          <div class="order-1 sm:order-2 lg:w-auto md:w-auto sm:w-full w-full">
+            <div
+              class="flex justify-start items-center mb-6 w-fit px-2 py-2 rounded-sm border-[#919191] border text-[#919191] text-[16px] font-light font-['poppins']"
+            >
+              Feautured Headlines
+            </div>
+            <h2
+              class="xl:text-[48px] lg:text-[42px] md:text-[38px] sm:text-[32px] text-[26px] font-bold text-[#212121] xl:leading-[65px] lg:leading-[58px] md:leading-[52px] sm:leading-[45px] leading-[36px] font-['poppins']"
+            >
+              Check out the latest news<br class="hidden sm:block" />
+              from around the world
+            </h2>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-end items-center sm:gap-[14px] gap-1 pt-[34px] pb-[31px]"
+        >
+          <div
+            id="prevBtn"
+            class="group relative rounded-[2px] bg-[#f5f5f5] backdrop-blur-md cursor-pointer w-[45px] h-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:bg-dark hover:scale-105 active:scale-95"
+          >
+            <img
+              src="./assets/images/Vector2.png"
+              alt="Left Arrow Icon"
+              class="w-[20px] h-[20px] transition-all duration-300 group-hover:opacity-0 absolute"
+            />
+            <img
+              src="./assets/images/whiteleft.png"
+              alt="Left Arrow White"
+              class="w-[20px] h-[20px] opacity-0 transition-all duration-300 group-hover:opacity-100"
+            />
+          </div>
+
+          <div
+            id="nextBtn"
+            class="group relative rounded-[2px] bg-[#f5f5f5] backdrop-blur-md cursor-pointer w-[45px] h-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:bg-dark hover:scale-105 active:scale-95"
+          >
+            <img
+              src="./assets/images/rightarrow2.png"
+              alt="Right Arrow Icon"
+              class="w-[20px] h-[20px] transition-all duration-300 group-hover:opacity-0 absolute"
+            />
+            <img
+              src="./assets/images/Vector1.png"
+              alt="Right Arrow White"
+              class="w-[20px] h-[20px] opacity-0 transition-all duration-300 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+
+        <div class="overflow-hidden">
+          <div
+            id="carousel-track"
+            class="flex transition-transform duration-500"
+          >
+            <div
+              class="lg:w-1/2 md:w-1/2 sm:w-full w-full sm:p-4 p-2 carousel-item"
+            >
+              <a
+                href=""
+                class="group block transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div class="relative rounded-[11px] overflow-hidden">
+                  <img
+                    src="./assets/images/girl1.png"
+                    alt="Girl Image"
+                    class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[rgba(0,0,285,0.68)] mix-blend-screen transition-opacity duration-300 group-hover:opacity-90"
+                  ></div>
+                </div>
+                <div
+                  class="flex items-center justify-between sm:pt-[22px] pt-[16px]"
+                >
+                  <h4
+                    class="lg:text-[19px] md:text-[18px] sm:text-[16px] text-[14px] font-bold font-['poppins'] text-[#212121] lg:leading-[27px] md:leading-[25px] sm:leading-[22px] leading-[20px] truncate sm:whitespace-normal whitespace-nowrap flex-1 mr-3 transition-colors duration-300 group-hover:text-[#0000CC]"
+                  >
+                    Why is custom development preferable over cms in the USA
+                  </h4>
+                  <div
+                    class="bg-dark lg:w-[53px] md:w-[45px] sm:w-[40px] w-[23px] lg:h-[53px] md:h-[45px] sm:h-[40px] h-[23px] rounded-[2px] flex justify-center items-center flex-shrink-0 transition-all duration-300 group-hover:bg-[#0000CC] group-hover:scale-110"
+                  >
+                    <img
+                      src="./assets/images/link.png"
+                      alt="Link Arrow"
+                      class="lg:w-[20px] md:w-[18px] sm:w-[16px] w-[12px] lg:h-[20px] md:h-[18px] sm:h-[16px] h-[12px] transition-transform duration-300 group-hover:rotate-45"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-normal font-['poppins'] text-[#919191] leading-[27px]"
+                >
+                  Irfan - February 17, 2025
+                </p>
+              </a>
+            </div>
+
+            <div
+              class="lg:w-1/2 md:w-1/2 sm:w-full w-full sm:p-4 p-2 carousel-item"
+            >
+              <a
+                href=""
+                class="group block transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div class="relative rounded-[11px] overflow-hidden">
+                  <img
+                    src="./assets/images/girl1.png"
+                    alt="Girl Image"
+                    class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[rgba(0,0,285,0.68)] mix-blend-screen transition-opacity duration-300 group-hover:opacity-90"
+                  ></div>
+                </div>
+                <div
+                  class="flex items-center justify-between sm:pt-[22px] pt-[16px]"
+                >
+                  <h4
+                    class="lg:text-[19px] md:text-[18px] sm:text-[16px] text-[14px] font-bold font-['poppins'] text-[#212121] lg:leading-[27px] md:leading-[25px] sm:leading-[22px] leading-[20px] truncate sm:whitespace-normal whitespace-nowrap flex-1 mr-3 transition-colors duration-300 group-hover:text-[#0000CC]"
+                  >
+                    Beyond the Basics: The Benefits of Custom Web Development
+                  </h4>
+                  <div
+                    class="bg-dark lg:w-[53px] md:w-[45px] sm:w-[40px] w-[23px] lg:h-[53px] md:h-[45px] sm:h-[40px] h-[23px] rounded-[2px] flex justify-center items-center flex-shrink-0 transition-all duration-300 group-hover:bg-[#0000CC] group-hover:scale-110"
+                  >
+                    <img
+                      src="./assets/images/link.png"
+                      alt="Link Arrow"
+                      class="lg:w-[20px] md:w-[18px] sm:w-[16px] w-[12px] lg:h-[20px] md:h-[18px] sm:h-[16px] h-[12px] transition-transform duration-300 group-hover:rotate-45"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-normal font-['poppins'] text-[#919191] leading-[27px]"
+                >
+                  Irfan - February 17, 2025
+                </p>
+              </a>
+            </div>
+
+            <div
+              class="lg:w-1/2 md:w-1/2 sm:w-full w-full sm:p-4 p-2 carousel-item"
+            >
+              <a
+                href=""
+                class="group block transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div class="relative rounded-[11px] overflow-hidden">
+                  <img
+                    src="./assets/images/girl1.png"
+                    alt="Girl Image"
+                    class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[rgba(0,0,285,0.68)] mix-blend-screen transition-opacity duration-300 group-hover:opacity-90"
+                  ></div>
+                </div>
+                <div
+                  class="flex items-center justify-between sm:pt-[22px] pt-[16px]"
+                >
+                  <h4
+                    class="lg:text-[19px] md:text-[18px] sm:text-[16px] text-[14px] font-bold font-['poppins'] text-[#212121] lg:leading-[27px] md:leading-[25px] sm:leading-[22px] leading-[20px] truncate sm:whitespace-normal whitespace-nowrap flex-1 mr-3 transition-colors duration-300 group-hover:text-[#0000CC]"
+                  >
+                    Why is custom development preferable over cms in the USA
+                  </h4>
+                  <div
+                    class="bg-dark lg:w-[53px] md:w-[45px] sm:w-[40px] w-[23px] lg:h-[53px] md:h-[45px] sm:h-[40px] h-[23px] rounded-[2px] flex justify-center items-center flex-shrink-0 transition-all duration-300 group-hover:bg-[#0000CC] group-hover:scale-110"
+                  >
+                    <img
+                      src="./assets/images/link.png"
+                      alt="Link Arrow"
+                      class="lg:w-[20px] md:w-[18px] sm:w-[16px] w-[12px] lg:h-[20px] md:h-[18px] sm:h-[16px] h-[12px] transition-transform duration-300 group-hover:rotate-45"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-normal font-['poppins'] text-[#919191] leading-[27px]"
+                >
+                  Irfan - February 17, 2025
+                </p>
+              </a>
+            </div>
+
+            <div
+              class="lg:w-1/2 md:w-1/2 sm:w-full w-full sm:p-4 p-2 carousel-item"
+            >
+              <a
+                href=""
+                class="group block transition-all duration-300 hover:scale-[1.02]"
+              >
+                <div class="relative rounded-[11px] overflow-hidden">
+                  <img
+                    src="./assets/images/girl1.png"
+                    alt="Girl Image"
+                    class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div
+                    class="absolute inset-0 bg-[rgba(0,0,285,0.68)] mix-blend-screen transition-opacity duration-300 group-hover:opacity-90"
+                  ></div>
+                </div>
+                <div
+                  class="flex items-center justify-between sm:pt-[22px] pt-[16px]"
+                >
+                  <h4
+                    class="lg:text-[19px] md:text-[18px] sm:text-[16px] text-[14px] font-bold font-['poppins'] text-[#212121] lg:leading-[27px] md:leading-[25px] sm:leading-[22px] leading-[20px] truncate sm:whitespace-normal whitespace-nowrap flex-1 mr-3 transition-colors duration-300 group-hover:text-[#0000CC]"
+                  >
+                    Beyond the Basics: The Benefits of Custom Web Development
+                  </h4>
+                  <div
+                    class="bg-dark lg:w-[53px] md:w-[45px] sm:w-[40px] w-[23px] lg:h-[53px] md:h-[45px] sm:h-[40px] h-[23px] rounded-[2px] flex justify-center items-center flex-shrink-0 transition-all duration-300 group-hover:bg-[#0000CC] group-hover:scale-110"
+                  >
+                    <img
+                      src="./assets/images/link.png"
+                      alt="Link Arrow"
+                      class="lg:w-[20px] md:w-[18px] sm:w-[16px] w-[12px] lg:h-[20px] md:h-[18px] sm:h-[16px] h-[12px] transition-transform duration-300 group-hover:rotate-45"
+                    />
+                  </div>
+                </div>
+                <p
+                  class="lg:text-[15px] md:text-[14px] sm:text-[13px] text-[12px] font-normal font-['poppins'] text-[#919191] leading-[27px]"
+                >
+                  Irfan - February 17, 2025
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="sm:hidden block">
+          <a
+            class="inline-flex items-center justify-center sm:w-[150px] w-full h-[43px] font-['Poppins'] text-[14px] rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all transform hover:scale-105 shadow-md hover:shadow-lg"
+            href="#contact"
+          >
+            View all
+            <img
+              src="./assets/images/Group105.png"
+              alt="Arrow"
+              class="w-[16px] h-[14px] ml-2"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Banner ===== -->
+    <section id="Banner" class="py-16 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="relative bg-dark rounded-[11px] pb-[78px] overflow-hidden">
+          <div
+            class="absolute lg:top-1/2 lg:-translate-y-1/2 top-auto -bottom-[46px] lg:bottom-0 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[-80px] xl:right-[-90px]"
+          >
+            <img
+              src="./assets/images/white.png"
+              alt="Decorative white icon"
+              class="xl:w-[180px] lg:w-[160px] w-[120px] h-auto lg:translate-y-0 translate-y-4 lg:rotate-0 rotate-90"
+            />
+          </div>
+
+          <div class="px-4 sm:px-6 lg:px-8">
+            <h4
+              class="text-center text-white font-['Poppins'] font-bold xl:leading-[65px] lg:leading-[60px] md:leading-[55px] sm:leading-[50px] leading-[42px] xl:text-[48px] lg:text-[44px] md:text-[40px] sm:text-[36px] text-[30px] pt-[24px] sm:pt-[40px] md:pt-[48px] lg:pt-[54px]"
+            >
+              Connect with CodeNdCoffee
+            </h4>
+
+            <h5
+              class="text-center text-white font-['Poppins'] font-semibold xl:text-[17px] lg:text-[16.5px] md:text-[16px] sm:text-[15.5px] text-[15px] leading-[27px] pt-[16px]"
+            >
+              Let's Build Something Extraordinary
+            </h5>
+
+            <p
+              class="text-center text-white font-['Poppins'] font-light leading-[27px] xl:text-[15px] lg:text-[14.5px] md:text-[14px] sm:text-[13.5px] text-[13px] max-w-[90%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[83%] mx-auto pt-[8px]"
+            >
+              We're more than a service provider - we're your dedicated partner.
+              Whether you're an ambitious startup or an established enterprise,
+            </p>
+
+            <p
+              class="text-center text-white font-['Poppins'] font-light leading-[27px] xl:text-[15px] lg:text-[14.5px] md:text-[14px] sm:text-[13.5px] text-[13px] max-w-[90%] sm:max-w-[80%] md:max-w-[75%] lg:max-w-[70%] xl:max-w-[60%] mx-auto pt-[4px] pb-[36px]"
+            >
+              We bring the expertise, creativity, and reliability needed to
+              achieve your goals.
+            </p>
+
+            <a
+              class="flex items-center justify-center w-full sm:w-[277px] md:w-[260px] lg:w-[277px] h-[43px] mx-auto rounded-sm bg-white text-dark font-['Poppins'] xl:text-[14px] lg:text-[13.5px] md:text-[13px] sm:text-[12.5px] text-[12px] font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-105"
+              href="#contact"
+            >
+              Connect With Us Today
+              <img
+                src="./assets/images/blueGroup.png"
+                alt="Arrow"
+                class="w-[16px] h-[14px] ml-2"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MarqueeSlide ===== -->
+    <section class="lg:pt-[40px] pt-[0px] overflow-hidden">
+      <div
+        class="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[2deg] marquee-wrapper flex items-center relative overflow-hidden"
+      >
+        <div
+          class="marquee-track flex items-center space-x-6 sm:space-x-10 whitespace-nowrap"
+        >
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+            >
+              Elevate Your Digital Presence
+            </h5>
+            <img
+              src="./assets/images/double.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+            >
+              Elevate Your Digital Presence
+            </h5>
+            <img
+              src="./assets/images/double.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+            >
+              Elevate Your Digital Presence
+            </h5>
+            <img
+              src="./assets/images/double.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+            >
+              Elevate Your Digital Presence
+            </h5>
+            <img
+              src="./assets/images/double.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-dark shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[-1deg] marquee-wrapper flex items-center relative overflow-hidden"
+      >
+        <div
+          class="marquee-track-reverse flex items-center space-x-4 sm:space-x-10 whitespace-nowrap"
+        >
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+            >
+              Innovate Without Limits
+            </h5>
+            <img
+              src="./assets/images/double1.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+            >
+              Innovate Without Limits
+            </h5>
+            <img
+              src="./assets/images/double1.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+            >
+              Innovate Without Limits
+            </h5>
+            <img
+              src="./assets/images/double1.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+          <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+            <h5
+              class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+            >
+              Innovate Without Limits
+            </h5>
+            <img
+              src="./assets/images/double1.png"
+              alt="Blue Double image"
+              class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <section
+      id="Footer"
+      class="bg-dark lg:mt-[145px] mt-[40px] md:block hidden"
+    >
+      <!-- Main container with auto padding -->
+      <div class="container mx-auto">
+        <div
+          class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-2 sm:gap-[40px] gap-2"
+        >
+          <!-- ..........1st Column - Contact Info........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <!-- Logo -->
+            <img
+              src="./assets/images/whiteLogo.png"
+              alt="Footer Logo"
+              class="xl:w-[170px] lg:w-[160px] md:w-[150px] sm:w-[140px] w-[130px] xl:h-[65px] lg:h-[60px] md:h-[55px] sm:h-[50px] h-[45px] mx-auto sm:mx-0"
+            />
+
+            <!-- Contact Us Heading -->
+            <h2
+              class="sm:pt-[50px] pt-[35px] text-white font-['poppins'] font-bold xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] leading-[26px]"
+            >
+              Contact Us
+            </h2>
+
+            <!-- Phone -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/call.png"
+                  alt="Call Icon"
+                  class="xl:w-[20px] lg:w-[19px] md:w-[18px] sm:w-[17px] w-[16px] xl:h-[20px] lg:h-[19px] md:h-[18px] sm:h-[17px] h-[16px]"
+                />
+              </div>
+              <a
+                href="tel:+13075337903"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+              >
+                +1 3075337903
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/mail.png"
+                  alt="Mail Icon"
+                  class="xl:w-[22px] lg:w-[21px] md:w-[20px] sm:w-[19px] w-[18px] xl:h-[15px] lg:h-[14.5px] md:h-[14px] sm:h-[13.5px] h-[13px]"
+                />
+              </div>
+              <a
+                href="mailto:info@codendcoffee.com"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+              >
+                info@codendcoffee.com
+              </a>
+            </div>
+
+            <!-- Follow Us Heading -->
+            <h2
+              class="sm:pt-[50px] pt-[30px] text-white font-['poppins'] font-semibold xl:text-[23px] lg:text-[22.5px] md:text-[22px] sm:text-[21.5px] text-[21px] leading-[26px]"
+            >
+              Follow Us
+            </h2>
+
+            <!-- Social Icons -->
+            <div class="pt-[15px] flex justify-start items-center gap-3">
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/facebook.png"
+                  alt="Facebook Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/linkedin.png"
+                  alt="Linkedin Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/insta.png"
+                  alt="Instagram Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- ..........2nd Column - What we do........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              What we do
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px] sm:w-[90%] w-full">
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Web Development
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  App Development
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Digital Marketing
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Search Engine Optimization
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  DevOps
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Security Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Code Optimization
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  UI UX
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ..........3rd Column - Discover........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Discover
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px]">
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Contact
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Terms and Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ..........4th Column - Our location........... -->
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Our location
+            </h3>
+
+            <p
+              class="sm:pt-[31px] pt-[10px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px]"
+            >
+              CODENDCOFFEE LLC
+            </p>
+            <p
+              class="pt-[1px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px] w-full"
+            >
+              5830 E 2nd St, Ste 7000 Casper, Wyoming 82609 US
+            </p>
+
+            <img
+              src="./assets/images/map.png"
+              alt="Map Image"
+              class="pt-[22px] rounded-lg w-full h-auto"
+            />
+            <img
+              src="./assets/images/review.png"
+              alt="Google Review Image"
+              class="pt-[18px] rounded-lg w-full h-auto"
+            />
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p
+          class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
+        >
+          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          reserved.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-dark lg:mt-[145px] mt-[40px] md:hidden block">
+      <div class="container pt-[50px]">
+        <img
+          src="./assets/images/whiteLogo.png"
+          alt="Footer Logo"
+          class="mx-auto w-[154px] h-[60px]"
+        />
+        <div class="grid-cols-2 grid gap-6">
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              What we do
+            </h3>
+            <ul class="sm:pt-[31px] pt-[10px] sm:w-[90%] w-full">
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Web Development
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  App Development
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Digital Marketing
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Search Engine Optimization
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  DevOps
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Security Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Code Optimization
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  UI UX
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Discover
+            </h3>
+
+            <ul class="sm:pt-[31px] pt-[10px]">
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Contact
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Blogs
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] text-[#E8E8E8] font-light leading-[38px] hover:text-white transition-colors cursor-pointer block"
+                >
+                  Terms and Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2
+              class="sm:pt-[50px] pt-[35px] text-white font-['poppins'] font-bold xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] leading-[26px]"
+            >
+              Contact Us
+            </h2>
+
+            <!-- Phone -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/call.png"
+                  alt="Call Icon"
+                  class="xl:w-[20px] lg:w-[19px] md:w-[18px] sm:w-[17px] w-[16px] xl:h-[20px] lg:h-[19px] md:h-[18px] sm:h-[17px] h-[16px]"
+                />
+              </div>
+              <a
+                href="tel:+13075337903"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+              >
+                +1 3075337903
+              </a>
+            </div>
+
+            <!-- Email -->
+            <div
+              class="sm:pt-[37px] pt-[20px] flex justify-start items-center lg:gap-4 gap-1"
+            >
+              <div
+                class="xl:w-[37px] lg:w-[35px] md:w-[33px] sm:w-[32px] w-[30px] xl:h-[37px] lg:h-[35px] md:h-[33px] sm:h-[32px] h-[30px] rounded-full bg-white flex justify-center items-center"
+              >
+                <img
+                  src="./assets/images/mail.png"
+                  alt="Mail Icon"
+                  class="xl:w-[22px] lg:w-[21px] md:w-[20px] sm:w-[19px] w-[18px] xl:h-[15px] lg:h-[14.5px] md:h-[14px] sm:h-[13.5px] h-[13px]"
+                />
+              </div>
+              <a
+                href="mailto:info@codendcoffee.com"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+              >
+                info@codendcoffee.com
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h2
+              class="sm:pt-[50px] pt-[30px] text-white font-['poppins'] font-semibold xl:text-[23px] lg:text-[22.5px] md:text-[22px] sm:text-[21.5px] text-[21px] leading-[26px]"
+            >
+              Follow Us
+            </h2>
+
+            <!-- Social Icons -->
+            <div class="pt-[15px] flex justify-start items-center gap-3">
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/facebook.png"
+                  alt="Facebook Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/linkedin.png"
+                  alt="Linkedin Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+              <a
+                href="#"
+                class="xl:w-[33px] lg:w-[32px] md:w-[31px] sm:w-[30px] w-[28px] xl:h-[33px] lg:h-[32px] md:h-[31px] sm:h-[30px] h-[28px] flex justify-start items-center hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="./assets/images/insta.png"
+                  alt="Instagram Logo"
+                  class="w-full h-auto"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-span-1 sm:pt-[60px] pt-[40px]">
+            <h3
+              class="xl:text-[27px] lg:text-[26px] md:text-[25px] sm:text-[24px] text-[22px] font-bold text-white font-['poppins'] leading-[26px]"
+            >
+              Our location
+            </h3>
+
+            <p
+              class="sm:pt-[31px] pt-[10px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px]"
+            >
+              CODENDCOFFEE LLC
+            </p>
+            <p
+              class="pt-[1px] text-[#E8E8E8] xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light font-['poppins'] leading-[26px] w-full"
+            >
+              5830 E 2nd St, Ste 7000 Casper, Wyoming 82609 US
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="./assets/images/map.png"
+              alt="Map Image"
+              class="pt-[22px] rounded-lg w-full h-auto"
+            />
+            <img
+              src="./assets/images/review.png"
+              alt="Google Review Image"
+              class="pt-[18px] rounded-lg w-full h-auto"
+            />
+          </div>
+        </div>
+        <!-- Copyright -->
+        <p
+          class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
+        >
+          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          reserved.
+        </p>
+      </div>
+    </section>
+
+    <!-- JS moved to `assets/js/app.js` -->
+  </body>
+</html>

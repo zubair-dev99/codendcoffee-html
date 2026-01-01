@@ -1,0 +1,288 @@
+/* AllServices page-specific styles */
+
+/* FAQ styles */
+.faq-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #e5e7eb;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+
+.faq-item:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: max-height;
+  scroll-margin-top: 20px;
+}
+
+.faq-answer.open {
+  max-height: 300px; /* Adjust based on content */
+}
+
+/* Icon animation */
+.icon-plus {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-plus i {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-size: 18px;
+}
+
+.faq-question:hover .icon-plus {
+  transform: scale(1.1);
+}
+
+/* Button hover effects */
+.faq-question {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question:focus {
+  outline: 2px solid rgba(33, 33, 33, 0.2);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Content animation */
+.faq-answer > div {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
+}
+
+.faq-answer.open > div {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Accessibility */
+.faq-question[aria-expanded="true"] {
+  font-weight: 600;
+}
+
+/* Custom CSS for show more/less functionality */
+#show-more-toggle {
+  display: none;
+}
+
+/* All cards visible on desktop */
+@media (min-width: 768px) {
+  .service-card {
+    display: block !important;
+  }
+  .toggle-container {
+    display: none !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* Toggle button visible by default on mobile */
+  .toggle-container {
+    display: block !important;
+  }
+
+  /* Default state: Only first 3 cards visible */
+  .service-card {
+    animation: fadeIn 0.3s ease;
+  }
+
+  .service-card:nth-child(n + 4) {
+    display: none;
+  }
+
+  .container #servicesGrid .service-card:nth-child(n + 4) {
+    display: none;
+  }
+
+  .container.expanded #servicesGrid .service-card:nth-child(n + 4) {
+    display: block !important;
+  }
+
+  /* Button text switching */
+  .show-more-text {
+    display: flex !important;
+  }
+  .show-less-text {
+    display: none !important;
+  }
+
+  /* Toggle texts via container.expanded for robustness */
+  .toggle-container .show-more-text {
+    display: flex !important;
+  }
+  .toggle-container .show-less-text {
+    display: none !important;
+  }
+
+  .container.expanded .toggle-container .show-more-text {
+    display: none !important;
+  }
+  .container.expanded .toggle-container .show-less-text {
+    display: flex !important;
+  }
+
+  /* Button styling */
+  .toggle-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2);
+  }
+
+  #servicesGrid .service-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+
+  #servicesGrid .service-card p {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #servicesGrid .service-card p::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  /* Make the fade overlay at bottom more subtle */
+  #servicesGrid .service-card p::after {
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    height: 3rem;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Card styling */
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Generic infinite carousel (AllServices only) */
+[data-infinite-carousel] [data-carousel-track],
+[data-infinite-carousel] [data-carousel-track] * {
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+[data-infinite-carousel] [data-carousel-track].is-dragging,
+[data-infinite-carousel] [data-carousel-track].is-dragging * {
+  cursor: grabbing;
+}
+
+/* Quality section mobile slider */
+.quality-slider-root {
+  overflow: hidden;
+}
+
+.quality-slider-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.quality-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.quality-slider-nav {
+  width: 100%;
+}
+
+.quality-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: #6c95d3;
+  border: 1px solid #6c95d3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+  color: #fff;
+}
+
+.quality-nav-btn img {
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.quality-nav-btn:hover {
+  background: #0000ff;
+  border-color: #0000ff;
+  transform: translateY(-1px) scale(1.03);
+}
+
+@media (min-width: 768px) {
+  .quality-slider-track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px;
+    transform: none !important;
+    justify-content: stretch;
+  }
+
+  .quality-slide {
+    flex: 1 1 auto;
+    min-width: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0;
+  }
+
+  .quality-slider-nav {
+    display: none !important;
+  }
+}
+
