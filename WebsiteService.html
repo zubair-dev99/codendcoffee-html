@@ -7,9 +7,8 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Add GSAP CDN in head if not already -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/ScrollTrigger.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -584,6 +583,10 @@
               src="./assets/images/newBlue.png"
               alt="Blue Image"
               class="w-[340px] h-[230px]"
+              data-aos="fade-left"
+              data-aos-duration="7000"
+              data-aos-easing="ease-out"
+              data-aos-delay="200"
             />
           </div>
         </div>
@@ -604,14 +607,9 @@
         >
           <!-- ......card1....... -->
           <div
-            class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
-
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.6,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -649,13 +647,9 @@ w-full max-w-[350px] mx-auto lg:mx-0"
           </div>
           <!-- ......card2....... -->
           <div
-              class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -686,18 +680,15 @@ w-full max-w-[350px] mx-auto lg:mx-0"
             <p
               class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
             >
-              Flexible and easy-to-manage content management systems that give you full control.
+              Flexible and easy-to-manage content management systems that give
+              you full control.
             </p>
           </div>
           <!-- ......card3....... -->
           <div
-             class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -721,7 +712,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
             <h3
               class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
             >
-             Responsive Design
+              Responsive Design
             </h3>
 
             <!-- Paragraph -->
@@ -733,13 +724,9 @@ w-full max-w-[350px] mx-auto lg:mx-0"
           </div>
           <!-- ......card4....... -->
           <div
-              class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -763,25 +750,22 @@ w-full max-w-[350px] mx-auto lg:mx-0"
             <h3
               class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
             >
-             E-Commerce Solutions
+              E-Commerce Solutions
             </h3>
 
             <!-- Paragraph -->
             <p
               class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
             >
-              Secure, scalable online stores with payment gateway integration and optimized user flows.
+              Secure, scalable online stores with payment gateway integration
+              and optimized user flows.
             </p>
           </div>
           <!-- ......card5....... -->
           <div
-             class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -812,18 +796,15 @@ w-full max-w-[350px] mx-auto lg:mx-0"
             <p
               class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
             >
-              Technical SEO best practices built directly into the site structure.
+              Technical SEO best practices built directly into the site
+              structure.
             </p>
           </div>
           <!-- ......card6....... -->
           <div
-              class="group relative bg-dark lg:h-[350px] h-auto 
-lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
-rounded-[11px] shadow-2xl overflow-hidden 
-transition-all duration-500 ease-out 
-hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
-shrink-0 hover:bg-white 
-w-full max-w-[350px] mx-auto lg:mx-0"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
           >
             <!-- Image -->
             <div
@@ -854,7 +835,8 @@ w-full max-w-[350px] mx-auto lg:mx-0"
             <p
               class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
             >
-              Continuous updates, monitoring, and improvements to keep your website running smoothly.
+              Continuous updates, monitoring, and improvements to keep your
+              website running smoothly.
             </p>
           </div>
         </div>
@@ -904,7 +886,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
               </div>
               <a
                 href="tel:+13075337903"
-                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+                class="xl:text-[16px] lg:text-[16px] md:text-[15px] sm:text-[14px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
               >
                 +1 3075337903
               </a>
@@ -925,7 +907,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
               </div>
               <a
                 href="mailto:info@codendcoffee.com"
-                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+                class="xl:text-[16px] lg:text-[16px] md:text-[15px] sm:text-[14px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
               >
                 info@codendcoffee.com
               </a>
@@ -1138,7 +1120,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
         <p
           class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
         >
-          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          Copyright © <span id="currentYear"></span> CodendCoffee. All rights
           reserved.
         </p>
       </div>
@@ -1300,7 +1282,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
               </div>
               <a
                 href="tel:+13075337903"
-                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[12px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors"
               >
                 +1 3075337903
               </a>
@@ -1321,7 +1303,7 @@ w-full max-w-[350px] mx-auto lg:mx-0"
               </div>
               <a
                 href="mailto:info@codendcoffee.com"
-                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
+                class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[12px] font-['poppins'] font-light text-[#E8E8E8] leading-[26px] hover:text-white transition-colors break-all"
               >
                 info@codendcoffee.com
               </a>
@@ -1406,10 +1388,13 @@ w-full max-w-[350px] mx-auto lg:mx-0"
         <p
           class="xl:text-[18px] lg:text-[17px] md:text-[16.5px] sm:text-[16px] text-[15px] font-light text-white text-center pb-[44px] pt-[33px] font-['poppins'] leading-[26px]"
         >
-          Copyright Â© <span id="currentYear"></span> CodendCoffee. All rights
+          Copyright © <span id="currentYear"></span> CodendCoffee. All rights
           reserved.
         </p>
       </div>
     </section>
+
+    <!-- Body ke end mein add karein -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
