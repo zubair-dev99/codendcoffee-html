@@ -7,12 +7,16 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add GSAP CDN in head if not already -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/ScrollTrigger.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/allServices.css" />
+    <link rel="stylesheet" href="./assets/css/websiteService.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -62,21 +66,9 @@
       };
     </script>
 
-    <!-- Vendor scripts -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/pagedone@1.2.2/src/js/pagedone.js"
-      defer
-    ></script> -->
-
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-
     <!-- App JS -->
     <script src="./assets/js/app.js" defer></script>
-    <script src="./assets/js/allServices.js" defer></script>
+    <script src="./assets/js/WebsiteService.js" defer></script>
   </head>
 
   <body>
@@ -401,8 +393,9 @@
       </div>
     </header>
 
-    <main id="SingleService" class="sm:pt-[150px] pt-[44px]">
-      <section class="container" id="hero-section">
+    <!-- .............hero-section............. -->
+    <main id="SingleService" class="sm:pt-[160px] pt-[44px] container">
+      <section id="hero-section">
         <h2
           class="lg:text-[48px] text-[26px] lg:w-[517px] w-full text-left sm:text-center sm:mx-auto block font-bold text-[#0A2540] lg:leading-[65px] leading-[42px] font-['Poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
         >
@@ -439,42 +432,46 @@
           </a>
         </div>
 
-        <div class="w-full flex justify-center mt-[100px]">
-          <div class="relative w-full">
-            <!-- Blue Bar -->
-            <div class="h-[70px] bg-dark rounded-md relative">
+        <!-- Stats Section START-->
+
+        <div
+          class="w-full flex justify-center mt-[60px] sm:mt-[80px] lg:mt-[100px]"
+        >
+          <div class="relative w-full px-4 sm:px-6 lg:px-0">
+            <!-- Blue Bar - Hidden on mobile, visible on lg+ -->
+            <div
+              class="h-[60px] sm:h-[65px] lg:h-[70px] bg-dark rounded-md relative hidden lg:block"
+            >
               <!-- Center Notch -->
               <div
-                class="absolute left-1/2 -top-3 -translate-x-1/2 w-[50px] h-10 bg-dark rotate-45 rounded-lg"
+                class="absolute left-1/2 -top-2 sm:-top-3 lg:-top-3 -translate-x-1/2 w-[40px] sm:w-[45px] lg:w-[50px] h-8 sm:h-9 lg:h-10 bg-dark rotate-45 rounded-lg"
               ></div>
             </div>
 
-            <!-- Cards -->
-          
-           <div
-  class="absolute -bottom-8 left-1/2 -translate-x-1/2 
-         flex flex-col sm:flex-row 
-         gap-3 sm:gap-4 
-         w-full px-4 sm:px-16"
->
-
+            <!-- Cards Container -->
+            <div
+              class="relative lg:absolute lg:-bottom-8 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-4 w-full max-w-sm sm:max-w-2xl lg:max-w-full px-0 sm:px-4 lg:px-16"
+            >
               <!-- Card 1 -->
               <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] h-[57px] flex-1 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
+                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
               >
                 <span
-                  class="font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] mr-1"
-                  >200+</span
+                  data-target="200"
+                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
                 >
+                  200+
+                </span>
                 Custom Development
               </div>
 
               <!-- Card 2 -->
               <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] h-[57px] flex-1 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
+                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
               >
                 <span
-                  class="font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] mr-1"
+                  data-target="100"
+                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
                   >100+</span
                 >
                 IT Consultancy
@@ -482,10 +479,11 @@
 
               <!-- Card 3 -->
               <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] h-[57px] flex-1 flex items-center justify-center shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
+                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
               >
                 <span
-                  class="font-semibold font-['poppins'] text-[17px] leading-[23px] text-[#40465E] mr-1"
+                  data-target="30"
+                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
                   >30+</span
                 >
                 Trending Technologies
@@ -493,7 +491,376 @@
             </div>
           </div>
         </div>
+        <!-- Stats Section ENMDD-->
       </section>
+      <!-- .............hero-section end............. -->
+      <!-- .............Delievers start............. -->
+
+      <section id="Delievers">
+        <div
+          class="grid lg:grid-cols-2 grid-cols-1 sm:pt-[110px] pt-[44px] gap-8 items-center"
+        >
+          <!-- Left Column -->
+          <div>
+            <h2
+              class="lg:text-[48px] text-[26px] lg:w-[517px] w-full text-left block font-bold text-[#0A2540] lg:leading-[65px] leading-[42px] font-['Poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
+            >
+              What This Service Delivers
+            </h2>
+            <p
+              class="lg:w-[664px] w-full text-left text-[15px] font-normal text-[#919191] leading-[23px] font-['Poppins'] sm:pt-[26px] pt-[12px] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp animation-delay-200"
+            >
+              We create websites that go beyond visuals. Every build is focused
+              on performance, usability, and long-term scalability.
+            </p>
+            <ul class="pt-[36px]">
+              <li class="flex justify-start items-center gap-[15px]">
+                <img
+                  src="./assets/images/smallblue.png"
+                  alt="Small Blue image"
+                  class="w-[17px] h-[12px]"
+                />
+                <p
+                  class="text-[15px] text-[#919191] font-['poppins'] font-light"
+                >
+                  Custom website design tailored to your brand
+                </p>
+              </li>
+              <li class="flex justify-start items-center gap-[15px] pt-[25px]">
+                <img
+                  src="./assets/images/smallblue.png"
+                  alt="Small Blue image"
+                  class="w-[17px] h-[12px]"
+                />
+                <p
+                  class="text-[15px] text-[#919191] font-['poppins'] font-light"
+                >
+                  Clean, maintainable, and scalable codebase
+                </p>
+              </li>
+              <li class="flex justify-start items-center gap-[15px] pt-[25px]">
+                <img
+                  src="./assets/images/smallblue.png"
+                  alt="Small Blue image"
+                  class="w-[17px] h-[12px]"
+                />
+                <p
+                  class="text-[15px] text-[#919191] font-['poppins'] font-light"
+                >
+                  SEO-ready structure from day one
+                </p>
+              </li>
+              <li class="flex justify-start items-center gap-[15px] pt-[25px]">
+                <img
+                  src="./assets/images/smallblue.png"
+                  alt="Small Blue image"
+                  class="w-[17px] h-[12px]"
+                />
+                <p
+                  class="text-[15px] text-[#919191] font-['poppins'] font-light"
+                >
+                  Optimized performance across all devices
+                </p>
+              </li>
+              <li class="flex justify-start items-center gap-[15px] pt-[25px]">
+                <img
+                  src="./assets/images/smallblue.png"
+                  alt="Small Blue image"
+                  class="w-[17px] h-[12px]"
+                />
+                <p
+                  class="text-[15px] text-[#919191] font-['poppins'] font-light"
+                >
+                  Secure and future-proof architecture
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column -->
+          <div class="flex justify-end">
+            <img
+              id="animatedImage"
+              src="./assets/images/newBlue.png"
+              alt="Blue Image"
+              class="w-[340px] h-[230px]"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- .............Delievers end............. -->
+
+      <!-- .............Capabilities start............. -->
+
+      <section id="Capabilities" class="sm:pt-[100px] pt-[44px]">
+        <h2
+          class="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[50px] font-bold w-full max-w-[615px] mx-auto text-center text-[#212121] leading-[36px] sm:leading-[42px] md:leading-[52px] lg:leading-[65px] font-['poppins']"
+        >
+          Our Web Development Capabilities
+        </h2>
+
+        <div
+          class="sm:pt-[100px] pt-[44px] grid sm:grid-cols-3 grid-cols-1 lg:gap-[34px] gap-[18px]"
+        >
+          <!-- ......card1....... -->
+          <div
+            class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service1.png"
+                alt="Care Icon1"
+                class="lg:w-[55px] w-[26px] lg:h-[46px] h-[26px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue1.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[55px] w-[26px] lg:h-[46px] h-[26px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+              Custom Website Development
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Fully customized websites designed to meet your business goals and
+              user needs. Fully customized websites designed to meet your
+              business goals and user needs.
+            </p>
+          </div>
+          <!-- ......card2....... -->
+          <div
+              class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service2.png"
+                alt="Care Icon1"
+                class="lg:w-[41px] w-[22px] lg:h-[48px] h-[26px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue2.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[41px] w-[22px] lg:h-[48px] h-[26px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+              Custom Website Development
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Flexible and easy-to-manage content management systems that give you full control.
+            </p>
+          </div>
+          <!-- ......card3....... -->
+          <div
+             class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service3.png"
+                alt="Care Icon1"
+                class="lg:w-[52px] w-[26px] lg:h-[52px] h-[26px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue3.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[52px] w-[26px] lg:h-[52px] h-[26px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+             Responsive Design
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Seamless experiences across desktop, tablet, and mobile devices.
+            </p>
+          </div>
+          <!-- ......card4....... -->
+          <div
+              class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service4.png"
+                alt="Care Icon1"
+                class="lg:w-[46px] w-[26px] lg:h-[50px] h-[26px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue4.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[46px] w-[26px] lg:h-[50px] h-[26px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+             E-Commerce Solutions
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Secure, scalable online stores with payment gateway integration and optimized user flows.
+            </p>
+          </div>
+          <!-- ......card5....... -->
+          <div
+             class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service5.png"
+                alt="Care Icon1"
+                class="lg:w-[53px] w-[26px] lg:h-[53px] h-[28px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue5.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[53px] w-[26px] lg:h-[53px] h-[28px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+              SEO-Focused Architecture
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Technical SEO best practices built directly into the site structure.
+            </p>
+          </div>
+          <!-- ......card6....... -->
+          <div
+              class="group relative bg-dark lg:h-[350px] h-auto 
+lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 
+rounded-[11px] shadow-2xl overflow-hidden 
+transition-all duration-500 ease-out 
+hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_25px_60px_rgba(0,0,0,0.3)]
+shrink-0 hover:bg-white 
+w-full max-w-[350px] mx-auto lg:mx-0"
+          >
+            <!-- Image -->
+            <div
+              class="sm:w-[51px] w-[30px] sm:h-[55px] h-[30px] mx-auto relative"
+            >
+              <!-- Default Image -->
+              <img
+                src="./assets/images/websiteService/service6.png"
+                alt="Care Icon1"
+                class="lg:w-[53px] w-[26px] lg:h-[53px] h-[26px] mx-auto transition-opacity duration-300 group-hover:opacity-0 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+              <!-- Hover Image -->
+              <img
+                src="./assets/images/websiteService/blue6.png"
+                alt="Care Icon1 Hover"
+                class="lg:w-[53px] w-[26px] lg:h-[53px] h-[26px] mx-auto transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-1/2 -translate-x-1/2"
+              />
+            </div>
+
+            <!-- Heading -->
+            <h3
+              class="lg:text-[30px] md:text-[24px] text-[22px] font-['poppins'] text-center font-bold text-white lg:leading-[47px] leading-[28px] lg:pt-[22px] pt-[12px] transition-colors duration-300 group-hover:text-[#212121]"
+            >
+              Ongoing Maintenance
+            </h3>
+
+            <!-- Paragraph -->
+            <p
+              class="text-white sm:text-[16px] text-[14px] leading-[18px] sm:leading-[25px] text-center font-light font-['poppins'] lg:pt-[16px] pt-[10px] w-full max-w-[300px] h-[90px] mx-auto overflow-y-auto scrollbar-hide group-hover:text-[#919191]"
+            >
+              Continuous updates, monitoring, and improvements to keep your website running smoothly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- .............Capabilities end............. -->
     </main>
 
     <!-- ===== Footer ===== -->
