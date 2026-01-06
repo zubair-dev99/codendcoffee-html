@@ -393,8 +393,8 @@
     </header>
 
     <!-- .............hero-section............. -->
-    <main id="SingleService" class="sm:pt-[160px] pt-[44px] container">
-      <section id="hero-section">
+    <main id="SingleService" class="sm:pt-[160px] pt-[44px]">
+      <section id="hero-section" class="container">
         <h2
           class="lg:text-[48px] text-[26px] lg:w-[517px] w-full text-left sm:text-center sm:mx-auto block font-bold text-[#0A2540] lg:leading-[65px] leading-[42px] font-['Poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
         >
@@ -409,7 +409,7 @@
         </p>
 
         <div
-          class="flex flex-row mx-auto gap-3 pt-8 sm:pt-[34px] justify-center items-center ml-[26px]"
+          class="flex flex-row mx-auto gap-3 pt-8 sm:pt-[34px] justify-center items-center lg:ml-[26px] ml-0"
         >
           <a
             class="inline-flex items-center justify-center w-full sm:w-[166px] h-[43px] font-['Poppins'] text-sm rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-[1.02] hover:shadow-lg"
@@ -436,7 +436,7 @@
         <div
           class="w-full flex justify-center mt-[60px] sm:mt-[80px] lg:mt-[100px]"
         >
-          <div class="relative w-full px-4 sm:px-6 lg:px-0">
+          <div class="relative w-full px-0 sm:px-6 lg:px-0">
             <!-- Blue Bar - Hidden on mobile, visible on lg+ -->
             <div
               class="h-[60px] sm:h-[65px] lg:h-[70px] bg-dark rounded-md relative hidden lg:block"
@@ -448,44 +448,100 @@
             </div>
 
             <!-- Cards Container -->
-            <div
-              class="relative lg:absolute lg:-bottom-8 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-4 w-full max-w-sm sm:max-w-2xl lg:max-w-full px-0 sm:px-4 lg:px-16"
-            >
-              <!-- Card 1 -->
+            <div class="lg:block hidden">
               <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
+                class="relative lg:absolute lg:-bottom-8 left-1/2 -translate-x-1/2 flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-4 w-full max-w-sm sm:max-w-2xl lg:max-w-full px-0 sm:px-4 lg:px-16"
               >
-                <span
-                  data-target="200"
-                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
+                <!-- Card 1 -->
+                <div
+                  class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
                 >
-                  200+
-                </span>
-                Custom Development
-              </div>
+                  <span
+                    data-target="200"
+                    class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
+                  >
+                    200+
+                  </span>
+                  Custom Development
+                </div>
 
-              <!-- Card 2 -->
-              <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
-              >
-                <span
-                  data-target="100"
-                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
-                  >100+</span
+                <!-- Card 2 -->
+                <div
+                  class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
                 >
-                IT Consultancy
-              </div>
+                  <span
+                    data-target="100"
+                    class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
+                    >100+</span
+                  >
+                  IT Consultancy
+                </div>
 
-              <!-- Card 3 -->
-              <div
-                class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
-              >
-                <span
-                  data-target="30"
-                  class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
-                  >30+</span
+                <!-- Card 3 -->
+                <div
+                  class="bg-white/60 backdrop-blur-md border border-white/30 rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex items-center justify-center shadow-[0_4px_16px_rgba(0,0,0,0.1)] sm:shadow-[0_6px_20px_rgba(0,0,0,0.12)] lg:shadow-[0_8px_24px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_rgba(0,0,0,0.15)] sm:hover:shadow-[0_10px_32px_rgba(0,0,0,0.16)] lg:hover:shadow-[0_12px_32px_rgba(0,0,0,0.18)] transition-all duration-300"
                 >
-                Trending Technologies
+                  <span
+                    data-target="30"
+                    class="counter inline-block w-[40px] sm:w-[45px] lg:w-[50px] font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] mr-1 sm:mr-1 lg:mr-1 text-center"
+                    >30+</span
+                  >
+                  Trending Technologies
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:hidden block">
+              <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+                <div
+                  class="bg-white/60 backdrop-blur-md p-[80px] rounded-md font-semibold font-['poppins'] text-[15px] sm:text-[16px] lg:text-[17px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-[#40465E] h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex flex-col items-center justify-center bg-[linear-gradient(to_top,#0000FF_28%,#0000FF_40%,#BDBCFE_100%)] transition-all duration-300"
+                >
+                  <span
+                    data-target="200"
+                    class="counter inline-block font-semibold font-['poppins'] text-[35px] leading-[20px] sm:leading-[21px] lg:leading-[23px] text-white text-center"
+                  >
+                    200+
+                  </span>
+                  <span
+                    class="text-center text-white sm:text-[18px] text-[14px] pt-5 leading-[14px] sm:leading-[15px] lg:leading-[16px] mt-[2px]"
+                  >
+                    Custom Development
+                  </span>
+                </div>
+                <div
+                  class="bg-white/60 backdrop-blur-md p-[80px] rounded-md font-semibold font-['poppins'] text-white h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex flex-col items-center justify-center bg-[linear-gradient(to_top,#0000FF_28%,#0000FF_40%,#BDBCFE_100%)] transition-all duration-300"
+                >
+                  <!-- Number -->
+                  <span
+                    data-target="100"
+                    class="counter inline-block font-semibold text-[35px] leading-[15px] sm:leading-[16px] lg:leading-[17px] text-center"
+                  >
+                    100+
+                  </span>
+                  <!-- Text -->
+                  <span
+                    class="text-center text-white sm:text-[18px] text-[14px] pt-5 leading-[14px] sm:leading-[15px] lg:leading-[16px] mt-[2px]"
+                  >
+                    IT Consultancy
+                  </span>
+                </div>
+                <div
+                  class="bg-white/60 backdrop-blur-md p-[80px] rounded-md font-semibold font-['poppins'] text-white h-[52px] sm:h-[55px] lg:h-[57px] flex-1 flex flex-col items-center justify-center bg-[linear-gradient(to_top,#0000FF_28%,#0000FF_40%,#BDBCFE_100%)] transition-all duration-300"
+                >
+                  <!-- Number -->
+                  <span
+                    data-target="30"
+                    class="counter inline-block font-semibold text-[35px] sm:leading-[16px] lg:leading-[17px] text-center"
+                  >
+                    30+
+                  </span>
+                  <!-- Text -->
+                  <span
+                    class="text-center text-white sm:text-[18px] text-[14px] pt-3 leading-[14px] sm:leading-[15px] lg:leading-[16px] mt-[2px]"
+                  >
+                    Trending Technologies
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -495,7 +551,7 @@
       <!-- .............hero-section end............. -->
       <!-- .............Delievers start............. -->
 
-      <section id="Delievers">
+      <section id="Delievers" class="container">
         <div
           class="grid lg:grid-cols-2 grid-cols-1 sm:pt-[110px] pt-[44px] gap-8 items-center"
         >
@@ -582,7 +638,7 @@
               id="animatedImage"
               src="./assets/images/newBlue.png"
               alt="Blue Image"
-              class="w-[340px] h-[230px]"
+              class="w-[340px] h-[230px] block mx-auto lg:mx-0"
               data-aos="fade-left"
               data-aos-duration="7000"
               data-aos-easing="ease-out"
@@ -595,7 +651,7 @@
 
       <!-- .............Capabilities start............. -->
 
-      <section id="Capabilities" class="sm:pt-[100px] pt-[44px]">
+      <section id="Capabilities" class="sm:pt-[100px] pt-[44px] container">
         <h2
           class="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[50px] font-bold w-full max-w-[615px] mx-auto text-center text-[#212121] leading-[36px] sm:leading-[42px] md:leading-[52px] lg:leading-[65px] font-['poppins']"
         >
@@ -609,7 +665,7 @@
           <div
             data-aos="fade-down"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.6,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -649,7 +705,7 @@
           <div
             data-aos="fade-down"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -688,7 +744,7 @@
           <div
             data-aos="fade-down"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -724,9 +780,9 @@
           </div>
           <!-- ......card4....... -->
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -763,9 +819,9 @@
           </div>
           <!-- ......card5....... -->
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -802,9 +858,9 @@
           </div>
           <!-- ......card6....... -->
           <div
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-duration="2000"
-            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden /* Hover pe fast, mouse out pe slow */ transition-all duration-300 ease-out hover:transition-all hover:duration-100 hover:ease-[cubic-bezier(0.4,0,0.2,1)] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white shrink-0 w-full max-w-[350px] mx-auto lg:mx-0"
+            class="group relative bg-dark lg:h-[350px] h-auto lg:pt-[46px] pt-[32px] lg:px-[32px] px-4 lg:pb-[32px] pb-6 rounded-[11px] shadow-2xl overflow-hidden shrink-0 w-full max-w-[350px] mx-auto lg:mx-0 [transition:transform_400ms_ease-out,box-shadow_400ms_ease-out,background-color_200ms_ease-in-out] hover:-translate-y-2 hover:scale-[1.03] hover:shadow-[0_25px_20px_rgba(0,0,0,0.3)] hover:bg-white"
           >
             <!-- Image -->
             <div
@@ -843,6 +899,320 @@
       </section>
 
       <!-- .............Capabilities end............. -->
+      <!-- ===== Featuring (as-is from components/Featuring.html) ===== -->
+      <section id="Featuring" class="bg-white">
+        <div class="container lg:pt-[0px] lg:pt-[130px] pt-[50px]">
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6"
+          >
+            <h2
+              class="hidden sm:block font-['Poppins'] font-bold text-[#212121] text-[34px] md:text-[40px] lg:text-[48px] leading-[42px] md:leading-[50px] lg:leading-[58px] xl:leading-[65px]"
+            >
+              Featuring Our Work with<br
+                class="xl:block lg:block md:block sm:hidden"
+              />
+              Renowned Industry Leaders
+            </h2>
+
+            <h2
+              class="sm:hidden block font-['Poppins'] font-bold text-[#212121] text-[30px] leading-[36px]"
+            >
+              Featuring Our Work with Renowned Industry Leaders
+            </h2>
+
+            <a
+              class="inline-flex items-center justify-center h-[45px] w-full md:w-[250px] bg-dark text-white rounded-sm text-[14px] font-['Poppins'] font-semibold transition-all hover:bg-[#0000CC] hover:scale-[1.05] shadow-md hover:shadow-lg"
+              href="#contact"
+            >
+              Contact Us
+              <img
+                src="./assets/images/Group105.png"
+                alt="Arrow"
+                class="ml-2 w-[16px] h-[14px]"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex justify-center items-center sm:gap-3 gap-1 w-full lg:pt-[53px] md:pt-[40px] pt-[30px]"
+        >
+          <div class="sm:block">
+            <img
+              src="./assets/images/double.png"
+              alt="Arrow Icon"
+              class="lg:w-[160px] md:w-[140px] sm:w-[120px] w-[80px] lg:h-[80px] md:h-[70px] sm:h-[60px] h-[50px]"
+            />
+          </div>
+
+          <div
+            class="bg-dark overflow-hidden flex items-center w-full lg:h-[80px] md:h-[70px] sm:h-[60px] h-[50px]"
+          >
+            <div
+              class="marquee lg:space-x-[120px] md:space-x-[80px] sm:space-x-[50px] space-x-[20px]"
+            >
+              <img
+                src="./assets/images/project1.png"
+                class="lg:w-[190px] md:w-[170px] sm:w-[150px] w-[100px] lg:h-[52px] md:h-[46px] sm:h-[40px] h-[30px] mt-2"
+                alt="Project 1"
+              />
+              <img
+                src="./assets/images/project2.png"
+                class="lg:w-[244px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[46px] md:h-[42px] sm:h-[36px] h-[28px] mt-2"
+                alt="Project 2"
+              />
+              <img
+                src="./assets/images/project3.png"
+                class="lg:w-[243px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[60px] md:h-[54px] sm:h-[45px] h-[35px]"
+                alt="Project 3"
+              />
+              <img
+                src="./assets/images/project4.png"
+                class="lg:w-[232px] md:w-[210px] sm:w-[170px] w-[110px] lg:h-[70px] md:h-[63px] sm:h-[52px] h-[42px]"
+                alt="Project 4"
+              />
+
+              <img
+                src="./assets/images/project1.png"
+                class="lg:w-[190px] md:w-[170px] sm:w-[150px] w-[100px] lg:h-[52px] md:h-[46px] sm:h-[40px] h-[30px] mt-2"
+                alt="Project 1"
+              />
+              <img
+                src="./assets/images/project2.png"
+                class="lg:w-[244px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[46px] md:h-[42px] sm:h-[36px] h-[28px] mt-2"
+                alt="Project 2"
+              />
+              <img
+                src="./assets/images/project3.png"
+                class="lg:w-[243px] md:w-[220px] sm:w-[180px] w-[120px] lg:h-[60px] md:h-[54px] sm:h-[45px] h-[35px]"
+                alt="Project 3"
+              />
+              <img
+                src="./assets/images/project4.png"
+                class="lg:w-[232px] md:w-[210px] sm:w-[170px] w-[110px] lg:h-[70px] md:h-[63px] sm:h-[52px] h-[42px]"
+                alt="Project 4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- .............Latest project start............. -->
+      <section class="container sm:pt-[100px] pt-[44px]">
+        <h2
+          class="lg:text-[48px] text-[26px] lg:w-[517px] w-full text-left font-bold text-[#0A2540] lg:leading-[65px] leading-[42px] font-['Poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
+        >
+          Our Latest Projects
+        </h2>
+        <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-[100px] gap-[50px]">
+          <div>
+            <img
+              src="./assets/images/websiteService/desktop.png"
+              alt="Project Image"
+            />
+          </div>
+          <div class="flex justify-start items-center">
+            <div>
+              <h3
+                class="lg:text-[30px] text-[22px] font-bold text-[#0A2540] font-['Poppins'] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp"
+              >
+                IlmShare
+              </h3>
+              <p
+                class="text-[15px] font-light text-[#919191] leading-[26px] font-['Poppins'] sm:pt-[20px] pt-[12px] transform transition-all duration-700 opacity-0 translate-y-8 animate-fadeInUp animation-delay-200"
+              >
+                IlamShare is a digital learning environment that manages all the
+                aspects of students' needs
+              </p>
+
+              <div
+                class="flex flex-row gap-3 pt-2 sm:pt-[40px] justify-center sm:justify-start"
+              >
+                <a
+                  class="inline-flex items-center justify-center w-full sm:w-[200px] h-[43px] font-['Poppins'] text-sm rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-[1.02] hover:shadow-lg"
+                  href="#contact"
+                >
+                  View Portfolio
+                  <img
+                    src="./assets/images/Group105.png"
+                    alt="Arrow"
+                    class="w-4 h-3.5 ml-2"
+                  />
+                </a>
+                <a
+                  class="inline-flex items-center justify-center w-full sm:w-[150px] h-[43px] rounded-sm border border-dark font-['Poppins'] text-sm text-[#0A2540] font-semibold hover:bg-[#0000CC] hover:text-white transition-all hover:scale-[1.02] hover:shadow-lg"
+                  href="#portfolio"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- .............Latest project end............. -->
+
+      <!-- ===== Banner ===== -->
+      <section id="Banner" class="py-16 bg-white overflow-hidden">
+        <div class="container mx-auto px-4">
+          <div
+            class="relative bg-dark rounded-[11px] pb-[78px] overflow-hidden"
+          >
+            <div
+              class="absolute lg:top-1/2 lg:-translate-y-1/2 top-auto -bottom-[46px] lg:bottom-0 left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-[-80px] xl:right-[-90px]"
+            >
+              <img
+                src="./assets/images/white.png"
+                alt="Decorative white icon"
+                class="xl:w-[180px] lg:w-[160px] w-[120px] h-auto lg:translate-y-0 translate-y-4 lg:rotate-0 rotate-90"
+              />
+            </div>
+
+            <div class="px-4 sm:px-6 lg:px-8">
+              <h4
+                class="text-center mx-auto lg:w-[710px] w-full text-white font-['Poppins'] font-bold xl:leading-[65px] lg:leading-[60px] md:leading-[55px] sm:leading-[50px] leading-[42px] xl:text-[48px] lg:text-[44px] md:text-[40px] sm:text-[36px] text-[30px] pt-[24px] sm:pt-[40px] md:pt-[48px] lg:pt-[54px]"
+              >
+                Build a website that works as hard as your business
+              </h4>
+
+              <p
+                class="text-center text-white font-['Poppins'] font-light leading-[27px] xl:text-[15px] lg:text-[14.5px] md:text-[14px] sm:text-[13.5px] text-[13px] lg:w-[460px] w-full mx-auto pt-[4px] pb-[36px]"
+              >
+                Let’s create a digital platform you can rely on today and scale
+                tomorrow.
+              </p>
+
+              <a
+                class="flex items-center justify-center w-full sm:w-[277px] md:w-[260px] lg:w-[277px] h-[43px] mx-auto rounded-sm bg-white text-dark font-['Poppins'] xl:text-[14px] lg:text-[13.5px] md:text-[13px] sm:text-[12.5px] text-[12px] font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-105"
+                href="#contact"
+              >
+                Connect With Us Today
+                <img
+                  src="./assets/images/blueGroup.png"
+                  alt="Arrow"
+                  class="w-[16px] h-[14px] ml-2"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== MarqueeSlide ===== -->
+      <section class="lg:pt-[40px] pt-[0px] overflow-hidden">
+        <div
+          class="bg-white shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[2deg] marquee-wrapper flex items-center relative overflow-hidden"
+        >
+          <div
+            class="marquee-track flex items-center space-x-6 sm:space-x-10 whitespace-nowrap"
+          >
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-[#0000ff] font-['poppins'] leading-tight"
+              >
+                Elevate Your Digital Presence
+              </h5>
+              <img
+                src="./assets/images/double.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="bg-dark shadow-[0_4px_20px_rgba(0,0,0,0.15)] w-full sm:h-[120px] h-[80px] rotate-[-1deg] marquee-wrapper flex items-center relative overflow-hidden"
+        >
+          <div
+            class="marquee-track-reverse flex items-center space-x-4 sm:space-x-10 whitespace-nowrap"
+          >
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+            <div class="flex items-center space-x-4 sm:space-x-6 flex-shrink-0">
+              <h5
+                class="text-[24px] sm:text-[40px] md:text-[45px] lg:text-[50px] font-bold text-white font-['poppins'] leading-tight"
+              >
+                Innovate Without Limits
+              </h5>
+              <img
+                src="./assets/images/double1.png"
+                alt="Blue Double image"
+                class="w-[20px] h-[15px] sm:w-[25px] sm:h-[19px] md:w-[28px] md:h-[21px] lg:w-[30px] lg:h-[23px] sm:ml-4"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- ===== Footer ===== -->

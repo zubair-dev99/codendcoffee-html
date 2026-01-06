@@ -41,7 +41,7 @@ counters.forEach((counter) => observer.observe(counter));
 // AOS initialization with mobile detection
 function initAOS() {
   // Check if device is mobile
-  const isMobile = window.innerWidth <= 768;
+  const isMobile = window.innerWidth <= 1024;
 
   if (!isMobile) {
     // Initialize AOS only for non-mobile devices
@@ -64,3 +64,5 @@ document.addEventListener("DOMContentLoaded", initAOS);
 
 // Re-initialize on window resize
 window.addEventListener("resize", initAOS);
+
+
