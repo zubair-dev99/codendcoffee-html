@@ -928,3 +928,23 @@ html {
             }
         }
    /* ............................................extra Carousel Container ........................................*/
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* scrollbar track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* scrollbar thumb (moving part) */
+::-webkit-scrollbar-thumb {
+  background: #0000ff; /* your color */
+  border-radius: 10px;
+}
+
+/* hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #0000ff;
+}
