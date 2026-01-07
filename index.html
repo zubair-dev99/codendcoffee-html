@@ -7,7 +7,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-     <!-- AOS CSS -->
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -398,9 +398,10 @@
     >
       <!-- Background decorative image -->
       <img
+        
         src="./assets/images/double.png"
         alt=""
-        class="absolute -right-16 sm:-right-[200px] sm:bottom-[20px] bottom-[100px] w-[200px] h-[205px] sm:w-[400px] sm:h-[265px] md:w-[700px] md:h-[371px] 2xl:w-[900px] 2xl:h-[400px] opacity-70 md:opacity-100"
+        class="absolute -right-16 sm:-right-[200px] sm:bottom-[20px] bottom-[100px] w-[200px] h-[205px] sm:w-[400px] sm:h-[265px] md:w-[700px] md:h-[371px] 2xl:w-[700px] 2xl:h-[400px] opacity-70 md:opacity-100"
       />
 
       <div class="container grid grid-cols-12 items-center relative">
@@ -574,9 +575,12 @@
                 <div class="stat-item">
                   <div class="flex justify-between items-center">
                     <p
-                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.4)_100%)] text-white px-2 py-1"
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.4)_100%)] text-white px-2 py-1 flex items-center "
                     >
-                      <span class="counter" data-target="200" data-start="0"
+                      <span
+                        class="counter inline-block w-[30px] text-right"
+                        data-target="200"
+                        data-start="0"
                         >0</span
                       >+ Custom Development
                     </p>
@@ -586,12 +590,16 @@
                 <div class="stat-item mt-4 sm:mt-6">
                   <div class="flex justify-between items-center">
                     <p
-                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.4)_100%)] text-white"
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.4)_100%)] text-white flex items-center"
                     >
-                      <span class="counter" data-target="100" data-start="0"
+                      <span
+                        class="counter inline-block w-[30px] text-right"
+                        data-target="100"
+                        data-start="0"
                         >0</span
                       >+ IT consultancy
                     </p>
+
                     <p
                       class="font-['Poppins'] font-medium text-[13px] leading-[27px] w-[30px] h-[30px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_0%,rgba(255,255,255,0.4)_100%)] text-white"
                     ></p>
@@ -601,9 +609,12 @@
                 <div class="stat-item mt-4 sm:mt-6">
                   <div class="flex justify-between items-center">
                     <p
-                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_40%,rgba(255,255,255,0.4)_100%)] text-white mb-4 sm:mb-6"
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] px-2 py-1 rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_40%,rgba(255,255,255,0.4)_100%)] text-white mb-4 sm:mb-6 flex items-center"
                     >
-                      <span class="counter" data-target="30" data-start="0"
+                      <span
+                        class="counter inline-block w-[30px] text-right"
+                        data-target="30"
+                        data-start="0"
                         >0</span
                       >+ Trending technologies
                     </p>
@@ -1014,81 +1025,75 @@
       </div>
     </section>
 
+    <!-- .............extra slider start............. -->
 
+    <section class="container overflow-hidden pt-[100px]" data-aos="fade-up">
+      <div class="flex flex-col md:flex-row">
+        <!-- Left Tabs Section (20%) -->
 
-       <!-- .............extra slider start............. -->
-
-      <section
-        class="container overflow-hidden pt-[100px]"
-        data-aos="fade-up"
-      >
-        
-        <div class="flex flex-col md:flex-row">
-          <!-- Left Tabs Section (20%) -->
-
-          <div
-            class="md:w-1/5 bg-white flex justify-center items-center border-r border-gray-200"
-            data-aos="fade-right"
-          >
-            <div
-              class="space-y-2 grid justify-center items-center sm:block hidden"
-              id="tabs-container"
-            >
-              <!-- Tabs will be generated by JavaScript -->
-            </div>
-          </div>
-
-          <!-- Right Content Section (80%) - Carousel -->
-          <div class="md:w-4/5 carousel-container" data-aos="fade-left">
-            <div class="carousel-track" id="carousel-track">
-              <!-- Slides will be generated by JavaScript -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Progress Bar and Controls -->
-        <div class="px-8 pb-8" data-aos="fade-up">
-          <div class="">
-            <div class="progress-fill" id="progress-fill"></div>
-          </div>
-        </div>
         <div
-          class="flex justify-start items-center gap-[15px] sm:pt-[20px] pt-[20px] sm:pb-[20px] -pb-[50px]"
+          class="md:w-1/5 bg-white flex justify-center items-center border-r border-gray-200"
+          data-aos="fade-right"
         >
-          <button
-            id="prev-btn"
-            class="relative bg-[#F6F5F7] flex justify-center items-center mb-2 p-3 cursor-pointer hover:bg-dark transition-colors group"
+          <div
+            class="space-y-2 grid justify-center items-center sm:block hidden"
+            id="tabs-container"
           >
-            <img
-              src="./assets/images/Vector2.png"
-              alt="Previous Arrow"
-              class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
-            />
-            <img
-              src="./assets/images/whiteleft.png"
-              alt="Previous Arrow White"
-              class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            />
-          </button>
-
-          <button
-            id="next-btn"
-            class="relative bg-[#F5F5F5] flex justify-center items-center mb-2 p-3 cursor-pointer hover:bg-dark transition-colors group"
-          >
-            <img
-              src="./assets/images/newright.png"
-              alt="Next Arrow"
-              class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
-            />
-            <img
-              src="./assets/images/Vector1.png"
-              alt="Next Arrow White"
-              class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-            />
-          </button>
+            <!-- Tabs will be generated by JavaScript -->
+          </div>
         </div>
-      </section>
-      <!-- .............extra slider end............. -->
+
+        <!-- Right Content Section (80%) - Carousel -->
+        <div class="md:w-4/5 carousel-container" data-aos="fade-left">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Slides will be generated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar and Controls -->
+      <div class="px-8 pb-8" data-aos="fade-up">
+        <div class="">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+      <div
+        class="flex justify-start items-center gap-[15px] sm:pt-[20px] pt-[20px] sm:pb-[20px] -pb-[50px]"
+      >
+        <button
+          id="prev-btn"
+          class="relative bg-[#F6F5F7] flex justify-center items-center mb-2 p-3 cursor-pointer hover:bg-dark transition-colors group"
+        >
+          <img
+            src="./assets/images/Vector2.png"
+            alt="Previous Arrow"
+            class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="./assets/images/whiteleft.png"
+            alt="Previous Arrow White"
+            class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </button>
+
+        <button
+          id="next-btn"
+          class="relative bg-[#F5F5F5] flex justify-center items-center mb-2 p-3 cursor-pointer hover:bg-dark transition-colors group"
+        >
+          <img
+            src="./assets/images/newright.png"
+            alt="Next Arrow"
+            class="w-[20px] h-[20px] transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="./assets/images/Vector1.png"
+            alt="Next Arrow White"
+            class="absolute w-[20px] h-[20px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </button>
+      </div>
+    </section>
+    <!-- .............extra slider end............. -->
 
     <!-- ===== CareAbout ===== -->
     <section class="bg-dark lg:h-[460px] h-auto pb-16">
@@ -1381,7 +1386,7 @@
       <div
         class="flex justify-center items-center sm:mt-[60px] mt-[0px] relative"
       >
-        <img
+        <img 
           src="./assets/images/newBlue1.png"
           alt="Background Group Icon"
           class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
@@ -1389,7 +1394,7 @@
         <div
           class="bg-[#002BFF]/40 min-[1751px]:bg-white w-full h-[50px] sm:block hidden mt-[30px]"
         ></div>
-        <img
+        <img 
           src="./assets/images/newBlue.png"
           alt="Background Group Icon"
           class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
@@ -1397,7 +1402,7 @@
 
         <div class="container mx-auto sm:absolute sm:top-0 p-3 sm:p-0">
           <div class="grid grid-cols-3 sm:gap-3 gap-2">
-            <div
+            <div data-aos="fade-up"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div
@@ -1423,7 +1428,7 @@
               </p>
             </div>
 
-            <div
+            <div data-aos="fade-down"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div
@@ -1449,7 +1454,7 @@
               </p>
             </div>
 
-            <div
+            <div data-aos="fade-up"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div

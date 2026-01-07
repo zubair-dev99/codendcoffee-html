@@ -563,3 +563,27 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", openFaqOnResize);
 });
 
+
+
+
+
+// AOS initialization with mobile detection
+function initAOS() {
+  // Check if device is mobile
+  const isMobile = window.innerWidth <= 1024;
+
+  if (!isMobile) {
+    // Initialize AOS only for non-mobile devices
+    AOS.init({
+      duration: 1000,
+      delay: 200,
+      once: false,
+      disable: false, // Enable for desktop
+    });
+  } else {
+    // Disable AOS for mobile devices
+    AOS.init({
+      disable: true, // Disable for mobile
+    });
+  }
+}
