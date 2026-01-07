@@ -1006,3 +1006,422 @@ window.initTwoCardCarousel = initTwoCardCarousel;
 window.initCounterAnimation = initCounterAnimation;
 window.initHeaderScroll = initHeaderScroll;
 window.resetCounters = () => window.counterSystem?.resetAll();
+
+
+
+
+
+/* ............................................extra Carousel Container ........................................*/
+
+
+        // AOS initialization with mobile detection
+        function initAOS() {
+            const isMobile = window.innerWidth <= 768;
+            
+            if (!isMobile) {
+                AOS.init({
+                    duration: 1000,
+                    delay: 200,
+                    once: false,
+                    disable: false
+                });
+            } else {
+                AOS.init({ disable: true });
+            }
+        }
+
+        // Carousel data with images
+        const carouselData = [
+            {
+                id: 1,
+                title: "DE&I",
+                color: "text-[#0000ff]",
+                image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <div class="h-full flex flex-col md:flex-row ">
+                        <!-- Text Column (50%) -->
+                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Diversity, Equity, and Inclusion</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
+                                We are sustaining the right environment where people can be at their best, be authentic, and are treated with dignity and respect. This includes working every day to eliminate hate and bias from our industry.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition text-lg">
+                                LEARN MORE
+                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Image Column (50%) -->
+                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Diversity and Inclusion" 
+                                 class="content-image">
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 2,
+                title: "Environmental",
+                color: "text-[#0000ff]",
+                image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <div class="h-full flex flex-col md:flex-row ">
+                        <!-- Text Column (50%) -->
+                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Environmental Responsibility</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
+                                Committed to reducing our carbon footprint and promoting sustainable practices across all operations. We aim to achieve net-zero emissions by 2040 through innovation and renewable energy investments.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition text-lg">
+                                EXPLORE INITIATIVES
+                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Image Column (50%) -->
+                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Environmental Responsibility" 
+                                 class="content-image">
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 3,
+                title: "Innovation",
+                color: "text-[#0000ff]",
+                image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <div class="h-full flex flex-col md:flex-row ">
+                        <!-- Text Column (50%) -->
+                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Innovation & Technology</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
+                                Driving progress through cutting-edge technology and creative solutions. Our R&D investments focus on sustainable materials, circular economy models, and digital transformation.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition text-lg">
+                                VIEW PROJECTS
+                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Image Column (50%) -->
+                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Innovation Technology" 
+                                 class="content-image">
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 4,
+                title: "Safety",
+                color: "text-[#0000ff]",
+                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                content: `
+                    <div class="h-full flex flex-col md:flex-row ">
+                        <!-- Text Column (50%) -->
+                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Safety & Well-being</h2>
+                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
+                                Ensuring the health, safety, and well-being of our employees, partners, and communities is our top priority. We maintain the highest safety standards across all facilities worldwide.
+                            </p>
+                            <a href="#" class="inline-flex items-center text-red-600 font-semibold hover:text-red-800 transition text-lg">
+                                SAFETY PROTOCOLS
+                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Image Column (50%) -->
+                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                 alt="Safety First" 
+                                 class="content-image">
+                        </div>
+                    </div>
+                `
+            }
+        ];
+
+        // Carousel state
+        let currentSlide = 0;
+        let autoPlayInterval;
+        let isAutoPlay = true;
+        let isAnimating = false;
+        const slideDuration = 5000;
+
+        // DOM Elements
+        const tabsContainer = document.getElementById('tabs-container');
+        const carouselTrack = document.getElementById('carousel-track');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressFill = document.getElementById('progress-fill');
+
+        // Initialize carousel with infinite loop
+        function initCarousel() {
+            // Create tabs
+            carouselData.forEach((slide, index) => {
+                // Create tab button
+                const tabBtn = document.createElement('button');
+                tabBtn.className = `tab-btn w-full text-left p-4 rounded-lg ${index === 0 ? 'active' : ''}`;
+                tabBtn.innerHTML = `
+                    <div class="flex items-center text-sm font-['poppins] font-normal">
+                        <span class="justify-center ${slide.color} mr-8">0${slide.id}</span>
+                        <span class="tab-title">${slide.title}</span>
+                    </div>
+                `;
+                tabBtn.addEventListener('click', () => {
+                    if (!isAnimating) goToSlide(index);
+                });
+                tabsContainer.appendChild(tabBtn);
+                
+                // Create carousel slide
+                const carouselSlide = document.createElement('div');
+                carouselSlide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+                carouselSlide.innerHTML = slide.content;
+                carouselTrack.appendChild(carouselSlide);
+            });
+            
+            // Clone first and last slides for infinite loop
+            const firstSlide = carouselTrack.firstElementChild.cloneNode(true);
+            const lastSlide = carouselTrack.lastElementChild.cloneNode(true);
+            
+            // Add cloned slides
+            carouselTrack.appendChild(firstSlide);
+            carouselTrack.insertBefore(lastSlide, carouselTrack.firstElementChild);
+            
+            // Set initial position to show first real slide
+            updateCarouselPosition(true);
+            
+            // Start autoplay
+            startAutoPlay();
+            
+            // Add event listeners
+            prevBtn.addEventListener('click', showPrevSlide);
+            nextBtn.addEventListener('click', showNextSlide);
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Add transition end listener for infinite loop
+            carouselTrack.addEventListener('transitionend', handleTransitionEnd);
+        }
+
+        // Update carousel position
+        function updateCarouselPosition(initial = false) {
+            const slideWidth = 100; // 100% per slide
+            // Add 1 to account for cloned slide at start
+            const position = (currentSlide + 1) * slideWidth;
+            
+            if (!initial) {
+                carouselTrack.style.transition = 'transform 0.8s ease-in-out';
+            } else {
+                carouselTrack.style.transition = 'none';
+            }
+            
+            carouselTrack.style.transform = `translateX(-${position}%)`;
+        }
+
+        // Handle transition end for infinite loop
+        function handleTransitionEnd() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            
+            // If we're at the cloned first slide (position 0)
+            if (currentSlide === -1) {
+                carouselTrack.style.transition = 'none';
+                currentSlide = carouselData.length - 1;
+                updateCarouselPosition(true);
+                updateActiveSlide();
+            }
+            // If we're at the cloned last slide (position slides.length - 1)
+            else if (currentSlide === carouselData.length) {
+                carouselTrack.style.transition = 'none';
+                currentSlide = 0;
+                updateCarouselPosition(true);
+                updateActiveSlide();
+            }
+            
+            updateTabs();
+            isAnimating = false;
+        }
+
+        // Update active slide styling
+        function updateActiveSlide() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            slides.forEach((slide, index) => {
+                if (index === currentSlide + 1) { // +1 for cloned slide offset
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+        }
+
+        // Update tabs
+        function updateTabs() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            tabs.forEach((tab, index) => {
+                if (index === currentSlide) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+        }
+
+        // Go to specific slide with animation
+        function goToSlide(index) {
+            if (isAnimating || index === currentSlide) return;
+            
+            isAnimating = true;
+            const direction = index > currentSlide ? 'next' : 'prev';
+            
+            // Update current slide
+            currentSlide = index;
+            
+            // Add animation class
+            const slides = document.querySelectorAll('.carousel-slide');
+            const activeIndex = currentSlide + 1; // +1 for cloned slide offset
+            
+            slides[activeIndex].classList.remove('slide-next', 'slide-prev');
+            slides[activeIndex].classList.add(direction === 'next' ? 'slide-next' : 'slide-prev');
+            
+            // Update carousel position
+            updateCarouselPosition();
+            
+            // Update active slide
+            updateActiveSlide();
+            
+            // Reset autoplay
+            resetAutoPlay();
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Update tabs immediately
+            updateTabs();
+        }
+
+        // Show next slide
+        function showNextSlide() {
+            if (isAnimating) return;
+            
+            isAnimating = true;
+            currentSlide = (currentSlide + 1) % carouselData.length;
+            
+            // Add animation class
+            const slides = document.querySelectorAll('.carousel-slide');
+            const activeIndex = currentSlide + 1; // +1 for cloned slide offset
+            
+            slides[activeIndex].classList.remove('slide-next', 'slide-prev');
+            slides[activeIndex].classList.add('slide-next');
+            
+            // Update carousel position
+            updateCarouselPosition();
+            
+            // Update active slide
+            updateActiveSlide();
+            
+            // Reset autoplay
+            resetAutoPlay();
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Update tabs immediately
+            updateTabs();
+        }
+
+        // Show previous slide
+        function showPrevSlide() {
+            if (isAnimating) return;
+            
+            isAnimating = true;
+            currentSlide = (currentSlide - 1 + carouselData.length) % carouselData.length;
+            
+            // Add animation class
+            const slides = document.querySelectorAll('.carousel-slide');
+            const activeIndex = currentSlide + 1; // +1 for cloned slide offset
+            
+            slides[activeIndex].classList.remove('slide-next', 'slide-prev');
+            slides[activeIndex].classList.add('slide-prev');
+            
+            // Update carousel position
+            updateCarouselPosition();
+            
+            // Update active slide
+            updateActiveSlide();
+            
+            // Reset autoplay
+            resetAutoPlay();
+            
+            // Update progress bar
+            updateProgressBar();
+            
+            // Update tabs immediately
+            updateTabs();
+        }
+
+        // Start autoplay
+        function startAutoPlay() {
+            if (isAutoPlay) {
+                autoPlayInterval = setInterval(showNextSlide, slideDuration);
+            }
+        }
+
+        // Reset autoplay timer
+        function resetAutoPlay() {
+            if (isAutoPlay) {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+        }
+
+        // Update progress bar animation
+        function updateProgressBar() {
+            progressFill.classList.remove('active');
+            void progressFill.offsetWidth;
+            progressFill.classList.add('active');
+        }
+
+        // Initialize everything on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initAOS();
+            initCarousel();
+        });
+
+        // Re-initialize AOS on window resize
+        window.addEventListener('resize', initAOS);
+        
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carouselTrack.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+        
+        carouselTrack.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+        
+        function handleSwipe() {
+            if (isAnimating) return;
+            
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    showNextSlide();
+                } else {
+                    // Swipe right - previous slide
+                    showPrevSlide();
+                }
+            }
+        }
