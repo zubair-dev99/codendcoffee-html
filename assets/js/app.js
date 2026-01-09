@@ -509,15 +509,15 @@ function initTwoCardCarousel() {
     totalSlides = Math.max(1, Math.ceil(originals.length / cardsPerSlide));
   }
 
-  function setCardWidths() {
-    const containerWidth =
-      viewport.offsetWidth || viewport.getBoundingClientRect().width;
-    const cardWidth = containerWidth / cardsPerSlide;
-    Array.from(track.children).forEach((card) => {
-      card.style.minWidth = `${cardWidth}px`;
-      card.style.width = `${cardWidth}px`;
-    });
-  }
+ function setCardWidths() {
+  const containerWidth = viewport.offsetWidth;
+  const cardWidth = containerWidth / cardsPerSlide;
+
+  Array.from(track.children).forEach((card) => {
+    card.style.minWidth = `${cardWidth}px`;
+    card.style.width = `${cardWidth}px`;
+  });
+}
 
   function setTransition(enabled) {
     track.style.transition = enabled
@@ -526,8 +526,7 @@ function initTwoCardCarousel() {
   }
 
   function translateToIndex(index) {
-    const containerWidth =
-      viewport.offsetWidth || viewport.getBoundingClientRect().width;
+    const containerWidth = viewport.offsetWidth || viewport.getBoundingClientRect().width;
     track.style.transform = `translateX(${-index * containerWidth}px)`;
   }
 
@@ -574,9 +573,7 @@ function initTwoCardCarousel() {
     });
 
     // Prepend in correct order
-    tail
-      .reverse()
-      .forEach((clone) => track.insertBefore(clone, track.firstChild));
+    tail.reverse().forEach((clone) => track.insertBefore(clone, track.firstChild));
     head.forEach((clone) => track.appendChild(clone));
 
     setCardWidths();
@@ -1467,4 +1464,123 @@ function handleSwipe() {
       showPrevSlide();
     }
   }
+}
+
+
+
+// ..................................Faqs........................................
+
+
+// FAQ accordion helpers (keeps inline handlers working)
+function toggleFaq(button, faqNumber) {
+  const faqItem = button.closest(".faq-item");
+  const answer = faqItem?.querySelector(".faq-answer");
+  const icon = faqItem?.querySelector(".icon-plus i");
+  const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+  closeOtherFAQs(faqNumber);
+
+  if (isExpanded) {
+    closeFaq(button, answer, icon);
+  } else {
+    openFaq(button, answer, icon);
+  }
+}
+
+function openFaq(button, answer, icon) {
+  if (!button || !answer || !icon) return;
+
+  button.setAttribute("aria-expanded", "true");
+  answer.setAttribute("aria-hidden", "false");
+
+  answer.style.maxHeight = answer.scrollHeight + "px";
+  answer.classList.add("open");
+
+  icon.classList.remove("fa-plus");
+  icon.classList.add("fa-minus");
+  icon.style.transform = "rotate(180deg)";
+
+  button.style.fontWeight = "600";
+  button.closest(".faq-item")?.classList.add("active");
+}
+
+function closeFaq(button, answer, icon) {
+  if (!button || !answer || !icon) return;
+
+  button.setAttribute("aria-expanded", "false");
+  answer.setAttribute("aria-hidden", "true");
+
+  answer.style.maxHeight = "0";
+  setTimeout(() => answer.classList.remove("open"), 300);
+
+  icon.classList.remove("fa-minus");
+  icon.classList.add("fa-plus");
+  icon.style.transform = "rotate(0deg)";
+
+  button.style.fontWeight = "";
+  button.closest(".faq-item")?.classList.remove("active");
+}
+
+function closeOtherFAQs(currentFaq) {
+  const allFaqs = document.querySelectorAll(".faq-item");
+  allFaqs.forEach((faq, index) => {
+    if (index + 1 !== currentFaq) {
+      const answer = faq.querySelector(".faq-answer");
+      const button = faq.querySelector(".faq-question");
+      const icon = faq.querySelector(".icon-plus i");
+      if (answer?.classList.contains("open")) {
+        closeFaq(button, answer, icon);
+      }
+    }
+  });
+}
+
+function closeAllFAQs() {
+  const allFaqs = document.querySelectorAll(".faq-item");
+  allFaqs.forEach((faq) => {
+    const answer = faq.querySelector(".faq-answer");
+    const button = faq.querySelector(".faq-question");
+    const icon = faq.querySelector(".icon-plus i");
+    if (answer?.classList.contains("open")) {
+      closeFaq(button, answer, icon);
+    }
+  });
+}
+
+function initFaqAccessibility() {
+  // Keyboard support
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      const focusedElement = document.activeElement;
+      if (focusedElement.classList.contains("faq-question")) {
+        e.preventDefault();
+        const faqNumber =
+          Array.from(document.querySelectorAll(".faq-question")).indexOf(focusedElement) + 1;
+        toggleFaq(focusedElement, faqNumber);
+      }
+    }
+
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      const currentFaq = document.activeElement;
+      const allFaqButtons = Array.from(document.querySelectorAll(".faq-question"));
+      const currentIndex = allFaqButtons.indexOf(currentFaq);
+
+      if (currentIndex !== -1) {
+        const nextIndex =
+          e.key === "ArrowDown"
+            ? (currentIndex + 1) % allFaqButtons.length
+            : (currentIndex - 1 + allFaqButtons.length) % allFaqButtons.length;
+        allFaqButtons[nextIndex].focus();
+      }
+    }
+  });
+
+  // Close all FAQs when clicking outside (optional)
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".faq-item") && !e.target.closest(".faq-question")) {
+      // Uncomment to close when clicking outside:
+      // closeAllFAQs();
+    }
+  });
 }

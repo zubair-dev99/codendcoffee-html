@@ -398,7 +398,6 @@
     >
       <!-- Background decorative image -->
       <img
-        
         src="./assets/images/double.png"
         alt=""
         class="absolute -right-16 sm:-right-[200px] sm:bottom-[20px] bottom-[100px] w-[200px] h-[205px] sm:w-[400px] sm:h-[265px] md:w-[700px] md:h-[371px] 2xl:w-[700px] 2xl:h-[400px] opacity-70 md:opacity-100"
@@ -575,7 +574,7 @@
                 <div class="stat-item">
                   <div class="flex justify-between items-center">
                     <p
-                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.4)_100%)] text-white px-2 py-1 flex items-center "
+                      class="font-['Poppins'] font-medium text-[13px] leading-[27px] rounded-2xl whitespace-nowrap bg-[linear-gradient(to_right,rgba(255,255,255,0)_0%,rgba(255,255,255,0)_70%,rgba(255,255,255,0.4)_100%)] text-white px-2 py-1 flex items-center"
                     >
                       <span
                         class="counter inline-block w-[30px] text-right"
@@ -1386,7 +1385,7 @@
       <div
         class="flex justify-center items-center sm:mt-[60px] mt-[0px] relative"
       >
-        <img 
+        <img
           src="./assets/images/newBlue1.png"
           alt="Background Group Icon"
           class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
@@ -1394,7 +1393,7 @@
         <div
           class="bg-[#002BFF]/40 min-[1751px]:bg-white w-full h-[50px] sm:block hidden mt-[30px]"
         ></div>
-        <img 
+        <img
           src="./assets/images/newBlue.png"
           alt="Background Group Icon"
           class="w-[300px] h-[200px] sm:block hidden mt-[60px]"
@@ -1402,7 +1401,8 @@
 
         <div class="container mx-auto sm:absolute sm:top-0 p-3 sm:p-0">
           <div class="grid grid-cols-3 sm:gap-3 gap-2">
-            <div data-aos="fade-up"
+            <div
+              data-aos="fade-up"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div
@@ -1428,7 +1428,8 @@
               </p>
             </div>
 
-            <div data-aos="fade-down"
+            <div
+              data-aos="fade-down"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div
@@ -1454,7 +1455,8 @@
               </p>
             </div>
 
-            <div data-aos="fade-up"
+            <div
+              data-aos="fade-up"
               class="rounded-[11px] lg:h-[300px] md:h-auto h-auto border border-white/70 bg-white/40 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_-3px_rgba(0,0,0,0.1),0_15px_25px_-2px_rgba(0,0,0,0.06)] transition-all sm:p-4 p-1"
             >
               <div
@@ -1986,9 +1988,7 @@
             id="carousel-track"
             class="flex transition-transform duration-500"
           >
-            <div
-              class="lg:w-1/2 md:w-1/2 sm:w-full w-full sm:p-4 p-2 carousel-item"
-            >
+            <div class="twc-slide-item sm:p-4 p-2">
               <a
                 href=""
                 class="group block transition-all duration-300 hover:scale-[1.02]"
@@ -2172,6 +2172,230 @@
               class="w-[16px] h-[14px] ml-2"
             />
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ..............FAQ's................ -->
+
+    <section
+      class="container grid grid-cols-1 lg:grid-cols-2 sm:pt-[100px] pt-[50px]"
+    >
+      <div>
+        <h2
+          class="sm:text-[50px] text-[34px] font-bold text-[#212121] w-[399px] sm:leading-[65px] leading-[42px] font-['poppins']"
+        >
+          We're here to answer all your questions
+        </h2>
+        <a
+          class="inline-flex mt-[38px] items-center justify-center w-full sm:w-[190px] h-[43px] font-['Poppins'] text-sm rounded-sm bg-dark text-white font-semibold shadow-md hover:bg-[#0000CC] transition-all hover:scale-[1.02] hover:shadow-lg"
+          href="#contact"
+        >
+          Get in Touch
+          <img
+            src="./assets/images/Group105.png"
+            alt="Arrow"
+            class="w-4 h-3.5 ml-2"
+          />
+        </a>
+      </div>
+
+      <!-- FAQ Container -->
+      <div class="space-y-4" id="faqContainer">
+        <!-- FAQ Item 1 -->
+        <div
+          onclick="toggleFaq(this, 1)"
+          id="faq1-question"
+          aria-expanded="false"
+          aria-controls="faq1-answer"
+          class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+          role="region"
+          aria-labelledby="faq1-question"
+        >
+          <button
+            class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+          >
+            <span
+              class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[95%] w-full pr-4"
+            >
+              What industries does CodeNdCoffee typically serve?
+            </span>
+            <span class="icon-plus text-[#212121]" aria-hidden="true">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq1-answer"
+            role="region"
+            aria-hidden="true"
+          >
+            <div
+              class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+            >
+              <p>
+                CodeNdCoffee works with a diverse range of industries, including
+                e-commerce, healthcare, finance, education, and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div
+          onclick="toggleFaq(this, 2)"
+          id="faq2-question"
+          aria-expanded="false"
+          aria-controls="faq2-answer"
+          class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+          role="region"
+          aria-labelledby="faq2-question"
+        >
+          <button
+            class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+          >
+            <span
+              class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[92%] w-full pr-4"
+            >
+              How does CodeNdCoffee ensure the quality of its software products?
+            </span>
+            <span class="icon-plus text-[#212121]" aria-hidden="true">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq2-answer"
+            role="region"
+            aria-hidden="true"
+          >
+            <div
+              class="pt-[20px] text-[#656565] text-[15px] font-light font-['poppins'] leading-relaxed sm:w-[90%] w-full"
+            >
+              <p>
+                CodeNdCoffee works with a diverse range of industries, including
+                e-commerce, healthcare, finance, education, and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div
+          onclick="toggleFaq(this, 3)"
+          id="faq3-question"
+          aria-expanded="false"
+          aria-controls="faq3-answer"
+          class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+          role="region"
+          aria-labelledby="faq3-question"
+        >
+          <button
+            class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+          >
+            <span
+              class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[95%] w-full pr-4"
+            >
+              Can CodeNdCoffee support existing projects or only new
+              developments?
+            </span>
+            <span class="icon-plus text-[#212121]" aria-hidden="true">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq3-answer"
+            role="region"
+            aria-hidden="true"
+          >
+            <div
+              class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+            >
+              <p>
+                CodeNdCoffee works with a diverse range of industries, including
+                e-commerce, healthcare, finance, education, and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div
+          onclick="toggleFaq(this, 4)"
+          id="faq4-question"
+          aria-expanded="false"
+          aria-controls="faq4-answer"
+          class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+          role="region"
+          aria-labelledby="faq4-question"
+        >
+          <button
+            class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+          >
+            <span
+              class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[96%] w-full pr-4"
+            >
+              What is the typical project timeline for CodeNdCoffee?
+            </span>
+            <span class="icon-plus text-[#212121]" aria-hidden="true">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq4-answer"
+            role="region"
+            aria-hidden="true"
+          >
+            <div
+              class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+            >
+              <p>
+                CodeNdCoffee works with a diverse range of industries, including
+                e-commerce, healthcare, finance, education, and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div
+          onclick="toggleFaq(this, 5)"
+          id="faq5-question"
+          aria-expanded="false"
+          aria-controls="faq5-answer"
+          class="faq-item bg-[#fafafa] rounded-xl shadow-md overflow-hidden px-[28px] py-[14px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:drop-shadow-[0_8px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
+          role="region"
+          aria-labelledby="faq5-question"
+        >
+          <button
+            class="faq-question w-full text-left flex justify-between items-center focus:outline-none"
+          >
+            <span
+              class="text-[17px] font-semibold font-['poppins'] text-[#212121] sm:w-[98%] w-full"
+            >
+              How can I get a quote for a project with CodeNdCoffee?
+            </span>
+            <span class="icon-plus text-[#212121]" aria-hidden="true">
+              <i class="fas fa-plus"></i>
+            </span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq5-answer"
+            role="region"
+            aria-hidden="true"
+          >
+            <div
+              class="pt-[20px] text-[#656565] font-['poppins'] text-[15px] font-light leading-relaxed sm:w-[90%] w-full"
+            >
+              <p>
+                CodeNdCoffee works with a diverse range of industries, including
+                e-commerce, healthcare, finance, education, and technology.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
