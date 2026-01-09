@@ -154,7 +154,7 @@ function initSlider() {
       spaceBetween: 28,
       loop: true,
       centeredSlides: true,
-      grabCursor: true,
+      grabCursor: false,
       navigation: {
         nextEl: ".js-center-next",
         prevEl: ".js-center-prev",
@@ -405,7 +405,7 @@ function initFeedbackSlider() {
     isDragging = true;
     dragStartX = e.clientX;
     dragStartY = e.clientY;
-    track.style.cursor = "grabbing";
+    track.style.cursor = "pointer";
     e.preventDefault();
   });
 
@@ -417,7 +417,7 @@ function initFeedbackSlider() {
   track.addEventListener("mouseup", (e) => {
     if (!isDragging) return;
     isDragging = false;
-    track.style.cursor = "grab";
+    track.style.cursor = "pointer";
 
     const dragDistanceX = dragStartX - e.clientX;
     const dragDistanceY = dragStartY - e.clientY;
@@ -430,10 +430,10 @@ function initFeedbackSlider() {
 
   track.addEventListener("mouseleave", () => {
     isDragging = false;
-    track.style.cursor = "grab";
+    track.style.cursor = "pointer";
   });
 
-  track.style.cursor = "grab";
+  track.style.cursor = "pointer";
 
   let resizeTimeout;
   window.addEventListener("resize", () => {
@@ -500,7 +500,7 @@ function initTwoCardCarousel() {
   let isTransitioning = false;
 
   // Basic UX
-  track.style.cursor = "grab";
+  track.style.cursor = "pointer";
   viewport.style.width = "100%";
   viewport.style.touchAction = "pan-y";
 
@@ -675,7 +675,7 @@ function initTwoCardCarousel() {
     dragStartY = e.clientY;
     didDrag = false;
     track.classList.add("is-dragging");
-    track.style.cursor = "grabbing";
+    track.style.cursor = "pointer";
     // Avoid selecting text / dragging images
     e.preventDefault();
   });
@@ -708,7 +708,7 @@ function initTwoCardCarousel() {
   track.addEventListener("mouseleave", () => {
     isDragging = false;
     track.classList.remove("is-dragging");
-    track.style.cursor = "grab";
+    track.style.cursor = "pointer";
   });
 
   // Resize: rebuild clones + widths
@@ -1059,149 +1059,171 @@ const carouselData = [
     id: 1,
     title: "DE&I",
     color: "text-[#0000ff]",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
     content: `
-                    <div class="h-full flex flex-col md:flex-row ">
-                        <!-- Text Column (50%) -->
-                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
-                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Diversity, Equity, and Inclusion</h2>
-                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
-                                We are sustaining the right environment where people can be at their best, be authentic, and are treated with dignity and respect. This includes working every day to eliminate hate and bias from our industry.
-                            </p>
-                            <a href="#" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition text-lg">
-                                LEARN MORE
-                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Image Column (50%) -->
-                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Diversity and Inclusion" 
-                                 class="content-image">
-                        </div>
-                    </div>
-                `,
+      <div class="h-full w-full flex flex-col lg:flex-row items-center">
+        <!-- Text Column -->
+        <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Diversity, Equity, and Inclusion</h2>
+          <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
+            We are sustaining the right environment where people can be at their best, be authentic, and are treated with dignity and respect. This includes working every day to eliminate hate and bias from our industry.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-blue-700 font-semibold transition-all duration-300 text-lg group">
+            LEARN MORE
+             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="w-full lg:w-1/2 p-4 lg:p-8 flex items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" 
+                 alt="Diversity and Inclusion" 
+                 class="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+        </div>
+      </div>
+    `,
   },
   {
     id: 2,
     title: "Environmental",
     color: "text-[#0000ff]",
-    image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     content: `
-                    <div class="h-full flex flex-col md:flex-row ">
-                        <!-- Text Column (50%) -->
-                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
-                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Environmental Responsibility</h2>
-                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
-                                Committed to reducing our carbon footprint and promoting sustainable practices across all operations. We aim to achieve net-zero emissions by 2040 through innovation and renewable energy investments.
-                            </p>
-                            <a href="#" class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition text-lg">
-                                EXPLORE INITIATIVES
-                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Image Column (50%) -->
-                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Environmental Responsibility" 
-                                 class="content-image">
-                        </div>
-                    </div>
-                `,
+      <div class="h-full w-full flex flex-col lg:flex-row items-center">
+        <!-- Text Column -->
+        <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Environmental Responsibility</h2>
+          <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
+            Committed to reducing our carbon footprint and promoting sustainable practices across all operations. We aim to achieve net-zero emissions by 2040 through innovation and renewable energy investments.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-green-700 font-semibold transition-all duration-300 text-lg group">
+            EXPLORE INITIATIVES
+             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="w-full lg:w-1/2 p-4 lg:p-8 flex items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Environmental Responsibility" 
+                 class="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+        </div>
+      </div>
+    `,
   },
   {
     id: 3,
     title: "Innovation",
     color: "text-[#0000ff]",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     content: `
-                    <div class="h-full flex flex-col md:flex-row ">
-                        <!-- Text Column (50%) -->
-                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
-                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Innovation & Technology</h2>
-                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
-                                Driving progress through cutting-edge technology and creative solutions. Our R&D investments focus on sustainable materials, circular economy models, and digital transformation.
-                            </p>
-                            <a href="#" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-800 transition text-lg">
-                                VIEW PROJECTS
-                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Image Column (50%) -->
-                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Innovation Technology" 
-                                 class="content-image">
-                        </div>
-                    </div>
-                `,
+      <div class="h-full w-full flex flex-col lg:flex-row items-center">
+        <!-- Text Column -->
+        <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Innovation & Technology</h2>
+          <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
+            Driving progress through cutting-edge technology and creative solutions. Our R&D investments focus on sustainable materials, circular economy models, and digital transformation.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-purple-700 font-semibold transition-all duration-300 text-lg group">
+            VIEW PROJECTS
+            <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="w-full lg:w-1/2 p-4 lg:p-8 flex items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Innovation Technology" 
+                 class="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+        </div>
+      </div>
+    `,
   },
   {
     id: 4,
     title: "Safety",
     color: "text-[#0000ff]",
-    image:
-      "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     content: `
-                    <div class="h-full flex flex-col md:flex-row ">
-                        <!-- Text Column (50%) -->
-                        <div class="w-full md:w-1/2 px-4 flex flex-col justify-center">
-                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6">Safety & Well-being</h2>
-                            <p class="text-gray-600 leading-relaxed mb-6 md:mb-8">
-                                Ensuring the health, safety, and well-being of our employees, partners, and communities is our top priority. We maintain the highest safety standards across all facilities worldwide.
-                            </p>
-                            <a href="#" class="inline-flex items-center text-red-600 font-semibold hover:text-red-800 transition text-lg">
-                                SAFETY PROTOCOLS
-                                <i class="fas fa-arrow-right ml-3 text-xl"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Image Column (50%) -->
-                        <div class="w-full md:w-1/2 p-4 md:p-8 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Safety First" 
-                                 class="content-image">
-                        </div>
-                    </div>
-                `,
+      <div class="h-full w-full flex flex-col lg:flex-row items-center">
+        <!-- Text Column -->
+        <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Safety & Well-being</h2>
+          <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
+            Ensuring the health, safety, and well-being of our employees, partners, and communities is our top priority. We maintain the highest safety standards across all facilities worldwide.
+          </p>
+          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-red-700 font-semibold transition-all duration-300 text-lg group">
+            SAFETY PROTOCOLS
+             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="w-full lg:w-1/2 p-4 lg:p-8 flex items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0">
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                 alt="Safety First" 
+                 class="w-full h-[250px] md:h-[350px] lg:h-[400px] object-cover transform transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+        </div>
+      </div>
+    `,
   },
 ];
 
 // Carousel state
 let currentSlide = 0;
-let autoPlayInterval;
-let isAutoPlay = true;
 let isAnimating = false;
-const slideDuration = 5000;
 
 // DOM Elements
 const tabsContainer = document.getElementById("tabs-container");
 const carouselTrack = document.getElementById("carousel-track");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-const progressFill = document.getElementById("progress-fill");
 
-// Initialize carousel with infinite loop
+// Initialize carousel
 function initCarousel() {
+  // Clear existing content
+  tabsContainer.innerHTML = '';
+  carouselTrack.innerHTML = '';
+  
   // Create tabs
   carouselData.forEach((slide, index) => {
     // Create tab button
     const tabBtn = document.createElement("button");
-    tabBtn.className = `tab-btn w-full text-left p-4 rounded-lg ${
-      index === 0 ? "active" : ""
+    tabBtn.className = `tab-btn flex-shrink-0 lg:w-full text-left px-4 py-3 lg:px-6 lg:py-4 rounded-lg transition-all duration-500 ease-out ${
+      index === 0 
+        ? "active bg-gradient-to-r from-blue-50 to-white border-l-4 border-[#0000ff] shadow-sm mb-5" 
+        : "text-gray-600 hover:bg-gray-50 mb-5"
     }`;
     tabBtn.innerHTML = `
-                    <div class="flex items-center text-sm font-['poppins] font-normal">
-                        <span class="justify-center ${slide.color} mr-8">0${slide.id}</span>
-                        <span class="tab-title">${slide.title}</span>
-                    </div>
-                `;
+      <div class="flex items-center">
+        <span class="font-medium text-sm md:text-base lg:text-lg transition-all duration-300 ${
+          index === 0 ? "text-[#0000ff] font-semibold" : "text-gray-600"
+        }">${slide.title}</span>
+        <svg class="w-4 h-4 ml-2 transform transition-transform duration-300 ${
+          index === 0 ? "opacity-100 translate-x-0" : "opacity-0 "
+        }" fill="none" stroke="#0000ff" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </div>
+    `;
     tabBtn.addEventListener("click", () => {
       if (!isAnimating) goToSlide(index);
     });
@@ -1209,265 +1231,120 @@ function initCarousel() {
 
     // Create carousel slide
     const carouselSlide = document.createElement("div");
-    carouselSlide.className = `carousel-slide ${index === 0 ? "active" : ""}`;
+    carouselSlide.className = `carousel-slide absolute inset-0 w-full h-full ${
+      index === 0 ? "active opacity-100 scale-100" : "opacity-0 scale-95"
+    }`;
     carouselSlide.innerHTML = slide.content;
     carouselTrack.appendChild(carouselSlide);
   });
 
-  // Clone first and last slides for infinite loop
-  const firstSlide = carouselTrack.firstElementChild.cloneNode(true);
-  const lastSlide = carouselTrack.lastElementChild.cloneNode(true);
-
-  // Add cloned slides
-  carouselTrack.appendChild(firstSlide);
-  carouselTrack.insertBefore(lastSlide, carouselTrack.firstElementChild);
-
-  // Set initial position to show first real slide
-  updateCarouselPosition(true);
-
-  // Start autoplay
-  startAutoPlay();
-
-  // Add event listeners
-  prevBtn.addEventListener("click", showPrevSlide);
-  nextBtn.addEventListener("click", showNextSlide);
-
-  // Update progress bar
-  updateProgressBar();
-
-  // Add transition end listener for infinite loop
-  carouselTrack.addEventListener("transitionend", handleTransitionEnd);
-}
-
-// Update carousel position
-function updateCarouselPosition(initial = false) {
-  const slideWidth = 100; // 100% per slide
-  // Add 1 to account for cloned slide at start
-  const position = (currentSlide + 1) * slideWidth;
-
-  if (!initial) {
-    carouselTrack.style.transition = "transform 0.8s ease-in-out";
-  } else {
-    carouselTrack.style.transition = "none";
+  // Initialize AOS if function exists
+  if (typeof initAOS === 'function') {
+    initAOS();
   }
-
-  carouselTrack.style.transform = `translateX(-${position}%)`;
 }
 
-// Handle transition end for infinite loop
-function handleTransitionEnd() {
-  const slides = document.querySelectorAll(".carousel-slide");
-
-  // If we're at the cloned first slide (position 0)
-  if (currentSlide === -1) {
-    carouselTrack.style.transition = "none";
-    currentSlide = carouselData.length - 1;
-    updateCarouselPosition(true);
-    updateActiveSlide();
-  }
-  // If we're at the cloned last slide (position slides.length - 1)
-  else if (currentSlide === carouselData.length) {
-    carouselTrack.style.transition = "none";
-    currentSlide = 0;
-    updateCarouselPosition(true);
-    updateActiveSlide();
-  }
-
-  updateTabs();
-  isAnimating = false;
-}
-
-// Update active slide styling
-function updateActiveSlide() {
-  const slides = document.querySelectorAll(".carousel-slide");
-  slides.forEach((slide, index) => {
-    if (index === currentSlide + 1) {
-      // +1 for cloned slide offset
-      slide.classList.add("active");
-    } else {
-      slide.classList.remove("active");
-    }
-  });
-}
-
-// Update tabs
-function updateTabs() {
-  const tabs = document.querySelectorAll(".tab-btn");
-  tabs.forEach((tab, index) => {
-    if (index === currentSlide) {
-      tab.classList.add("active");
-    } else {
-      tab.classList.remove("active");
-    }
-  });
-}
-
-// Go to specific slide with animation
+// Professional slide animation with smooth transitions
 function goToSlide(index) {
   if (isAnimating || index === currentSlide) return;
-
+  
   isAnimating = true;
+  
+  // Get all slides and tabs
+  const slides = document.querySelectorAll(".carousel-slide");
+  const tabs = document.querySelectorAll(".tab-btn");
   const direction = index > currentSlide ? "next" : "prev";
-
+  
+  // Exit animation for current slide
+  const currentSlideEl = slides[currentSlide];
+  currentSlideEl.classList.add("exit-animation");
+  currentSlideEl.classList.remove("active", "opacity-100", "scale-100");
+  
+  // Prepare new slide with entrance animation
+  const newSlideEl = slides[index];
+  newSlideEl.classList.remove("opacity-0", "scale-95");
+  newSlideEl.classList.add(`enter-animation-${direction}`);
+  
+  // Update tabs with smooth transition
+  tabs.forEach((tab, tabIndex) => {
+    const titleSpan = tab.querySelector("span");
+    const arrowIcon = tab.querySelector("svg");
+    
+    if (tabIndex === index) {
+      // Active tab
+      tab.classList.add("active", "bg-gradient-to-r", "from-blue-50", "to-white", "border-l-4", "border-[#0000ff]", "shadow-sm", "mb-5");
+      tab.classList.remove("text-gray-600", "hover:bg-gray-50");
+      titleSpan.classList.add("text-[#0000ff]", "font-semibold");
+      titleSpan.classList.remove("text-gray-600");
+      arrowIcon.classList.add("opacity-100", "translate-x-0");
+      arrowIcon.classList.remove("opacity-0", "-translate-x-2");
+      arrowIcon.setAttribute("stroke", "#0000ff");
+    } else {
+      // Inactive tab
+      tab.classList.remove("active", "bg-gradient-to-r", "from-blue-50", "to-white", "border-l-4", "border-[#0000ff]", "shadow-sm");
+      tab.classList.add("text-gray-600", "hover:bg-gray-50", "mb-5");
+      titleSpan.classList.remove("text-[#0000ff]", "font-semibold");
+      titleSpan.classList.add("text-gray-600");
+      arrowIcon.classList.remove("opacity-100", "translate-x-0");
+      arrowIcon.classList.add("opacity-0", "-translate-x-2");
+      arrowIcon.setAttribute("stroke", "currentColor");
+    }
+  });
+  
   // Update current slide
   currentSlide = index;
-
-  // Add animation class
-  const slides = document.querySelectorAll(".carousel-slide");
-  const activeIndex = currentSlide + 1; // +1 for cloned slide offset
-
-  slides[activeIndex].classList.remove("slide-next", "slide-prev");
-  slides[activeIndex].classList.add(
-    direction === "next" ? "slide-next" : "slide-prev"
-  );
-
-  // Update carousel position
-  updateCarouselPosition();
-
-  // Update active slide
-  updateActiveSlide();
-
-  // Reset autoplay
-  resetAutoPlay();
-
-  // Update progress bar
-  updateProgressBar();
-
-  // Update tabs immediately
-  updateTabs();
-}
-
-// Show next slide
-function showNextSlide() {
-  if (isAnimating) return;
-
-  isAnimating = true;
-  currentSlide = (currentSlide + 1) % carouselData.length;
-
-  // Add animation class
-  const slides = document.querySelectorAll(".carousel-slide");
-  const activeIndex = currentSlide + 1; // +1 for cloned slide offset
-
-  slides[activeIndex].classList.remove("slide-next", "slide-prev");
-  slides[activeIndex].classList.add("slide-next");
-
-  // Update carousel position
-  updateCarouselPosition();
-
-  // Update active slide
-  updateActiveSlide();
-
-  // Reset autoplay
-  resetAutoPlay();
-
-  // Update progress bar
-  updateProgressBar();
-
-  // Update tabs immediately
-  updateTabs();
-}
-
-// Show previous slide
-function showPrevSlide() {
-  if (isAnimating) return;
-
-  isAnimating = true;
-  currentSlide = (currentSlide - 1 + carouselData.length) % carouselData.length;
-
-  // Add animation class
-  const slides = document.querySelectorAll(".carousel-slide");
-  const activeIndex = currentSlide + 1; // +1 for cloned slide offset
-
-  slides[activeIndex].classList.remove("slide-next", "slide-prev");
-  slides[activeIndex].classList.add("slide-prev");
-
-  // Update carousel position
-  updateCarouselPosition();
-
-  // Update active slide
-  updateActiveSlide();
-
-  // Reset autoplay
-  resetAutoPlay();
-
-  // Update progress bar
-  updateProgressBar();
-
-  // Update tabs immediately
-  updateTabs();
-}
-
-// Start autoplay
-function startAutoPlay() {
-  if (isAutoPlay) {
-    autoPlayInterval = setInterval(showNextSlide, slideDuration);
-  }
-}
-
-// Reset autoplay timer
-function resetAutoPlay() {
-  if (isAutoPlay) {
-    clearInterval(autoPlayInterval);
-    startAutoPlay();
-  }
-}
-
-// Update progress bar animation
-function updateProgressBar() {
-  progressFill.classList.remove("active");
-  void progressFill.offsetWidth;
-  progressFill.classList.add("active");
+  
+  // Wait for exit animation to complete, then start entrance
+  setTimeout(() => {
+    // Remove exit animation classes
+    currentSlideEl.classList.remove("exit-animation");
+    
+    // Add active classes to new slide
+    newSlideEl.classList.remove(`enter-animation-${direction}`);
+    newSlideEl.classList.add("active", "opacity-100", "scale-100");
+    
+    isAnimating = false;
+  }, 300);
 }
 
 // Initialize everything on page load
 document.addEventListener("DOMContentLoaded", function () {
-  initAOS();
   initCarousel();
 });
 
-// Re-initialize AOS on window resize
-window.addEventListener("resize", initAOS);
-
-// Touch/swipe support for mobile
+// Touch swipe support for mobile
 let touchStartX = 0;
 let touchEndX = 0;
 
-carouselTrack.addEventListener(
-  "touchstart",
-  (e) => {
+if (carouselTrack) {
+  carouselTrack.addEventListener("touchstart", (e) => {
     touchStartX = e.changedTouches[0].screenX;
-  },
-  false
-);
+  }, { passive: true });
 
-carouselTrack.addEventListener(
-  "touchend",
-  (e) => {
+  carouselTrack.addEventListener("touchend", (e) => {
     touchEndX = e.changedTouches[0].screenX;
     handleSwipe();
-  },
-  false
-);
+  }, { passive: true });
+}
 
 function handleSwipe() {
   if (isAnimating) return;
-
+  
   const swipeThreshold = 50;
   const diff = touchStartX - touchEndX;
-
+  
   if (Math.abs(diff) > swipeThreshold) {
     if (diff > 0) {
       // Swipe left - next slide
-      showNextSlide();
+      const nextSlide = (currentSlide + 1) % carouselData.length;
+      goToSlide(nextSlide);
     } else {
       // Swipe right - previous slide
-      showPrevSlide();
+      const prevSlide = (currentSlide - 1 + carouselData.length) % carouselData.length;
+      goToSlide(prevSlide);
     }
   }
 }
-
-
-
 // ..................................Faqs........................................
 
 
