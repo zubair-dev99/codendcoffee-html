@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNdCoffee - Case Studies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+
+    <!-- Case Study Detail View -->
+    <div id="detailView" class="fade-in">
+        <!-- Header with Back Button -->
+        <div class="bg-white border-b border-gray-200">
+            <div class="max-w-6xl mx-auto px-4 py-8">
+                <div id="detailHeader" class="grid md:grid-cols-3 gap-8 items-center"></div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+            <!-- Hero Image -->
+            <div id="detailHeroImage" class="rounded-3xl overflow-hidden shadow-2xl"></div>
+
+            <!-- Problem & Solution -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12 space-y-12">
+                <div id="problemSolution" class="grid md:grid-cols-2 gap-12"></div>
+
+                <!-- Results Metrics -->
+                <div id="resultsMetrics"></div>
+
+                <!-- Visual Showcase -->
+                <div id="visualShowcase"></div>
+
+                <!-- Client Testimonial -->
+                <div id="clientTestimonial"></div>
+            </div>
+
+           
+        </div>
+    </div>
+
+    <script>
+        const caseStudiesData = [
+            {
+                id: 'techventure-solutions',
+                clientName: 'TechVenture Solutions',
+                industry: 'Technology',
+                category: 'Web Development & SEO',
+                description: 'A B2B SaaS platform needed a complete digital transformation to scale their business and improve user acquisition through organic search.',
+                imageUrl: 'https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'TechVenture was struggling with an outdated website that didn\'t convert visitors and had poor search engine visibility, resulting in high customer acquisition costs.',
+                problemDetails: [
+                    'Website conversion rate was only 0.8%',
+                    'Zero organic traffic from search engines',
+                    'Slow page load times (5+ seconds)',
+                    'Poor mobile experience',
+                    'No clear value proposition or user flow',
+                ],
+                solution: 'We implemented a comprehensive digital strategy combining modern web development, SEO optimization, and conversion rate optimization.',
+                solutionSteps: [
+                    {
+                        title: 'Discovery & Strategy',
+                        description: 'Conducted user research, competitor analysis, and created a data-driven strategy',
+                    },
+                    {
+                        title: 'Modern Tech Stack',
+                        description: 'Built a lightning-fast React application with optimized performance',
+                    },
+                    {
+                        title: 'SEO Foundation',
+                        description: 'Implemented technical SEO, content strategy, and link building campaign',
+                    },
+                    {
+                        title: 'Conversion Optimization',
+                        description: 'A/B tested landing pages and user flows to maximize conversions',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Organic Traffic',
+                        value: '385%',
+                        change: '↑ 12,500 monthly visits',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Conversion Rate',
+                        value: '4.2%',
+                        change: '↑ 425% improvement',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'Page Speed',
+                        value: '0.9s',
+                        change: '↓ 82% faster',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Revenue Growth',
+                        value: '$2.4M',
+                        change: '↑ 340% increase',
+                        icon: 'dollar',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Modern, conversion-focused homepage design',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Analytics dashboard showing traffic growth',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Mobile-responsive design implementation',
+                    },
+                ],
+                testimonial: {
+                    quote: 'CodeNdCoffee transformed our entire digital presence. The results exceeded our expectations, and their team was professional, responsive, and truly understood our business needs. Our organic traffic has skyrocketed, and we\'re finally seeing the ROI we\'ve been looking for.',
+                    clientName: 'Sarah Mitchell',
+                    clientRole: 'CEO',
+                    clientCompany: 'TechVenture Solutions',
+                    clientImage: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: true,
+                technologies: ['React', 'Node.js', 'PostgreSQL', 'SEO Tools', 'Google Analytics'],
+                duration: '6 months',
+            },
+            {
+                id: 'urbanfit-wellness',
+                clientName: 'UrbanFit Wellness',
+                industry: 'Health & Fitness',
+                category: 'E-Commerce & Social Media',
+                description: 'A fitness brand needed an e-commerce platform and social media strategy to expand their online presence and drive sales.',
+                imageUrl: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'UrbanFit had great products but no online sales channel and minimal social media presence, limiting their growth potential.',
+                problemDetails: [
+                    'No e-commerce capability',
+                    'Limited brand awareness online',
+                    'Struggling with social media engagement',
+                    'Manual order processing',
+                    'No customer data or analytics',
+                ],
+                solution: 'We built a comprehensive e-commerce platform integrated with a data-driven social media marketing strategy.',
+                solutionSteps: [
+                    {
+                        title: 'E-Commerce Platform',
+                        description: 'Developed a custom online store with seamless checkout and inventory management',
+                    },
+                    {
+                        title: 'Social Media Strategy',
+                        description: 'Created engaging content calendar and influencer partnership program',
+                    },
+                    {
+                        title: 'Payment Integration',
+                        description: 'Integrated multiple payment gateways for smooth transactions',
+                    },
+                    {
+                        title: 'Analytics Setup',
+                        description: 'Implemented tracking and reporting for data-driven decisions',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Online Revenue',
+                        value: '$850K',
+                        change: '↑ From zero to hero',
+                        icon: 'dollar',
+                    },
+                    {
+                        label: 'Social Followers',
+                        value: '45K+',
+                        change: '↑ 2,800% growth',
+                        icon: 'users',
+                    },
+                    {
+                        label: 'Engagement Rate',
+                        value: '8.5%',
+                        change: '↑ 650% improvement',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'Customer Base',
+                        value: '12,400',
+                        change: '↑ New customers',
+                        icon: 'users',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'E-commerce storefront with intuitive product browsing',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/6954174/pexels-photo-6954174.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Social media campaign generating high engagement',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Mobile shopping experience optimization',
+                    },
+                ],
+                testimonial: {
+                    quote: 'Working with CodeNdCoffee was a game-changer for our business. They didn\'t just build us a website—they created an entire ecosystem that drives sales and builds our brand. Our online revenue now exceeds our physical retail stores!',
+                    clientName: 'Marcus Johnson',
+                    clientRole: 'Founder',
+                    clientCompany: 'UrbanFit Wellness',
+                    clientImage: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: true,
+                technologies: ['Shopify', 'React', 'Node.js', 'Stripe', 'Instagram API'],
+                duration: '4 months',
+            },
+            {
+                id: 'greenleaf-consulting',
+                clientName: 'GreenLeaf Consulting',
+                industry: 'Professional Services',
+                category: 'Brand Development & Web Design',
+                description: 'A sustainability consulting firm needed a professional web presence to attract enterprise clients and establish thought leadership.',
+                imageUrl: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'GreenLeaf relied entirely on referrals and had no digital presence, making it difficult to scale and attract larger enterprise clients.',
+                problemDetails: [
+                    'No website or online presence',
+                    'Unclear brand positioning',
+                    'Difficulty attracting enterprise clients',
+                    'No content marketing strategy',
+                    'Limited professional credibility online',
+                ],
+                solution: 'We created a comprehensive brand identity and authoritative website that positions them as industry leaders.',
+                solutionSteps: [
+                    {
+                        title: 'Brand Strategy',
+                        description: 'Developed brand positioning, messaging, and visual identity',
+                    },
+                    {
+                        title: 'Website Design',
+                        description: 'Created a professional, trust-building website with case studies',
+                    },
+                    {
+                        title: 'Content Hub',
+                        description: 'Built a blog and resource center for thought leadership',
+                    },
+                    {
+                        title: 'Lead Generation',
+                        description: 'Implemented contact forms, newsletter, and consultation booking',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Enterprise Clients',
+                        value: '18',
+                        change: '↑ Major contracts',
+                        icon: 'users',
+                    },
+                    {
+                        label: 'Website Visitors',
+                        value: '8,500',
+                        change: '↑ Monthly visits',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Lead Quality',
+                        value: '4.8/5',
+                        change: '↑ Qualified leads',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'Client Value',
+                        value: '+290%',
+                        change: '↑ Average deal size',
+                        icon: 'dollar',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Professional homepage establishing credibility',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Resource center and blog for thought leadership',
+                    },
+                ],
+                testimonial: {
+                    quote: 'CodeNdCoffee helped us go from invisible to indispensable. Our new website and brand identity opened doors to Fortune 500 clients we could only dream of before. The ROI has been phenomenal.',
+                    clientName: 'Dr. Emily Chen',
+                    clientRole: 'Managing Director',
+                    clientCompany: 'GreenLeaf Consulting',
+                    clientImage: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: false,
+                technologies: ['Next.js', 'Contentful CMS', 'Tailwind CSS', 'Firebase'],
+                duration: '3 months',
+            },
+            {
+                id: 'cloudtech-ai-platform',
+                clientName: 'CloudTech AI Platform',
+                industry: 'Artificial Intelligence',
+                category: 'GCP & Machine Learning',
+                description: 'An AI startup needed to build a scalable machine learning platform powered by Google Cloud Platform with advanced analytics and real-time predictions.',
+                imageUrl: 'https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'CloudTech struggled with infrastructure scalability, inefficient data pipelines, and high cloud costs. Their legacy system couldn\'t handle growing data volumes.',
+                problemDetails: [
+                    'Monthly cloud costs exceeded $45,000',
+                    'Data processing latency of 6+ hours',
+                    'Poor model accuracy with outdated ML infrastructure',
+                    'Limited real-time analytics capabilities',
+                    'Difficult to scale during peak demand',
+                ],
+                solution: 'We architected a complete migration to Google Cloud Platform with BigQuery, Vertex AI, and Cloud Functions, enabling real-time ML predictions at scale.',
+                solutionSteps: [
+                    {
+                        title: 'GCP Architecture Design',
+                        description: 'Designed scalable architecture using Cloud Run, Pub/Sub, and Cloud Storage',
+                    },
+                    {
+                        title: 'ML Pipeline Optimization',
+                        description: 'Implemented Vertex AI for automated model training and deployment',
+                    },
+                    {
+                        title: 'Real-time Analytics',
+                        description: 'Built BigQuery dashboards with live data streaming from multiple sources',
+                    },
+                    {
+                        title: 'Cost Optimization',
+                        description: 'Implemented resource allocation and auto-scaling policies',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Processing Speed',
+                        value: '94%',
+                        change: '↓ Latency reduced to 22 mins',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Model Accuracy',
+                        value: '96.8%',
+                        change: '↑ 28% improvement',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'Cost Reduction',
+                        value: '$18K/mo',
+                        change: '↓ 60% savings',
+                        icon: 'dollar',
+                    },
+                    {
+                        label: 'Users Served',
+                        value: '2.5M+',
+                        change: '↑ 500% capacity',
+                        icon: 'users',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/3714896/pexels-photo-3714896.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'GCP Vertex AI ML pipeline dashboard',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3862633/pexels-photo-3862633.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Real-time BigQuery analytics insights',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Cloud infrastructure monitoring and alerts',
+                    },
+                ],
+                testimonial: {
+                    quote: 'The migration to GCP transformed our AI platform. We\'re processing 5x more data at 94% lower latency, and our costs dropped significantly. CodeNdCoffee\'s expertise with Vertex AI was invaluable.',
+                    clientName: 'James Rodriguez',
+                    clientRole: 'CTO',
+                    clientCompany: 'CloudTech AI Platform',
+                    clientImage: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: true,
+                technologies: ['Google Cloud Platform', 'Vertex AI', 'BigQuery', 'Cloud Run', 'Pub/Sub', 'Python', 'TensorFlow'],
+                duration: '5 months',
+            },
+            {
+                id: 'azure-enterprise-analytics',
+                clientName: 'Enterprise Analytics Corp',
+                industry: 'Business Intelligence',
+                category: 'Azure & Data Analytics',
+                description: 'A Fortune 500 company needed a comprehensive data platform on Microsoft Azure to consolidate data from 50+ sources with advanced BI capabilities.',
+                imageUrl: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'Data scattered across legacy systems, siloed analytics teams, poor data quality, and no unified reporting across departments.',
+                problemDetails: [
+                    'Data spread across 50+ disconnected systems',
+                    'No centralized data governance',
+                    'Reports took weeks to generate',
+                    'Data inconsistencies across departments',
+                    'Limited self-service analytics for business users',
+                ],
+                solution: 'Built an enterprise data lake on Azure Synapse with real-time ETL, Power BI integration, and unified data governance.',
+                solutionSteps: [
+                    {
+                        title: 'Azure Data Lake Setup',
+                        description: 'Architected multi-layer data lake with Bronze, Silver, Gold layers',
+                    },
+                    {
+                        title: 'ETL Pipeline',
+                        description: 'Created Azure Data Factory pipelines to ingest from 50+ sources daily',
+                    },
+                    {
+                        title: 'Data Governance',
+                        description: 'Implemented Purview for metadata management and data lineage',
+                    },
+                    {
+                        title: 'BI Dashboards',
+                        description: 'Built 200+ Power BI reports with RLS for 1000+ business users',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Report Generation',
+                        value: '95%',
+                        change: '↓ 99% faster, from weeks to mins',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Data Quality',
+                        value: '99.2%',
+                        change: '↑ Accuracy score',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'User Adoption',
+                        value: '1000+',
+                        change: '↑ Active BI users',
+                        icon: 'users',
+                    },
+                    {
+                        label: 'ROI',
+                        value: '320%',
+                        change: '↑ First year',
+                        icon: 'dollar',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Azure Synapse Analytics dashboard',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Power BI executive reporting suite',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Data governance and lineage in Purview',
+                    },
+                ],
+                testimonial: {
+                    quote: 'Azure Synapse with Power BI has revolutionized how we make decisions. Our analytics team went from bottlenecks to enablers, and business leaders now have self-service access to insights. This is transformational.',
+                    clientName: 'Patricia Wong',
+                    clientRole: 'VP Data & Analytics',
+                    clientCompany: 'Enterprise Analytics Corp',
+                    clientImage: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: true,
+                technologies: ['Microsoft Azure', 'Synapse Analytics', 'Power BI', 'Data Factory', 'Purview', 'SQL', 'Spark'],
+                duration: '8 months',
+            },
+            {
+                id: 'aws-saas-infrastructure',
+                clientName: 'ScaleVenture SaaS',
+                industry: 'Software as a Service',
+                category: 'AWS Cloud Infrastructure',
+                description: 'A fast-growing SaaS company needed AWS cloud infrastructure to support 10x growth with high availability, security, and compliance requirements.',
+                imageUrl: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                problem: 'Current infrastructure couldn\'t handle traffic spikes, had security vulnerabilities, poor disaster recovery, and compliance gaps.',
+                problemDetails: [
+                    'Frequent downtime during peak usage',
+                    'Security vulnerabilities in legacy setup',
+                    'No proper disaster recovery plan',
+                    'HIPAA and SOC 2 compliance gaps',
+                    'Difficult to scale resources quickly',
+                ],
+                solution: 'Migrated to AWS with auto-scaling, multi-region redundancy, and comprehensive security and compliance framework.',
+                solutionSteps: [
+                    {
+                        title: 'AWS Architecture',
+                        description: 'Designed highly available infrastructure with EC2, RDS, and ALB across multiple AZs',
+                    },
+                    {
+                        title: 'Security & Compliance',
+                        description: 'Implemented VPC, IAM policies, WAF, and achieved HIPAA/SOC 2 compliance',
+                    },
+                    {
+                        title: 'Auto-scaling',
+                        description: 'Set up Auto Scaling Groups and Lambda for serverless components',
+                    },
+                    {
+                        title: 'Disaster Recovery',
+                        description: 'Built multi-region failover with RTO of 15 minutes',
+                    },
+                ],
+                metrics: [
+                    {
+                        label: 'Uptime',
+                        value: '99.99%',
+                        change: '↑ From 98.5%',
+                        icon: 'target',
+                    },
+                    {
+                        label: 'Scale Capacity',
+                        value: '10x',
+                        change: '↑ Without limits',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Response Time',
+                        value: '120ms',
+                        change: '↓ 70% faster',
+                        icon: 'trending',
+                    },
+                    {
+                        label: 'Compliance',
+                        value: '100%',
+                        change: '↑ HIPAA & SOC 2',
+                        icon: 'target',
+                    },
+                ],
+                images: [
+                    {
+                        url: 'https://images.pexels.com/photos/3551188/pexels-photo-3551188.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'AWS multi-region architecture diagram',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/3945687/pexels-photo-3945687.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'CloudWatch monitoring and alerting',
+                    },
+                    {
+                        url: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=1200',
+                        caption: 'Auto-scaling performance under load',
+                    },
+                ],
+                testimonial: {
+                    quote: 'AWS transformed our infrastructure. We went from stressed about uptime to confident we can scale infinitely. The security and compliance setup gave us peace of mind, and our customers feel the performance improvements immediately.',
+                    clientName: 'David Chen',
+                    clientRole: 'CEO',
+                    clientCompany: 'ScaleVenture SaaS',
+                    clientImage: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
+                },
+                featured: true,
+                technologies: ['AWS EC2', 'RDS', 'Lambda', 'S3', 'CloudFront', 'WAF', 'Terraform'],
+                duration: '6 months',
+            },
+        ];
+
+        const iconMap = {
+            trending: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L1 18"/><path d="M16 7h6v6"/></svg>`,
+            users: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+            dollar: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
+            target: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`
+        };
+
+        let currentImageIndex = 0;
+
+        function showDetailView(id) {
+            const caseStudy = caseStudiesData.find(cs => cs.id === id);
+            if (!caseStudy) return;
+
+            currentImageIndex = 0;
+
+            window.scrollTo(0, 0);
+
+            renderDetailHeader(caseStudy);
+            renderDetailHeroImage(caseStudy);
+            renderProblemSolution(caseStudy);
+            renderResultsMetrics(caseStudy);
+            renderVisualShowcase(caseStudy);
+            renderClientTestimonial(caseStudy);
+        }
+
+        function showListView() {
+            // Removed as list view is no longer present
+        }
+
+        function renderDetailHeader(caseStudy) {
+            const techTags = caseStudy.technologies?.map(tech =>
+                `<span class="px-3 py-1 bg-white text-blue-700 rounded-lg text-xs font-medium border border-blue-200">${tech}</span>`
+            ).join('') || '';
+
+            document.getElementById('detailHeader').innerHTML = `
+                <div class="md:col-span-2">
+                    <div class="flex gap-3 mb-4">
+                        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                            ${caseStudy.industry}
+                        </span>
+                        <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold">
+                            ${caseStudy.category}
+                        </span>
+                    </div>
+                    <h1 class="text-5xl font-bold text-gray-900 mb-4">${caseStudy.clientName}</h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">${caseStudy.description}</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+                    <div class="space-y-6">
+                        ${caseStudy.technologies ? `
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-3">
+                                    Tech Stack
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    ${techTags}
+                                </div>
+                            </div>
+                        ` : ''}
+                        ${caseStudy.duration ? `
+                            <div>
+                                <h3 class="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-2">
+                                    Timeline
+                                </h3>
+                                <p class="text-2xl font-bold text-blue-600">${caseStudy.duration}</p>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDetailHeroImage(caseStudy) {
+            document.getElementById('detailHeroImage').innerHTML = `
+                <img src="${caseStudy.imageUrl}" alt="${caseStudy.clientName}" class="w-full h-96 object-cover">
+            `;
+        }
+
+        function renderProblemSolution(caseStudy) {
+            const problemItems = caseStudy.problemDetails.map(detail => `
+                <li class="flex items-start gap-3">
+                    <span class="text-red-600 font-bold mt-1">•</span>
+                    <span class="text-gray-700">${detail}</span>
+                </li>
+            `).join('');
+
+            const solutionSteps = caseStudy.solutionSteps.map((step, index) => `
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                        ${index + 1}
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-900 mb-1">${step.title}</h4>
+                        <p class="text-gray-600 text-sm">${step.description}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('problemSolution').innerHTML = `
+                <div class="bg-red-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-3 bg-red-100 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">The Challenge</h3>
+                    </div>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">${caseStudy.problem}</p>
+                    <ul class="space-y-3">
+                        ${problemItems}
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 rounded-2xl p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-3 bg-blue-600 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                                <path d="M9 18h6"/>
+                                <path d="M10 22h4"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Our Solution</h3>
+                    </div>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">${caseStudy.solution}</p>
+                    <div class="space-y-4">
+                        ${solutionSteps}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderResultsMetrics(caseStudy) {
+            const metricsHTML = caseStudy.metrics.map(metric => `
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div class="w-8 h-8 mb-4 text-blue-200">
+                        ${iconMap[metric.icon]}
+                    </div>
+                    <div class="text-4xl font-bold mb-2">${metric.value}</div>
+                    <div class="text-sm text-blue-100 mb-2">${metric.label}</div>
+                    <div class="text-xs font-semibold text-green-300">
+                        ${metric.change}
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('resultsMetrics').innerHTML = `
+                <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-4">Results & Impact</h3>
+                    <p class="text-blue-100 text-lg mb-8 leading-relaxed">Here are the measurable outcomes and key achievements from this project.</p>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        ${metricsHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderVisualShowcase(caseStudy) {
+            const indicators = caseStudy.images.map((_, index) => `
+                <button
+                    onclick="goToImage(${index})"
+                    class="w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-blue-600 w-8' : 'bg-gray-300 hover:bg-gray-400'}"
+                    aria-label="Go to image ${index + 1}"
+                    id="indicator-${index}"
+                ></button>
+            `).join('');
+
+            const navigationButtons = caseStudy.images.length > 1 ? `
+                <button
+                    onclick="previousImage()"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                    aria-label="Previous image"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-900">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                <button
+                    onclick="nextImage()"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all"
+                    aria-label="Next image"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-900">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                </button>
+            ` : '';
+
+            document.getElementById('visualShowcase').innerHTML = `
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                        Project Visuals
+                    </h3>
+
+                    <div class="relative">
+                        <div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl">
+                            <img
+                                id="showcaseImage"
+                                src="${caseStudy.images[0].url}"
+                                alt="${caseStudy.images[0].caption}"
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+
+                        ${navigationButtons}
+
+                        <div class="flex justify-center gap-2 mt-6">
+                            ${indicators}
+                        </div>
+                    </div>
+
+                    <p id="showcaseCaption" class="text-center text-gray-600 mt-4">
+                        ${caseStudy.images[0].caption}
+                    </p>
+                </div>
+            `;
+
+            window.currentCaseStudyImages = caseStudy.images;
+        }
+
+        function previousImage() {
+            const images = window.currentCaseStudyImages;
+            currentImageIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+            updateShowcaseImage();
+        }
+
+        function nextImage() {
+            const images = window.currentCaseStudyImages;
+            currentImageIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+            updateShowcaseImage();
+        }
+
+        function goToImage(index) {
+            currentImageIndex = index;
+            updateShowcaseImage();
+        }
+
+        function updateShowcaseImage() {
+            const images = window.currentCaseStudyImages;
+            const img = document.getElementById('showcaseImage');
+            const caption = document.getElementById('showcaseCaption');
+
+            img.src = images[currentImageIndex].url;
+            img.alt = images[currentImageIndex].caption;
+            caption.textContent = images[currentImageIndex].caption;
+
+            images.forEach((_, index) => {
+                const indicator = document.getElementById(`indicator-${index}`);
+                if (indicator) {
+                    if (index === currentImageIndex) {
+                        indicator.classList.remove('bg-gray-300', 'hover:bg-gray-400', 'w-3');
+                        indicator.classList.add('bg-blue-600', 'w-8');
+                    } else {
+                        indicator.classList.remove('bg-blue-600', 'w-8');
+                        indicator.classList.add('bg-gray-300', 'hover:bg-gray-400', 'w-3');
+                    }
+                }
+            });
+        }
+
+        function renderClientTestimonial(caseStudy) {
+            const testimonial = caseStudy.testimonial;
+            const imageHTML = testimonial.clientImage ? `
+                <img src="${testimonial.clientImage}" alt="${testimonial.clientName}" class="w-16 h-16 rounded-full object-cover">
+            ` : '';
+
+            document.getElementById('clientTestimonial').innerHTML = `
+                <div class="bg-white border-2 border-blue-100 rounded-2xl p-8 md:p-12 relative">
+                    <div class="absolute -top-6 left-8 bg-blue-600 p-4 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+                        </svg>
+                    </div>
+
+                    <div class="pt-6">
+                        <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
+                            "${testimonial.quote}"
+                        </p>
+
+                        <div class="flex items-center gap-4">
+                            ${imageHTML}
+                            <div>
+                                <div class="font-bold text-gray-900 text-lg">${testimonial.clientName}</div>
+                                <div class="text-gray-600">
+                                    ${testimonial.clientRole} at ${testimonial.clientCompany}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        showDetailView('techventure-solutions');
+    </script>
+</body>
+</html>
