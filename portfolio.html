@@ -1,0 +1,364 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Listing | Agency.Dev</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Poppins:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "background-light": "#ffffff",
+              "background-dark": "#ffffff",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              poppins: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light text-slate-900 min-h-screen">
+    <main class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+      <!-- Headline Section -->
+      <div class="max-w-3xl mb-12">
+        <h1
+          class="text-4xl md:text-6xl font-bold font-poppins leading-tight mb-6"
+        >
+          Crafting digital experiences
+          <span class="text-primary">that matter.</span>
+        </h1>
+        <p class="text-lg text-slate-500 leading-relaxed">
+          A showcase of our latest work in design, development, and brand
+          strategy for global startups and enterprises.
+        </p>
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="flex flex-wrap gap-3 mb-12">
+        <button
+          class="px-5 py-2 rounded-full bg-primary text-white text-sm font-medium"
+        >
+          All Work
+        </button>
+        <button
+          class="px-5 py-2 rounded-full bg-slate-200 hover:bg-slate-300 text-sm font-medium transition-colors"
+        >
+          Web Design
+        </button>
+        <button
+          class="px-5 py-2 rounded-full bg-slate-200 hover:bg-slate-300 text-sm font-medium transition-colors"
+        >
+          Mobile Apps
+        </button>
+        <button
+          class="px-5 py-2 rounded-full bg-slate-200 hover:bg-slate-300 text-sm font-medium transition-colors"
+        >
+          Branding
+        </button>
+        <button
+          class="px-5 py-2 rounded-full bg-slate-200 hover:bg-slate-300 text-sm font-medium transition-colors"
+        >
+          Development
+        </button>
+      </div>
+
+      <!-- Project Grid (3 Columns) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Futuristic mobile banking application interface design"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBgAp4Ejsbqt8SSm2f-N29AZMahOuZFZqbXqS9VtGSZ5HXpctGNOGda79YRvkMY5iVzC8u2FfAcj-7jGl4Sxr_qKTxlDL6WN5Gp_fMAob3qUehcxFtH0tYTabrpT4Q13xglOIEREKnzC3MwzDGqY79oGOPrGWhgRZ_HBspIqdf9ad0WSKx5I47jak57bkP2Rv5yawB7Az6Q1BqjY2Vt8W-fEDRATZq_Q51irvTflJrWQb1ToCFhUHzOOtmXJdw86QkzVsslqPcp0E4&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                NeoBanking App
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              Fintech UI/UX overhaul for a next-gen digital bank.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >UI/UX</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Fintech</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Modern e-commerce website product grid layout"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDjs59T99Zz8ETcuGe6aWXZx9-7vYy3IHjekPncLYlbsCRx6x0a2OBnxJJ0uEH3AYKGn8pvjlJXg9Zw8mjkCgDCwV4bOaDOe80LHYoshtKuEGOdWXqT9l-L0ZA-sq_bIoACn44f_pZ4UIXZommOwjRQOcofpN6N1uEzRLaTu6P2gLOR05S1Pl5yJySD9pS5cpdBziQROj7LBFEWhzYh33NY3n6vWjAQ0T_nL6irvw875bWGf__6toc97razKmM9c8z0UcFSG2CyJsk&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                Skyline E-commerce
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              Next-gen shopping experience with headless architecture.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >E-commerce</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Next.js</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Health tracking app dashboard with AI metrics"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBX177MQJyb4msIWaF232RsvcWnQltCoZEj5G3Q02sRGPzXWdqKmi3PLGaw1UYjrLRi78HZaQkY_0xxVvfQkDyU29_3l0CrDoD09XHGkW0WabMIZy9CoUvDhwB7Tryed_AFR1_7ETeX1Fv7W3dFr-gUYVnkA0VqC7VXCquMLQ9lhDCzkHNKrM-UUabyZBOm4y7EpRPtFK_kOvmEm7qsA8uUHajyT-u_i3bkxPeAaJ29nYiUlOvu4VhyCLy7ZRk9RW0lV3QgWBCV6_o&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                HealthTrack AI
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              AI-driven wellness platform for personalized healthcare.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Healthcare</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >AI/ML</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Abstract space tech branding and logo design"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuALL1v2RTVDBvT8eQ54Vi3d7AljSKHR0rz3Tnb8p4Dz4F9i0fPw90Fs8hA4l7-h4KeiBvZ6raO56PMvn9WUecQi4fVkPnhr9gDu2PlTD6HPWXmN9dfbeufVYBFxJYvscdMB3AHQQ9UcJFKIiLQnU9PHvY0auos02EkJQuxIEYwK-NDWiMV3S8_PIfoU3oevWixP5qU9qpCzERTROk6sL4bo_dvXbZt98ENgPikI8RJOQ_TMPSFKpwT908vcMORh4Lna3pQWbsEIWOE&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                Orbit Branding
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              Visual identity and brand strategy for space-tech startups.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Branding</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Space</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Clean SaaS dashboard with data visualization"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCdKy-X3IdsgVFXFyhysZpF4vSvT9uksuv-IO8QeuIf3_VQR-XFX3uukN1Wb-bQEB17-a0orjvh7iWLMqgY-g34tktK865W3dgus2fv5KMliuauS23GpDmxppouQDITdZQYMRcsCDdFLatQFdleeWBrlaaxy6qCYi26NMnlvsVvD351DB9cN4VoOnVCWoRXBO-iXI-cHCc0Rs7JLOuHkeR0HKYdRSoaLX7IZtHCoGBriEYe7O77VNBaXkhWkck5G2g23pZ-UigH0_w&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                Zenith SaaS
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              Enterprise cloud solutions for distributed teams.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >SaaS</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Cloud</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="group flex flex-col gap-4">
+          <div
+            class="relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100"
+          >
+            <div
+              class="w-full h-full bg-center bg-cover transition-transform duration-500 group-hover:scale-110"
+              data-alt="Vibrant social media app interface"
+              style="
+                background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBa92KI0fdKryvgDXv6GHZ5AUyw3vP_fGQUIgE00-2pdFH3ucw0KSDjZyW43_aknFnxFm6ydooPsVCnJ0Bmwh0qsHup5BMGakTIJmQFpvpmVUoi2Yz63Hk93UisOiF6FEgNflqpXvYNkwsGTXAGQabSsLfw9gzbY6yAHlEi0vp7h3bKwacGOWLZRly4v6CZ8pFVmvtELHhjdlQMMBwuEwPCiJX0FU6juwfcKVgjO58PPfhPHscZIx4SWBkYXrVY2sVdA2dxC-kJC24&quot;);
+              "
+            ></div>
+            <div
+              class="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors duration-300"
+            ></div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3
+                class="text-xl font-bold font-poppins group-hover:text-primary transition-colors"
+              >
+                Pulse Social
+              </h3>
+              <span
+                class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0"
+                >arrow_outward</span
+              >
+            </div>
+            <p class="text-slate-500 text-sm mb-3">
+              Community-driven networking for creators and artists.
+            </p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Social</span
+              >
+              <span
+                class="text-[10px] uppercase tracking-wider font-bold px-2 py-1 rounded bg-slate-200"
+                >Mobile</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
