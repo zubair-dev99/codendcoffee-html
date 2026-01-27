@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contact Us | ConsultingFirm</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0000ff",
+                        "background-light": "#f8f8fc",
+                        "background-dark": "#0d0d1c",
+                        "slate-custom": "#717171",
+                        "border-custom": "#cecee9"
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'slide-down': 'slideDown 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'gradient-shift': 'gradientShift 3s ease infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        gradientShift: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Animation Styles */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(6, 6, 249, 0.1);
+        }
+        
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #0000ff, #00d4ff) border-box;
+            border: 2px solid transparent;
+        }
+        
+        .dark .gradient-border {
+            background: linear-gradient(#15152e, #15152e) padding-box,
+                        linear-gradient(45deg, #0000ff, #00d4ff) border-box;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #0000ff;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #0000ff }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d0d1c] dark:text-white transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+        
+            
+            <!-- Main Content Grid -->
+            <main class="flex-1 flex justify-center py-12 md:py-24 px-6 md:px-20">
+                <div class="max-w-[1200px] w-full grid grid-cols-1 lg:grid-cols-2 gap-20">
+                    <!-- Left Column: Company Info -->
+                    <div class="flex flex-col gap-10 animate-fade-in">
+                        <div class="flex flex-col gap-6">
+                            <span class="text-primary font-bold text-xs uppercase tracking-widest animate-slide-up">Connect with us</span>
+                            <h1 class="text-[#0d0d1c] dark:text-white text-5xl font-black leading-[1.1] tracking-tight animate-slide-up" style="animation-delay: 0.1s">
+                                Partner with Excellence.
+                            </h1>
+                            <p class="text-slate-custom dark:text-slate-custom/70 text-lg font-medium leading-relaxed max-w-md animate-slide-up" style="animation-delay: 0.2s">
+                                Let's discuss your next project. Our global team is ready to provide strategic solutions for your most complex challenges.
+                            </p>
+                        </div>
+                        
+                        <!-- Description List -->
+                        <div class="flex flex-col border-t border-border-custom dark:border-border-custom/20">
+                            <div class="grid grid-cols-[120px_1fr] border-b border-border-custom dark:border-border-custom/20 py-6 items-start hover:bg-white/5 dark:hover:bg-white/5 transition-all duration-300 hover:pl-4 rounded-lg">
+                                <p class="text-slate-custom dark:text-slate-custom/70 text-sm font-bold uppercase tracking-wider">HQ Office</p>
+                                <p class="text-[#0d0d1c] dark:text-white text-base font-semibold">123 Financial District, Suite 500<br/>New York, NY 10004</p>
+                            </div>
+                            <div class="grid grid-cols-[120px_1fr] border-b border-border-custom dark:border-border-custom/20 py-6 items-center hover:bg-white/5 dark:hover:bg-white/5 transition-all duration-300 hover:pl-4 rounded-lg" style="animation-delay: 0.3s">
+                                <p class="text-slate-custom dark:text-slate-custom/70 text-sm font-bold uppercase tracking-wider">Email Us</p>
+                                <p class="text-[#0d0d1c] dark:text-white text-base font-semibold">solutions@firm.com</p>
+                            </div>
+                            <div class="grid grid-cols-[120px_1fr] border-b border-border-custom dark:border-border-custom/20 py-6 items-center hover:bg-white/5 dark:hover:bg-white/5 transition-all duration-300 hover:pl-4 rounded-lg" style="animation-delay: 0.4s">
+                                <p class="text-slate-custom dark:text-slate-custom/70 text-sm font-bold uppercase tracking-wider">Call Us</p>
+                                <p class="text-[#0d0d1c] dark:text-white text-base font-semibold">+1 (212) 555-0198</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Section -->
+                        <div class="flex flex-col gap-4 animate-slide-up" style="animation-delay: 0.5s">
+                            <div class="w-full bg-slate-200 dark:bg-slate-800 aspect-[16/7] rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 relative group animate-float">
+                                <div class="absolute inset-0 bg-cover bg-center" data-alt="Satellite map view of financial district" data-location="New York City" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlSLvbHFfveasDySMu7iUFDMPoP6nRdX0sFu0dPlRuDvN0X2TPeM45LqbDKYdel0sxEz4ogiurHPfJXQ1bbPCgvR9PUEKYaejh5fAfL-GmmQEDht8z6KpxOtaikJSFQJJ8oaBJL40mZM-vAkQiW5ufLFP4w9xTNyxq3HAITMsdkF25a8zn2ivz0Gn6WYcfb_qi70HXfYa2jh01b7a7umRzpK20BfTyOqDbVlEzWoc0NwiSvVjudDsFmpNS_yGJbko41CbxqzaN7_uj");'></div>
+                                <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-black/90 px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase transition-all duration-300 group-hover:scale-105">
+                                    Global Headquarters
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column: Contact Form -->
+                    <div class="bg-white dark:bg-[#15152e] p-8 md:p-12 rounded-2xl shadow-sm border border-border-custom/20 flex flex-col gap-8 h-fit gradient-border hover-lift animate-slide-up" style="animation-delay: 0.6s">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-2xl font-bold dark:text-white">Inquiry Form</h3>
+                            <p class="text-sm text-slate-custom dark:text-slate-custom/70">Fields marked with an asterisk (*) are required.</p>
+                        </div>
+                        
+                        <form class="flex flex-col gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-slate-custom dark:text-slate-custom/70">Full Name *</span>
+                                    <input class="w-full bg-background-light dark:bg-background-dark border border-border-custom dark:border-border-custom/20 rounded-lg h-12 px-4 text-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 outline-none hover:border-primary/50" 
+                                           placeholder="John Doe" 
+                                           required="" 
+                                           type="text"/>
+                                </label>
+                                <label class="flex flex-col gap-2">
+                                    <span class="text-xs font-bold uppercase tracking-widest text-slate-custom dark:text-slate-custom/70">Work Email *</span>
+                                    <input class="w-full bg-background-light dark:bg-background-dark border border-border-custom dark:border-border-custom/20 rounded-lg h-12 px-4 text-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 outline-none hover:border-primary/50" 
+                                           placeholder="john@company.com" 
+                                           required="" 
+                                           type="email"/>
+                                </label>
+                            </div>
+                            
+                            <label class="flex flex-col gap-2">
+                                <span class="text-xs font-bold uppercase tracking-widest text-slate-custom dark:text-slate-custom/70">Subject</span>
+                                <input class="w-full bg-background-light dark:bg-background-dark border border-border-custom dark:border-border-custom/20 rounded-lg h-12 px-4 text-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 outline-none hover:border-primary/50" 
+                                       placeholder="Strategy Consulting" 
+                                       type="text"/>
+                            </label>
+                            
+                            <label class="flex flex-col gap-2">
+                                <span class="text-xs font-bold uppercase tracking-widest text-slate-custom dark:text-slate-custom/70">Message *</span>
+                                <textarea class="w-full bg-background-light dark:bg-background-dark border border-border-custom dark:border-border-custom/20 rounded-lg p-4 text-sm focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 outline-none resize-none hover:border-primary/50" 
+                                          placeholder="Tell us about your project requirements..." 
+                                          required="" 
+                                          rows="5"></textarea>
+                            </label>
+                            
+                            <button class="w-full bg-gradient-to-r from-primary to-blue-700 hover:from-blue-700 hover:to-primary text-white font-bold py-4 rounded-lg transition-all duration-500 flex items-center justify-center gap-2 group hover:shadow-lg hover:shadow-primary/30 animate-gradient-shift" 
+                                    type="submit">
+                                <span>Send Inquiry</span>
+                                <span class="material-symbols-outlined text-base group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+                            </button>
+                            
+                            <p class="text-[11px] text-center text-slate-custom/60 leading-relaxed italic">
+                                By submitting this form, you agree to our terms of service and privacy policy regarding data handling and communication.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            
+       
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Executive Team Directory | Consultancy Group</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Poppins Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0606f9",
+              "background-light": "#f5f5f8",
+              "background-dark": "#0f0f23",
+              "corp-text": "#212121",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"], // Changed to Poppins
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .executive-card:hover {
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      }
+      body {
+        font-family: "Poppins", sans-serif; /* Added Poppins globally */
+      }
+      * {
+        font-family:
+          "Poppins", sans-serif; /* Ensure all elements use Poppins */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-corp-text dark:text-gray-100 antialiased overflow-x-hidden"
+  >
+    <!-- Navigation -->
+    <div class="layout-container flex h-full grow flex-col">
+    
+      <main class="flex-1 flex flex-col items-center">
+        <!-- Hero Heading -->
+        <div class="w-full max-w-[1200px] px-6 md:px-10 py-16 md:py-24">
+          <div class="flex flex-col gap-4 max-w-3xl">
+            <h1
+              class="text-corp-text dark:text-white text-5xl md:text-6xl font-black leading-[1.1] tracking-tight"
+            >
+              Our Leadership
+            </h1>
+            <p
+              class="text-gray-600 dark:text-gray-400 text-lg md:text-xl font-normal leading-relaxed"
+            >
+              Meet the visionaries driving strategic excellence and sustainable
+              growth for our global clients. Our elite team combines decades of
+              industry-leading expertise across technology, operations, and
+              growth strategy.
+            </p>
+          </div>
+        </div>
+        <!-- Tabs/Filter -->
+        <div class="w-full max-w-[1200px] px-6 md:px-10">
+          <div
+            class="flex border-b border-gray-200 dark:border-gray-800 gap-8 overflow-x-auto no-scrollbar"
+          >
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-primary text-corp-text dark:text-white pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">All Members</p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">Partners</p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">Strategy</p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">Operations</p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">Technology</p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-transparent text-gray-500 hover:text-primary pb-3 pt-4 transition-all"
+              href="#"
+            >
+              <p class="text-sm font-bold tracking-wide">Governance</p>
+            </a>
+          </div>
+        </div>
+        <!-- Directory Grid -->
+        <div class="w-full max-w-[1200px] px-6 md:px-10 py-12">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12"
+          >
+            <!-- Team Member Card -->
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of alexander sterling"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCPTHbZzxxdHiyJRDDexUiuDEo3ZO2DcThH0-xAIxOBsHQBAhlbigrUWljCEixJESRja1MUVtAvz3oSzpx9LSbDFyZr6QuN8UZ86_Ic36AWPdDXOLtFPDbz7hAgcAkF7yRMk2VoO25ZVsqyCLjk3-q2gw6iN-u4LDntK2QtDT54-h8FABE99Wkbva06pckor6PlqANT4dPz1wwQfARusyMeQ2JPob39JFyhCR8pY9w79y5XpElBy2SzxCJbBsd4efdroXwcA8TME-8m&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Alexander Sterling
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Managing Director
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Executive Board
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of sarah jenkins"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCK1ZnEM6LRLZUtkGpZiIrKMstdeS9RM2qOQ_M7-Naope7o7WOHVkEBPrxJz13012AkYjDWmqnSmJ-qHQtT0JIsI-uYRrgAXq_j32RdGQPA-voSAffgl_Vgx_F-lJeTjAaqdJfV62v0DvjWAZvrz_-nDCBUMGsDpr13owQcI63X18DGRvTVLAxwo_DXAlDT89Gx6lKs0BfU82NJDN-8tNy1yOqCbTusNlQMq8hra_rXLkATJ-YfDWPP756BAktjkinF4dHwMPykx2ve&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Sarah Jenkins
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Senior Partner
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Global Leadership
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of david chen"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuChE4LtvbVFaxn9eWBkY67MU_8jD05x9x-V20b6_hprZMw56LMsHV2PhWzjxa9QOi_Cpg-Haw45-NDBPw1dsnClwS-CmNgBTpjweQm02K5-HUYFb76Smd5y_x3uF7huP934oEFnnS9QAMtf54JJwRzl9K_V6ugFSdzgOk6Ae1tmyqC7yEq3mp-i_RpcrP4UGZau1U6_0VqnqNrUFKGS2UvIxej1N8j_oHMlzYIZHkvx59vZj9OCALPlv7ieRioWivIAtJeFujkYA7tj&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  David Chen
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Head of Strategy
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Growth &amp; Analytics
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of elena rodriguez"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCUV9y4iXUcOw9BaXBscFek_jW70rAh4B365fvh6wCaCmgr_su72PycJpRbryYmJjUvNWECWVdrcV33ShTFM7IIB6EHSFfesK7F7KYg3Drd3WIHslsWe2PFkjiorFYIm8J4XtXG3iO4cBQ8UJBFZVLoNnKRVygWBNMsBRr5tjxkmHhUpfevx8R7KvQKGLMqoiGAtqOqchl2Z4O9hkx-2RUYSuQKZh9Ko9sXowNX19EuE8yiI6CdZKYtY4kjYn3wX9DCGqCdR5n73I-C&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Elena Rodriguez
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Chief Operations Officer
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Operations
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of marcus thorne"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuD20Qpvzf_oxMhTVWrx1oxFzLhKHB8_SEPqRP9DjvwMMMubIckbcetttCO4CBM6jEoCqI_e7-vWL-8KWk-kn0o6sX9VYHpD0gOTy4gwZThudSCs6dqfP6k_L5l7zndkeYRAFXqo6fAD7iLiJY7jt_UNBAEmXpmzS3MZGfE5_wbPBzN4jEt-U55j8GwtGOJ15ow58vwcbH59IiiaCBLT87BZeUj3u19ape3tnLgv8LGTzUzAwkR5gdrVNVgzIA7Hwnlfti7Thdp6atAI&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Marcus Thorne
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Director of Innovation
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Technology
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of julianne moore"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDNxAvN8ZAbyX8S9n5KtXum8ce1sUkjK4ei8f-Y9WsGoo3FI6TxyiGOckjc1wn6Z-ILcHJob_T4KUqPsRDFV5PWX3CiRegJeo86cFZFuV1q8RKtFEa0OHfMMGZTOB6XWP2lRvk1lykzAP3qudg6A2M7r3OLxFQcLWw-6nAqdjZHU78av9O0McFDfUhixtGdU_2FWfYenpPtgjtaJqIN0PPZU8KedvLoZFq_eBFeUIaCDAQrDrBYx5qSK9ct41JHsGYKO9rT60LEsUcl&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Julianne Moore
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Head of Finance
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Finance &amp; M&amp;A
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of robert vance"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuArn9RhA_JkM2I27Qcuw15paKUkQXfrdV-sWO04cIEr_byk7h5QHC3IuDe5xFr8jidSfoaNj__Pt8WfIf292YusNAV_NMByucs5Q_9lFGvHXIyRnAm8JYqvITCf8MHAkAUXu_ByQkF3XYG4s690yKZZLKxfGWTJOTV_QYnBArTwo9D1DHmG6FT5RipwFzN0GW2H6T4KCFhJRxuoHT-IMCCQhg7RVVY6vu8Bnd8HNvv0-v86X59URLa4KNAtFjDDJXSJdr1xbIBVKf1c&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Robert Vance
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  VP of Client Success
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Account Management
+                </p>
+              </div>
+            </div>
+            <div
+              class="executive-card group flex flex-col gap-5 p-2 rounded-xl transition-all duration-300 border-2 border-transparent hover:border-primary"
+            >
+              <div
+                class="w-full bg-center bg-no-repeat aspect-[4/5] bg-cover rounded-lg overflow-hidden relative"
+                data-alt="professional portrait of sophia al-fayed"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAo_3KnigYzyc9xFefo2d4GqCHrDO35FAOIcTBD3g-qnQEahYBlgN5KIyaIFehSCTfruh-gVXOtwW49jSGb0iudbaHXbBi6d1sBv6KnHIvG46MwvEj5UmbsGvF9hgG1qk678R8ns8wcDX1U_RQTLo3R4Nm-paEBZhExYUOf0rlje7FORxcPnXegBnV6jJr8uZ4kSZN0-mu9_igkvQ4cUgePb5Sk-RtblE_GKax1-yr0OJOKNela91IbkAvh-dPe1gyYaapyyhLyne7w&quot;);
+                "
+              >
+                <div
+                  class="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300"
+                ></div>
+              </div>
+              <div class="px-2 pb-2">
+                <h3
+                  class="text-corp-text dark:text-white text-xl font-extrabold tracking-tight"
+                >
+                  Sophia Al-Fayed
+                </h3>
+                <p
+                  class="text-primary text-sm font-bold uppercase tracking-widest mt-1"
+                >
+                  Director of Governance
+                </p>
+                <p
+                  class="text-gray-500 dark:text-gray-400 text-sm font-medium mt-1"
+                >
+                  Compliance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      
+   
+    </div>
+  </body>
+</html>
