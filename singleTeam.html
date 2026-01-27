@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Enhanced Elite Poppins Profile | Executive Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --primary-blue: #0000ff;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(0, 0, 255, 0.2);
+        }
+        @layer base {
+            body {
+                @apply font-['Poppins'] bg-white text-[#212121];
+                font-family: 'Poppins', sans-serif !important;
+            }
+        }
+        .text-outline {
+            -webkit-text-stroke: 1.5px #212121;
+            color: transparent;
+        }
+        .progress-bar {
+            animation: scroll-progress auto linear;
+            animation-timeline: scroll();
+        }
+        @keyframes scroll-progress {
+            from { width: 0%; background: #ffffff; }
+            to { width: 100%; background: var(--primary-blue); }
+        }
+        .grain {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            width: 200%;
+            height: 200vh;
+            background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+            background-repeat: repeat;
+            animation: bg-animation .2s infinite;
+            opacity: .05;
+            visibility: visible;
+            pointer-events: none;
+            z-index: 100;
+        }
+        @keyframes bg-animation {
+            0% { transform: translate(0,0) }
+            10% { transform: translate(-5%,-5%) }
+            20% { transform: translate(-10%,5%) }
+            30% { transform: translate(5%,-10%) }
+            40% { transform: translate(-5%,15%) }
+            50% { transform: translate(-10%,5%) }
+            60% { transform: translate(15%,0) }
+            70% { transform: translate(0,10%) }
+            80% { transform: translate(-15%,0) }
+            90% { transform: translate(10%,5%) }
+            100% { transform: translate(5%,0) }
+        }
+        .parallax-name {
+            animation: parallax-scroll auto linear;
+            animation-timeline: scroll();
+        }
+        @keyframes parallax-scroll {
+            from { transform: rotate(180deg) translateY(-10%); }
+            to { transform: rotate(180deg) translateY(10%); }
+        }
+        .blue-aura {
+            filter: blur(120px);
+            background: radial-gradient(circle, rgba(0,0,255,0.15) 0%, rgba(0,0,255,0) 70%);
+        }
+        .magnetic-hover {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .magnetic-hover:hover {
+            transform: scale(1.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+           
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 255, 0.05);
+        }
+        .growing-line {
+            transform-origin: left;
+            animation: line-grow auto linear;
+            animation-timeline: scroll();
+        }
+        @keyframes line-grow {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+        .split-gradient {
+            background: linear-gradient(to bottom, #212121 50%, var(--primary-blue) 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100% 200%;
+            background-position: 0 0;
+            transition: background-position 0.5s ease;
+        }
+        .split-gradient:hover {
+            background-position: 0 100%;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+        }
+        .premium-rounded {
+            border-radius: 48px;
+        }
+        .geometric-bg {
+            background-image: 
+                linear-gradient(rgba(0, 0, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 255, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+        /* Custom hover effect for technical proficiency cards */
+        .tech-card-hover {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .tech-card-hover:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 
+                8px 8px 16px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(0, 0, 255, 0.05);
+        }
+        .tech-card-hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 48px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            box-shadow: 
+                4px 4px 12px rgba(0, 0, 255, 0.15),
+                8px 8px 24px rgba(0, 0, 255, 0.1);
+        }
+        .tech-card-hover:hover::after {
+            opacity: 1;
+        }
+        /* Hero section side-by-side layout */
+        .hero-gradient-text {
+            background: linear-gradient(135deg, #212121 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-tagline {
+            position: relative;
+        }
+        .hero-tagline::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+<div class="grain"></div>
+<div class="fixed top-0 left-0 w-full h-1.5 z-[100] bg-gray-100">
+<div class="progress-bar h-full w-0"></div>
+</div>
+<div class="flex min-h-screen relative">
+
+<main class="w-full relative">
+<!-- Hero Section - Side by Side Layout -->
+<section class="min-h-screen flex items-center px-8 lg:px-24 py-20 relative overflow-hidden">
+<div class="blue-aura absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full z-0 opacity-50"></div>
+<div class="relative w-full max-w-7xl mx-auto z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+<!-- Left Column: Content -->
+<div class="space-y-10 lg:pr-8">
+<div class="space-y-6">
+<span class="text-[var(--primary-blue)] font-bold tracking-[0.2em] uppercase text-xs block">Executive Profile</span>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tight">
+<span class="hero-gradient-text">Lead</span>
+<br/>
+<span class="hero-gradient-text">Architect</span>
+</h1>
+</div>
+
+<div class="space-y-8">
+<p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-lg">
+Engineering digital excellence through uncompromising code, visionary strategy, and transformative solutions.
+</p>
+
+<div class="flex flex-wrap gap-4">
+<div class="hero-tagline pl-8 relative">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-gray-400">15+ Years</span>
+<p class="text-lg font-bold">Experience</p>
+</div>
+<div class="hero-tagline pl-8 relative">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-gray-400">50+ Projects</span>
+<p class="text-lg font-bold">Delivered</p>
+</div>
+<div class="hero-tagline pl-8 relative">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-gray-400">Global</span>
+<p class="text-lg font-bold">Impact</p>
+</div>
+</div>
+
+<div class="pt-8">
+<a href="#contact" class="magnetic-hover inline-flex items-center gap-4 bg-[#0000ff] text-white px-10 py-6 text-sm font-bold uppercase tracking-[0.2em] hover:bg-[var(--primary-blue)] transition-all premium-rounded shadow-2xl">
+<span>Start Collaboration</span>
+<span class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Right Column: Image -->
+<div class="relative lg:pl-8">
+<div class="relative group">
+<div class="aspect-[3/4] w-full overflow-hidden premium-rounded shadow-2xl relative">
+<img alt="Executive Portrait" class="w-full h-full object-cover saturate-[1.1] brightness-105 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPTHbZzxxdHiyJRDDexUiuDEo3ZO2DcThH0-xAIxOBsHQBAhlbigrUWljCEixJESRja1MUVtAvz3oSzpx9LSbDFyZr6QuN8UZ86_Ic36AWPdDXOLtFPDbz7hAgcAkF7yRMk2VoO25ZVsqyCLjk3-q2gw6iN-u4LDntK2QtDT54-h8FABE99Wkbva06pckor6PlqANT4dPz1wwQfARusyMeQ2JPob39JFyhCR8pY9w79y5XpElBy2SzxCJbBsd4efdroXwcA8TME-8m"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-[var(--primary-blue)] text-white p-8 premium-rounded shadow-xl hidden lg:block">
+<div class="text-center">
+<p class="text-xs font-bold tracking-[0.3em] uppercase mb-1 opacity-80">Since</p>
+<p class="text-2xl font-bold">2009</p>
+</div>
+</div>
+<div class="absolute -top-6 -left-6 bg-white text-[#212121] p-8 premium-rounded shadow-xl hidden lg:block">
+<div class="text-center">
+<p class="text-xs font-bold tracking-[0.3em] uppercase mb-1 opacity-80">Focus</p>
+<p class="text-2xl font-bold">Innovation</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-16 px-8 lg:px-24 bg-gray-50/30">
+<div class="max-w-3xl relative">
+<span class="text-[var(--primary-blue)] font-bold tracking-[0.2em] uppercase text-xs mb-8 block">01 / The Mission</span>
+<div class="growing-line w-full h-[1px] bg-[var(--primary-blue)] mb-12 origin-left"></div>
+<h2 class="text-2xl md:text-6xl font-black leading-tight text-[#212121]">
+                    Engineering digital <span class="split-gradient cursor-default">legacies</span> through <span class="split-gradient cursor-default">uncompromising code</span> and visionary strategy.
+                </h2>
+</div>
+</section>
+<section class="py-16 px-3 lg:px-24">
+<span class="text-[var(--primary-blue)] font-bold tracking-[0.2em] uppercase text-xs mb-16 block">02 / Technical Proficiency</span>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">terminal</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Systems</span>
+<p class="font-bold text-xl mt-1">Next.js</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">code</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Backend</span>
+<p class="font-bold text-xl mt-1">Rust</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">cloud</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Cloud</span>
+<p class="font-bold text-xl mt-1">AWS</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">hub</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Arch</span>
+<p class="font-bold text-xl mt-1">Services</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">layers</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Interface</span>
+<p class="font-bold text-xl mt-1">Tailwind</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">database</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Data</span>
+<p class="font-bold text-xl mt-1">PostgreSQL</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">smartphone</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">Mobile</span>
+<p class="font-bold text-xl mt-1">React Native</p>
+</div>
+</div>
+<div class="tech-card-hover glass-card premium-rounded p-10 flex flex-col items-center justify-center text-center gap-6 relative">
+<span class="material-symbols-outlined text-4xl text-gray-400 group-hover:text-[var(--primary-blue)] transition-colors duration-400">psychology</span>
+<div>
+<span class="text-[10px] font-bold tracking-widest text-gray-400 uppercase">AI</span>
+<p class="font-bold text-xl mt-1">PyTorch</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 px-8 lg:px-24 bg-white overflow-hidden">
+<span class="text-[var(--primary-blue)] font-bold tracking-[0.2em] uppercase text-xs mb-20 block">03 / Recent Impact</span>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-24 gap-x-12">
+<div class="md:col-start-1 md:col-end-9 group">
+<div class="relative premium-rounded overflow-hidden mb-8 shadow-xl transition-transform duration-700 hover:-translate-y-4">
+<img alt="Project" class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChE4LtvbVFaxn9eWBkY67MU_8jD05x9x-V20b6_hprZMw56LMsHV2PhWzjxa9QOi_Cpg-Haw45-NDBPw1dsnClwS-CmNgBTpjweQm02K5-HUYFb76Smd5y_x3uF7huP934oEFnnS9QAMtf54JJwRzl9K_V6ugFSdzgOk6Ae1tmyqC7yEq3mp-i_RpcrP4UGZau1U6_0VqnqNrUFKGS2UvIxej1N8j_oHMlzYIZHkvx59vZj9OCALPlv7ieRioWivIAtJeFujkYA7tj"/>
+<div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="space-y-4 px-4">
+<h3 class="text-3xl font-black">Nebula FinTech Core</h3>
+<p class="text-gray-500 leading-relaxed max-w-xl text-lg">Redesigned the entire transaction engine for a global banking client, achieving 40% reduction in latency and handling 1M+ req/sec.</p>
+<a class="magnetic-hover inline-flex items-center gap-3 text-[var(--primary-blue)] font-bold uppercase text-xs tracking-widest mt-4 group/link" href="#">
+                            Explore Innovation
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+</div>
+<div class="md:col-start-5 md:col-end-13 group">
+<div class="relative premium-rounded overflow-hidden mb-8 shadow-xl transition-transform duration-700 hover:-translate-y-4">
+<img alt="Project" class="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK1ZnEM6LRLZUtkGpZiIrKMstdeS9RM2qOQ_M7-Naope7o7WOHVkEBPrxJz13012AkYjDWmqnSmJ-qHQtT0JIsI-uYRrgAXq_j32RdGQPA-voSAffgl_Vgx_F-lJeTjAaqdJfV62v0DvjWAZvrz_-nDCBUMGsDpr13owQcI63X18DGRvTVLAxwo_DXAlDT89Gx6lKs0BfU82NJDN-8tNy1yOqCbTusNlQMq8hra_rXLkATJ-YfDWPP756BAktjkinF4dHwMPykx2ve"/>
+<div class="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="space-y-4 px-4">
+<h3 class="text-3xl font-black">Vertex Logistics AI</h3>
+<p class="text-gray-500 leading-relaxed max-w-xl text-lg">Integrated real-time predictive modeling for a Fortune 500 logistics firm, optimizing last-mile delivery by 22%.</p>
+<a class="magnetic-hover inline-flex items-center gap-3 text-[var(--primary-blue)] font-bold uppercase text-xs tracking-widest mt-4 group/link" href="#">
+                            Explore Innovation
+                            <span class="material-symbols-outlined text-sm group-hover/link:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 lg:px-24 bg-[var(--primary-blue)] text-white relative overflow-hidden">
+<div class="geometric-bg absolute inset-0 opacity-20 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="font-['Poppins'] not-italic text-xs font-bold tracking-[0.5em] uppercase opacity-40 mb-16 block">Philosophy</span>
+<blockquote class="text-5xl md:text-7xl leading-[1.1] italic font-['Poppins'] font-light">
+                    "The most elegant solution is not when there is nothing more to <span class="opacity-50">add</span>, but when there is nothing left to <span class="opacity-50">take away</span>."
+                </blockquote>
+<div class="w-24 h-[1px] bg-white/30 mx-auto my-16"></div>
+<cite class="font-['Poppins'] not-italic block text-sm font-bold tracking-[0.3em] uppercase opacity-80">— Lead Architect</cite>
+</div>
+</section>
+
+</main>
+</div>
+</body>
+</html>

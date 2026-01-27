@@ -1,0 +1,443 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Future of AI in Enterprise Architecture | InsightStream</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Poppins Font Family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "background-light": "#ffffff",
+              "background-dark": "#0d0d1c",
+              "accent-blue": "#0000ff",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"], // Changed to Poppins
+              serif: ["Poppins", "sans-serif"], // Changed to Poppins
+              body: ["Poppins", "sans-serif"], // Changed to Poppins
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0.5rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply font-body text-slate-900 antialiased;
+          font-family: "Poppins", sans-serif; /* Added Poppins globally */
+        }
+        h1,
+        h2,
+        h3 {
+          @apply font-serif;
+        }
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Additional Poppins styling for consistency */
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark dark:text-slate-100">
+    <div class="layout-container flex h-full grow flex-col">
+    
+      <main class="flex-1">
+        <article class="relative">
+          <div
+            class="max-w-screen-xl mx-auto px-4 md:px-10 lg:px-20 pt-12 pb-8"
+          >
+            <div class="flex flex-wrap items-center gap-3 mb-8">
+              <nav
+                class="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-500 font-semibold font-display"
+              >
+                <a class="hover:text-primary" href="#">Home</a>
+                <span class="material-symbols-outlined text-[10px]"
+                  >chevron_right</span
+                >
+                <a class="hover:text-primary" href="#">Insights</a>
+                <span class="material-symbols-outlined text-[10px]"
+                  >chevron_right</span
+                >
+              </nav>
+              <span
+                class="bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest font-display"
+                >Strategy</span
+              >
+            </div>
+            <h1
+              class="text-5xl md:text-7xl lg:text-8xl font-serif text-slate-900 dark:text-white mb-10 leading-[1.1] max-w-5xl"
+            >
+              The Future of AI in Enterprise Architecture: A 2024 Global
+              Forecast
+            </h1>
+            <div
+              class="flex flex-wrap items-center justify-between gap-6 py-8 border-y border-slate-100 dark:border-slate-800"
+            >
+              <div class="flex items-center gap-4">
+                <img
+                  alt="Dr. Elena Vance"
+                  class="size-14 rounded-full object-cover grayscale"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvm4KFbs_VuA7ETwnTbdhgov_H7Lu24XhoqdFMM2o6caL9ugq57KKrqmg6Zopwo2IfBIJDe3SEH2YcTeKpGpsIFbHsSrF7v3CSZJY7mdfO-ImhEMpK59lCuhkI39BsgqC0tAA3rVnqF3bB-dKIt6bxn0FzaDEz1f-5Um4PtXmFUvR0_9PW61IgkY28s0fj5Jav8zPAqqIbVNCkpjrbajZ0zW6qjsWv8x2I1DdySDJYSd0XOJjR7VX209prsRg3bnB8Kg8z6fJtdDzp"
+                />
+                <div>
+                  <p
+                    class="text-slate-900 dark:text-white font-bold font-display"
+                  >
+                    Dr. Elena Vance
+                  </p>
+                  <p
+                    class="text-slate-500 text-xs uppercase tracking-wider font-semibold"
+                  >
+                    Senior Partner, Technology
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-8 text-xs font-display text-slate-500 uppercase tracking-widest"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm"
+                    >schedule</span
+                  >
+                  <span>12 Min Read</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sm"
+                    >calendar_today</span
+                  >
+                  <span>Jan 24, 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full h-[600px] mt-4">
+            <img
+              alt="Conceptual architecture image"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyWi7YPsfVW8sFDrZCPNUFTpsugeYJvvp-WTj6lEmtnh_Hk4_UECazaN_52mY6sjAHAxidvYBKEN4xYa2vVpW5L2vsVHZFB0NT4Eae3weaFILBTQnsfuS3C5f8PGcBQ8eZf8B0ewx1O_z26Tz4yDtW917AiF4toyIfxn_V9OOXYSfiEQOqGTPEL6AE3bHOwmSarOrzbxUuCXb7VYXbQH6bnumRfrppCp0223PPv6CT-7c6HcFfFEHBf8oRUSU1BE3zpND1FFkv1iMz"
+            />
+          </div>
+          <div
+            class="max-w-screen-xl mx-auto px-4 md:px-10 lg:px-20 relative pt-20"
+          >
+            <div class="flex flex-col lg:flex-row gap-20">
+              <aside class="hidden lg:block w-64 shrink-0">
+                <div class="sticky top-32">
+                  <h4
+                    class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-6 font-display"
+                  >
+                    Table of Contents
+                  </h4>
+                  <ul
+                    class="space-y-4 text-sm font-medium border-l border-slate-100 dark:border-slate-800"
+                  >
+                    <li>
+                      <a
+                        class="block pl-4 py-1 text-primary border-l-2 border-primary -ml-[1px]"
+                        href="#introduction"
+                        >Introduction</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block pl-4 py-1 text-slate-500 hover:text-primary transition-colors"
+                        href="#core-shift"
+                        >The Digital Core Shift</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block pl-4 py-1 text-slate-500 hover:text-primary transition-colors"
+                        href="#governance"
+                        >Automated Governance</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block pl-4 py-1 text-slate-500 hover:text-primary transition-colors"
+                        href="#conclusion"
+                        >Strategic Imperatives</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </aside>
+              <div class="flex-1">
+                <div
+                  class="prose prose-slate prose-lg lg:prose-xl dark:prose-invert max-w-none"
+                >
+                  <p
+                    class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-12"
+                  >
+                    As global markets shift towards automated governance, firms
+                    are restructuring their digital core to accommodate
+                    generative models at scale. The landscape of enterprise
+                    architecture is undergoing its most radical transformation
+                    since the advent of the cloud.
+                  </p>
+                  <h2
+                    class="text-3xl font-serif text-slate-900 dark:text-white mt-16 mb-6"
+                    id="core-shift"
+                  >
+                    The Digital Core Shift
+                  </h2>
+                  <p>
+                    For decades, enterprise architecture was defined by
+                    stability and long-term planning. Today, the core must be
+                    elastic, built not just for data storage, but for
+                    intelligence processing. The integration of large language
+                    models (LLMs) requires a fundamental rethink of how
+                    information flows through an organization.
+                  </p>
+                  <blockquote
+                    class="my-16 pl-8 border-l-4 border-primary italic text-2xl font-serif text-slate-800 dark:text-slate-200 py-2"
+                  >
+                    "The question is no longer about adoption, but about the
+                    speed of architectural integration. Those who treat AI as a
+                    layer will fail; those who treat it as the foundation will
+                    lead."
+                  </blockquote>
+                  <p>
+                    To achieve this, we have identified three pillars of modern
+                    resilience:
+                  </p>
+                  <ul class="space-y-4 my-8 list-none pl-0">
+                    <li class="flex items-start gap-4">
+                      <span class="material-symbols-outlined text-primary mt-1"
+                        >check_circle</span
+                      >
+                      <span
+                        ><strong>Decentralized Intelligence:</strong>
+                        Distributing processing power across edge nodes to
+                        reduce latency and improve security.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-4">
+                      <span class="material-symbols-outlined text-primary mt-1"
+                        >check_circle</span
+                      >
+                      <span
+                        ><strong>Semantic Data Fabric:</strong> Creating a
+                        unified layer that allows AI models to understand
+                        context, not just values.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-4">
+                      <span class="material-symbols-outlined text-primary mt-1"
+                        >check_circle</span
+                      >
+                      <span
+                        ><strong>Adaptive Governance:</strong> Automated
+                        compliance checks that evolve alongside regulatory
+                        changes.</span
+                      >
+                    </li>
+                  </ul>
+                  <h2
+                    class="text-3xl font-serif text-slate-900 dark:text-white mt-16 mb-6"
+                    id="governance"
+                  >
+                    Navigating Automated Governance
+                  </h2>
+                  <p>
+                    Security remains the primary barrier to enterprise-wide AI.
+                    Our research shows that 74% of CIOs are concerned about data
+                    leakage through public model training. The solution lies in
+                    proprietary silos—architecture that allows for the benefits
+                    of LLMs while keeping intellectual property within a secure
+                    perimeter.
+                  </p>
+                  <div
+                    class="my-12 p-8 bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800"
+                  >
+                    <h4 class="text-lg font-bold font-display mb-4">
+                      Key Forecast Insight
+                    </h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                      By late 2024, we expect 60% of Fortune 500 companies to
+                      have transitioned from experimental AI pilots to permanent
+                      "AI Orchestration Layers" within their core
+                      infrastructure.
+                    </p>
+                  </div>
+                </div>
+          
+              </div>
+              <aside class="hidden xl:block w-12 shrink-0">
+                <div class="sticky top-32 flex flex-col gap-4 items-center">
+                  <div
+                    class="h-10 w-[1px] bg-slate-100 dark:bg-slate-800"
+                  ></div>
+                  <button
+                    class="text-slate-400 hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">thumb_up</span>
+                  </button>
+                  <button
+                    class="text-slate-400 hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">bookmark</span>
+                  </button>
+                  <button
+                    class="text-slate-400 hover:text-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">ios_share</span>
+                  </button>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </article>
+        <section
+          class="bg-slate-900 text-white mt-32 py-24 px-4 md:px-10 lg:px-20"
+        >
+          <div
+            class="max-w-screen-xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12"
+          >
+            <div class="max-w-xl">
+              <h2 class="text-4xl md:text-5xl font-serif mb-6 leading-tight">
+                Join the Inner Circle of Global Strategy
+              </h2>
+              <p class="text-slate-400 text-lg">
+                Receive our weekly executive briefing on technology, strategy,
+                and leadership. No fluff, only high-impact intelligence.
+              </p>
+            </div>
+            <div class="w-full max-w-md">
+              <form
+                class="flex flex-col sm:flex-row gap-0 border-b border-white/20 pb-2"
+              >
+                <input
+                  class="flex-1 bg-transparent border-none focus:ring-0 text-white placeholder:text-slate-500 py-4 font-display"
+                  placeholder="professional@company.com"
+                  type="email"
+                />
+                <button
+                  class="bg-primary text-white font-bold px-8 py-4 uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-primary transition-all font-display whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </form>
+              <p
+                class="text-[10px] text-slate-500 mt-4 uppercase tracking-widest"
+              >
+                By subscribing, you agree to our Privacy Policy
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="max-w-screen-xl mx-auto px-4 md:px-10 lg:px-20 py-24">
+          <div class="flex items-center justify-between mb-16">
+            <h2 class="text-4xl font-serif">Related Insights</h2>
+            <a
+              class="text-xs font-bold uppercase tracking-widest text-primary flex items-center gap-2 group font-display"
+              href="#"
+            >
+              View All Insights
+              <span
+                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <a class="group block" href="#">
+              <div class="aspect-[4/3] mb-6 overflow-hidden">
+                <img
+                  alt="ESG Insight"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCiPZcAXd0kClt-Q29gudcX0fQwTBdPkpjnkkhlQC7vOnSNPUA6j1PWsJSz-1NakvtCgPQtGoB1R1uzMVKz71t5SOZ5YSyAbCngc2D6v50qh9KFLUvbSxoNYY3T5B1No2L4apAxmNEbZ9oOFGylGzxSfGgNsZHx6mJoAOfQL65u4Dl2OL0gqI14HEHOAbOHQBCwn-Z8R2RZDT50iX9gkyXpeQoN9xddUheTLg5bZ7C3_-wGniPFgs2KLdKVLpMT3rLmBUibwOOsOHE"
+                />
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-primary mb-3 block font-display"
+                >ESG</span
+              >
+              <h3
+                class="text-xl font-serif group-hover:underline underline-offset-4 decoration-primary transition-all"
+              >
+                Navigating ESG Complexity: A Practical Framework for CEOs
+              </h3>
+            </a>
+            <a class="group block" href="#">
+              <div class="aspect-[4/3] mb-6 overflow-hidden">
+                <img
+                  alt="Finance Insight"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9z4rc1M1yoioZomHqzUtf-rgbdqmrneV1Zw0ICECpJTUaK0rsj7ScvPxExO5MXrIDPKhZHNdyOce_1ZNwLHSAZ00ksxyIhm79-F4R_PW1cbyJH8h99R5zq6fT37WciPz1EWn4r6LYdVGxd2IrhW9IZmWe8NMgnDXWRkf_RiDpLCV_PRnAS5OahGyQ0OCa8Crnza2weR1hWt9X0xtBg0YOCW3cokKs53dV89CtOFthF4C-rIhEL2kewAIZ1Mr5dO0jWd-SxjiN07sm"
+                />
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-primary mb-3 block font-display"
+                >Finance</span
+              >
+              <h3
+                class="text-xl font-serif group-hover:underline underline-offset-4 decoration-primary transition-all"
+              >
+                Digital Transformation in Mid-Market Finance Firms
+              </h3>
+            </a>
+            <a class="group block" href="#">
+              <div class="aspect-[4/3] mb-6 overflow-hidden">
+                <img
+                  alt="Leadership Insight"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeRKTmfuFw8ScRSV3eonTW2HpixJgi8i2SC5RgBxJkhWmwhQVEz2CCkLwcW2QiE0d2CkmzJ9v5Ock_UcMqQZNtW2IEqEmGkgtd4tLB1Dx2a2VLFKO4-NgMfU2QM2SwaEdJuXYnKJW7irH0O0d6LprSypX6p82AE1cH10yb7GaeHruXXmfvkZRxKGA8B695xtryXDi9B2oH5LdnZWaFgVpWGPPL5WAMAOV1TwJ2JVdLY0vAewvoAMZ31kOW2jJtcfBorMBSvUYUpIv7"
+                />
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-widest text-primary mb-3 block font-display"
+                >Leadership</span
+              >
+              <h3
+                class="text-xl font-serif group-hover:underline underline-offset-4 decoration-primary transition-all"
+              >
+                The Rise of Hybrid Leadership: Managing Remote Excellence
+              </h3>
+            </a>
+          </div>
+        </section>
+      </main>
+  
+    </div>
+  </body>
+</html>
