@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Terms and Conditions | CodeNdCoffee</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/terms.css" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "secondary-grey": "#919191",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./assets/js/terms.js" defer></script>
+  </head>
+  <body class="antialiased">
+    <!-- Hero Section with Slideshow -->
+    <section
+      class="hero-bg relative h-[60vh] flex items-center justify-center overflow-hidden"
+    >
+      <!-- Slideshow Container -->
+      <div class="hero-slideshow">
+        <!-- Slide 1 -->
+        <div
+          class="slide active"
+          id="slide1"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="slide"
+          id="slide2"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="slide"
+          id="slide3"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div
+          class="slide"
+          id="slide4"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide Navigation Dots -->
+        <div class="slide-dots">
+          <div class="slide-dot active" onclick="goToSlide(0)"></div>
+          <div class="slide-dot" onclick="goToSlide(1)"></div>
+          <div class="slide-dot" onclick="goToSlide(2)"></div>
+          <div class="slide-dot" onclick="goToSlide(3)"></div>
+        </div>
+      </div>
+
+      <div
+        class="glass-card max-w-4xl w-[90%] md:w-full p-10 md:p-16 rounded-[2rem] text-center shadow-2xl z-10"
+      >
+        <div
+          class="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-bold tracking-widest uppercase mb-6"
+        >
+          Legal Documentation
+        </div>
+        <h1
+          class="text-4xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Terms and <span class="text-primary">Conditions</span>
+        </h1>
+        <p class="text-[var(--secondary-text)] font-medium">
+          Last Updated: March 25, 2024
+        </p>
+        <div class="no-print flex items-center justify-center gap-4 mt-10">
+          <button
+            class="print-btn bg-primary text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+            onclick="window.print()"
+          >
+            <span class="material-symbols-outlined text-lg">print</span>
+            Print
+          </button>
+          <button
+            id="downloadPdf"
+            class="print-btn bg-white text-slate-900 border border-slate-200 px-8 py-3.5 rounded-xl font-bold hover:bg-slate-50 transition-all"
+          >
+            <span class="material-symbols-outlined text-lg">download</span>
+            PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main
+      class="max-w-[1400px] mx-auto px-6 md:px-12 py-20 lg:flex gap-16 relative"
+    >
+      <!-- Sidebar Navigation -->
+      <aside class="hidden lg:block w-80 shrink-0">
+        <div class="sticky-sidebar space-y-2">
+         
+          <div
+            class="bg-white border border-blue-400 rounded-[16px] shadow-[6px_4px_10px_rgba(20,0,205,0.19)] transition-all duration-300"
+          >
+            <nav class="space-y-1">
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all pt-6 text-[var(--secondary-text)] hover:text-primary"
+                href="#intro"
+              >
+                <span class="material-symbols-outlined font-light">info</span>
+                <span class="text-sm font-semibold">Introduction</span>
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#acceptance"
+              >
+                <span class="material-symbols-outlined font-light"
+                  >verified</span
+                >
+                <span class="text-sm font-semibold">1. Acceptance</span>
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#services"
+              >
+                <span class="material-symbols-outlined font-light"
+                  >terminal</span
+                >
+                <span class="text-sm font-semibold">2. Services</span>
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#ip"
+              >
+                <span class="material-symbols-outlined font-light"
+                  >copyright</span
+                >
+                <span class="text-sm font-semibold"
+                  >3. Intellectual Property</span
+                >
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#obligations"
+              >
+                <span class="material-symbols-outlined font-light"
+                  >assignment_ind</span
+                >
+                <span class="text-sm font-semibold">4. Client Obligations</span>
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#liability"
+              >
+                <span class="material-symbols-outlined font-light">gavel</span>
+                <span class="text-sm font-semibold">5. Liability</span>
+              </a>
+              <a
+                class="group flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-[var(--secondary-text)] hover:text-primary"
+                href="#termination"
+              >
+                <span class="material-symbols-outlined font-light">cancel</span>
+                <span class="text-sm font-semibold">6. Termination</span>
+              </a>
+            </nav>
+            <div
+              class="mt-12 p-6 rounded-2xl bg-blue-50 border border-blue-100"
+            >
+              <p
+                class="text-xs font-bold text-primary uppercase tracking-widest mb-2"
+              >
+                Need help?
+              </p>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Have questions regarding our terms? Our legal team is here to assist.
+              </p>
+              <a
+                class="text-sm font-bold text-primary hover:underline"
+                href="mailto:legal@codendcoffee.com"
+                >legal@codendcoffee.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Article Content -->
+      <article class="flex-1 max-w-3xl mx-auto">
+        <div class="content-section scroll-mt-32" id="intro">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">
+            Introduction
+          </h2>
+          <p class="text-lg text-[var(--secondary-text)] leading-relaxed">
+            Welcome to <strong class="text-primary">CodeNdCoffee</strong>. These Terms and Conditions govern your
+            use of our software development services, product engineering solutions, 
+            website, and digital products. By engaging with our services, you agree to 
+            comply with and be bound by the following terms.
+          </p>
+        </div>
+
+        <div class="space-y-20">
+          <!-- Section 1 -->
+          <section class="content-section scroll-mt-32" id="acceptance">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 01
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Acceptance of Terms
+            </h3>
+            <div class="text-[var(--secondary-text)] leading-relaxed space-y-4">
+              <p>
+                By accessing and using the services provided by <strong class="text-primary">CodeNdCoffee</strong>, you agree 
+                to be bound by these Terms and Conditions. This agreement constitutes a 
+                legally binding contract between you (the "Client") and CodeNdCoffee 
+                (the "Company").
+              </p>
+              <p>
+                We reserve the right to update these terms at any time, and
+                continued use of our services after changes constitutes
+                acceptance of the new terms. Clients will be notified of significant changes.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 2 -->
+          <section class="content-section scroll-mt-32" id="services">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 02
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Description of Services
+            </h3>
+            <div class="text-[var(--secondary-text)] leading-relaxed space-y-6">
+              <p>
+                CodeNdCoffee specializes in product-based software development, 
+                SaaS application development, mobile applications, enterprise solutions, 
+                cloud infrastructure management, and technical consulting for startups 
+                and established businesses.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >verified_user</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">
+                    Product Scope
+                  </p>
+                  <p class="text-xs">
+                    Defined by discovery sessions, MVP planning, and formal proposal.
+                  </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >support_agent</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">Product Support</p>
+                  <p class="text-xs">
+                    90-day post-deployment support and optional maintenance plans.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3 -->
+          <section class="content-section scroll-mt-32" id="ip">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 03
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Intellectual Property Rights
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed mb-6">
+              Unless otherwise specified in a written agreement, CodeNdCoffee
+              retains all ownership rights to proprietary frameworks, code
+              libraries, development tools, and internal products used during development.
+              Client-specific custom code is transferred upon final payment.
+            </p>
+            <div class="bg-slate-900 text-slate-300 p-8 rounded-2xl">
+              <p class="text-sm italic">
+                "Upon final payment, the Client is granted a non-exclusive,
+                perpetual license to use the final custom deliverables for their
+                intended business purpose. Source code ownership is transferred as per
+                the signed agreement."
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 4 -->
+          <section class="content-section scroll-mt-32" id="obligations">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 04
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Client Obligations
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed">
+              The Client is responsible for providing timely feedback, necessary
+              assets, API documentation, and access to required systems for product 
+              development. Failure to provide requested information within agreed 
+              timelines may result in project delays and additional costs.
+            </p>
+          </section>
+
+          <!-- Section 5 -->
+          <section class="content-section scroll-mt-32" id="liability">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 05
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Limitation of Liability
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed">
+              In no event shall CodeNdCoffee be liable for any indirect,
+              incidental, special, or consequential damages including loss of profits.
+              Our total liability for any claim arising out of this agreement shall 
+              not exceed the amount paid by the Client for the specific product or 
+              service in question.
+            </p>
+          </section>
+
+          <!-- Section 6 -->
+          <section class="content-section scroll-mt-32" id="termination">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 06
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Termination of Contract
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed mb-12">
+              Either party may terminate the engagement with a 30-day written
+              notice. In the event of termination, the Client shall pay CodeNdCoffee
+              for all work performed, deliverables completed, and costs incurred up 
+              to the date of termination. All intellectual property remains with 
+              CodeNdCoffee until full payment is received.
+            </p>
+          </section>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button
+          class="floating-btn h-12 w-12 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all text-primary hover:-translate-y-1"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          aria-label="Back to top"
+        >
+          <span class="material-symbols-outlined">arrow_upward</span>
+        </button>
+      </article>
+    </main>
+  </body>
+</html>

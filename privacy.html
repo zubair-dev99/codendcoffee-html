@@ -1,0 +1,447 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Privacy Policy | CodeNdCoffee</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/privacy.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "secondary-grey": "#919191",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="./assets/js/privacy.js" defer></script>
+  </head>
+  <body class="antialiased">
+    <!-- Hero Section with Slideshow -->
+    <section
+      class="hero-bg relative h-[60vh] flex items-center justify-center overflow-hidden"
+    >
+      <!-- Slideshow Container -->
+      <div class="hero-slideshow">
+        <!-- Slide 1 - Privacy & Security -->
+        <div
+          class="slide active"
+          id="slide1"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 2 - Data Protection -->
+        <div
+          class="slide"
+          id="slide2"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 3 - Digital Privacy -->
+        <div
+          class="slide"
+          id="slide3"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide 4 - Secure Data -->
+        <div
+          class="slide"
+          id="slide4"
+          style="
+            background-image: url(&quot;https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80&quot;);
+          "
+        >
+          <div class="slide-overlay"></div>
+        </div>
+
+        <!-- Slide Navigation Dots -->
+        <div class="slide-dots">
+          <div class="slide-dot active" onclick="goToSlide(0)"></div>
+          <div class="slide-dot" onclick="goToSlide(1)"></div>
+          <div class="slide-dot" onclick="goToSlide(2)"></div>
+          <div class="slide-dot" onclick="goToSlide(3)"></div>
+        </div>
+      </div>
+
+      <div
+        class="glass-card max-w-4xl w-[90%] md:w-full p-10 md:p-16 rounded-[2rem] text-center shadow-2xl z-10"
+      >
+        <div
+          class="inline-block px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-bold tracking-widest uppercase mb-6"
+        >
+          Legal Documentation
+        </div>
+        <h1
+          class="text-4xl md:text-6xl font-black text-white leading-tight mb-6"
+        >
+          Privacy <span class="text-primary">Policy</span>
+        </h1>
+        <p class="text-[var(--secondary-text)] font-medium">
+          Last Updated: March 25, 2024
+        </p>
+        <div class="no-print flex items-center justify-center gap-4 mt-10">
+          <button
+            class="print-btn bg-primary text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
+            onclick="window.print()"
+          >
+            <span class="material-symbols-outlined text-lg">print</span>
+            Print
+          </button>
+          <button
+            id="downloadPdf"
+            class="print-btn bg-white text-slate-900 border border-slate-200 px-8 py-3.5 rounded-xl font-bold hover:bg-slate-50 transition-all flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-lg icon">download</span>
+            <span class="btn-text">PDF</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main
+      class="max-w-[1400px] mx-auto px-6 md:px-12 py-20 lg:flex gap-16 relative"
+    >
+
+
+      <!-- Main Article Content -->
+      <article class="flex-1 max-w-5xl mx-auto">
+        <div class="content-section scroll-mt-32" id="intro">
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-6">
+            Introduction
+          </h2>
+          <p class="text-lg text-[var(--secondary-text)] leading-relaxed">
+            Welcome to <strong class="text-primary">CodeNdCoffee</strong>. We are committed to
+            protecting your personal information and your right to privacy. As a 
+            product and service-based software development company, we handle 
+            sensitive data with utmost care. If you have any questions or concerns 
+            about our policy, or our practices with regards to your personal 
+            information, please contact us.
+          </p>
+          <p class="text-lg text-[var(--secondary-text)] leading-relaxed mt-4">
+            When you visit our website, use our services, or engage with our 
+            software products, you trust us with your personal and business information. 
+            We take your privacy very seriously. This privacy notice describes our 
+            data practices for our website, software products, and client services. 
+            We explain what information we collect, how we use it, and what rights 
+            you have regarding your data.
+          </p>
+        </div>
+
+        <div class="space-y-20">
+          <!-- Section 1 -->
+          <section class="content-section scroll-mt-32" id="collection">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 01
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Information We Collect
+            </h3>
+            <div class="text-[var(--secondary-text)] leading-relaxed space-y-6">
+              <p>
+                We collect personal and business information that you voluntarily 
+                provide when expressing interest in our services, using our products, 
+                or engaging in business discussions. The information we collect 
+                depends on your interactions with us and may include:
+              </p>
+              <div class="space-y-3 mt-4">
+                <div class="flex items-start gap-3">
+                  <span class="text-primary mt-1 material-symbols-outlined"
+                    >check_circle</span
+                  >
+                  <span class="mt-1"
+                    ><strong>Client Data:</strong> Name, company details, email address, 
+                    phone number, job title, and business requirements. </span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-primary mt-1 material-symbols-outlined"
+                    >check_circle</span
+                  >
+                  <span class="mt-1"
+                    ><strong>Product Usage Data:</strong> Analytics from our software 
+                    products, feature usage, performance metrics, and error logs.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-primary mt-1 material-symbols-outlined"
+                    >check_circle</span
+                  >
+                  <span class="mt-1"
+                    ><strong>Technical Data:</strong> IP addresses, browser type, 
+                    device information, operating system, and country of origin.</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-primary mt-1 material-symbols-outlined"
+                    >check_circle</span
+                  >
+                  <span class="mt-1"
+                    ><strong>Project Data:</strong> Information related to software 
+                    development projects, specifications, and deliverables.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 2 -->
+          <section class="content-section scroll-mt-32" id="usage">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 02
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              How We Use Your Information
+            </h3>
+            <div class="text-[var(--secondary-text)] leading-relaxed space-y-6">
+              <p>
+                We use collected information for various business purposes related 
+                to software development, product improvement, and service delivery. 
+                We process your information based on legitimate business interests, 
+                contractual obligations, and legal requirements.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >rocket_launch</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">
+                    Product Development
+                  </p>
+                  <p class="text-xs">
+                    To develop, improve, and maintain our software products and 
+                    custom solutions for clients.
+                  </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >forum</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">
+                    Client Communication
+                  </p>
+                  <p class="text-xs">
+                    To respond to inquiries, provide project updates, and send 
+                    important service notifications.
+                  </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >analytics</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">
+                    Service Improvement
+                  </p>
+                  <p class="text-xs">
+                    To analyze product usage, identify improvement areas, and 
+                    enhance user experience.
+                  </p>
+                </div>
+                <div class="p-5 rounded-xl border border-slate-100 bg-white">
+                  <span class="material-symbols-outlined text-primary mb-3"
+                    >security</span
+                  >
+                  <p class="text-sm font-bold text-slate-900 mb-1">
+                    Security & Compliance
+                  </p>
+                  <p class="text-xs">
+                    To monitor and prevent security threats, fraud, and ensure 
+                    regulatory compliance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3 -->
+          <section class="content-section scroll-mt-32" id="cookies">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 03
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Cookies and Tracking Technologies
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed mb-6">
+              We use cookies and similar tracking technologies (like web beacons 
+              and pixels) to enhance user experience, analyze product usage, and 
+              improve our services. These technologies help us understand how 
+              clients interact with our products and website. You can control 
+              cookie preferences through your browser settings.
+            </p>
+            <div
+              class="flex items-center justify-between p-6 border border-blue-100 bg-blue-50 rounded-xl"
+            >
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary"
+                  >cookie</span
+                >
+                <span class="text-sm font-medium text-slate-700"
+                  >Read our detailed Cookie Policy</span
+                >
+              </div>
+              <a class="text-primary text-sm font-bold hover:underline" href="#"
+                >View Cookie Policy</a
+              >
+            </div>
+          </section>
+
+          <!-- Section 4 -->
+          <section class="content-section scroll-mt-32" id="rights">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="h-px w-8 bg-primary"></span>
+              <span
+                class="text-primary font-black text-sm uppercase tracking-widest"
+              >
+                Section 04
+              </span>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">
+              Your Data Protection Rights
+            </h3>
+            <p class="text-[var(--secondary-text)] leading-relaxed mb-6">
+              Depending on your location (such as the European Economic Area, 
+              California, etc.), you have specific rights under applicable data 
+              protection laws. CodeNdCoffee respects these rights, which may include:
+            </p>
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div
+                  class="h-10 w-10 shrink-0 flex items-center justify-center bg-primary/10 rounded-full text-primary font-bold"
+                >
+                  1
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 mb-1">
+                    Right to Access & Portability
+                  </h5>
+                  <p class="text-sm text-[var(--secondary-text)]">
+                    Request copies of your personal data held by us in a 
+                    structured, machine-readable format.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="h-10 w-10 shrink-0 flex items-center justify-center bg-primary/10 rounded-full text-primary font-bold"
+                >
+                  2
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 mb-1">
+                    Right to Correction
+                  </h5>
+                  <p class="text-sm text-[var(--secondary-text)]">
+                    Request correction of inaccurate or incomplete personal 
+                    information in our records.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="h-10 w-10 shrink-0 flex items-center justify-center bg-primary/10 rounded-full text-primary font-bold"
+                >
+                  3
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 mb-1">
+                    Right to Deletion
+                  </h5>
+                  <p class="text-sm text-[var(--secondary-text)]">
+                    Request deletion of your personal data under certain 
+                    conditions, subject to legal retention requirements.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="h-10 w-10 shrink-0 flex items-center justify-center bg-primary/10 rounded-full text-primary font-bold"
+                >
+                  4
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 mb-1">
+                    Right to Restrict Processing
+                  </h5>
+                  <p class="text-sm text-[var(--secondary-text)]">
+                    Request restriction of processing your personal data 
+                    in specific circumstances.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="h-10 w-10 shrink-0 flex items-center justify-center bg-primary/10 rounded-full text-primary font-bold"
+                >
+                  5
+                </div>
+                <div>
+                  <h5 class="font-bold text-slate-900 mb-1">
+                    Right to Object
+                  </h5>
+                  <p class="text-sm text-[var(--secondary-text)]">
+                    Object to processing of your personal data for direct 
+                    marketing or specific legitimate interests.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-[var(--secondary-text)] mt-6">
+              To exercise any of these rights, please contact our Data Protection 
+              Officer at <strong>dpo@codendcoffee.com</strong>. We will respond 
+              to your request within 30 days as required by applicable laws.
+            </p>
+          </section>
+
+        
+        </div>
+
+     
+      </article>
+    </main>
+
+    
+  </body>
+</html>
