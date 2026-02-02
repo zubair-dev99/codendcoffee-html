@@ -1,0 +1,169 @@
+:root {
+  --primary: #0000ff;
+  --secondary-text: #919191;
+  --bg-light: #fbfbfc;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  color: #0f172a;
+  scroll-behavior: smooth;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1); /* thodi aur transparent */
+  backdrop-filter: blur(20px);           /* blur ko zyada karo */
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 16px;                   /* rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 
+              0 4px 16px rgba(0, 0, 0, 0.05); /* depth ke liye soft shadows */
+  padding: 20px;
+  color: #fff;                           /* text ke liye */
+  transition: all 0.3s ease;             /* hover effect smooth */
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15),
+              0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+
+.hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slide-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-container {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+}
+
+/* Additional alignment improvements */
+.content-section {
+  margin-bottom: 5rem;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.print-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 40;
+}
+
+.loading {
+  transform: scale(0.95);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.done {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
