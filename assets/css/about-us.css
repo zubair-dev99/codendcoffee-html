@@ -1,0 +1,137 @@
+
+
+
+
+  /* Custom styles for the new sections */
+      .mission-card {
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 255, 0.1);
+      }
+
+      .vision-card {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 255, 0.03) 0%,
+          rgba(0, 0, 255, 0.08) 100%
+        );
+      }
+
+      .leadership-card {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .leadership-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 255, 0.1);
+      }
+
+      .leadership-image {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(100deg, transparent, #0000ff, transparent);
+      }
+
+      .animated-bg {
+        background: linear-gradient(-45deg, #ffffff, #f0f5ff, #ffffff, #f0f5ff);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Ensure all text uses Poppins */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      span,
+      button,
+      a {
+        font-family: "Poppins", sans-serif;
+      }
+
+
+        @layer utilities {
+            .parallax-text {
+                background-attachment: fixed;
+                user-select: none;
+                pointer-events: none;
+            }
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .timeline-line-enhanced {
+                background: linear-gradient(to bottom, #0000ff 0%, #3b82f6 100%);
+                width: 4px;
+            }
+            .vision-grid {
+                background-image: linear-gradient(rgba(0, 0, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.05) 1px, transparent 1px);
+                background-size: 50px 50px;
+                background-attachment: fixed;
+            }
+            .floating-logo-1 { animation: float-x 20s linear infinite; }
+            .floating-logo-2 { animation: float-x 35s linear infinite reverse; }
+            .floating-logo-3 { animation: float-x 25s linear infinite; }
+            @keyframes float-x {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(100vw); }
+            }
+            @keyframes fade-in-up {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-up {
+                animation: fade-in-up 0.8s ease-out forwards;
+            }
+            .pulse-marker {
+                box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7);
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0% { box-shadow: 0 0 0 0 rgba(0, 0, 255, 0.7); }
+                70% { box-shadow: 0 0 0 10px rgba(0, 0, 255, 0); }
+                100% { box-shadow: 0 0 0 0 rgba(0, 0, 255, 0); }
+            }
+            .world-map-parallax {
+                background-image: radial-gradient(rgba(0, 0, 255, 0.1) 1px, transparent 1px);
+                background-size: 40px 40px;
+                background-attachment: fixed;
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0000ff22;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0000ff44;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
