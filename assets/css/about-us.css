@@ -90,9 +90,9 @@
                 background-size: 50px 50px;
                 background-attachment: fixed;
             }
-            .floating-logo-1 { animation: float-x 20s linear infinite; }
-            .floating-logo-2 { animation: float-x 35s linear infinite reverse; }
-            .floating-logo-3 { animation: float-x 25s linear infinite; }
+            .floating-logo-1 { animation: float-x 50s linear infinite; }
+            .floating-logo-2 { animation: float-x 45s linear infinite reverse; }
+            .floating-logo-3 { animation: float-x 45s linear infinite; }
             @keyframes float-x {
                 0% { transform: translateX(-100%); }
                 100% { transform: translateX(100vw); }
