@@ -88,84 +88,84 @@
   >
     <main>
       <!-- Existing Hero Section (kept as is) -->
-      <section
-        class="flex flex-col md:flex-row min-h-[90vh] w-full items-stretch overflow-hidden"
-      >
-        <div class="w-full md:w-1/2 relative bg-gray-200">
-         <div
-  class="h-full w-full bg-cover bg-center bg-no-repeat grayscale-0 hover:grayscale transition-all duration-700"
-  style="
+     <section
+  class="flex flex-col md:flex-row min-h-[90vh] w-full items-stretch overflow-hidden"
+>
+  <!-- Left Image / Banner -->
+  <div class="w-full md:w-1/2 relative bg-gray-200">
+    <div
+      class="h-full w-full bg-cover bg-center bg-no-repeat grayscale-0 hover:grayscale transition-all duration-700"
+        style="
 background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
     background-attachment: fixed;
   "
-></div>
-            <div
-              class="absolute inset-0 bg-primary/10 mix-blend-multiply"
-            ></div>
-          </div>
-        </div>
-        <div
-          class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-20 py-20 bg-white dark:bg-background-dark"
+    ></div>
+    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+  </div>
+
+  <!-- Right Content -->
+  <div
+    class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-20 py-20 bg-white dark:bg-background-dark"
+  >
+    <div class="max-w-xl">
+      <div class="flex items-center gap-2 mb-6">
+        <div class="h-px w-12 bg-primary"></div>
+        <span
+          class="text-primary font-bold tracking-widest text-xs uppercase"
+          >CodendCoffee Services</span
         >
-          <div class="max-w-xl">
-            <div class="flex items-center gap-2 mb-6">
-              <div class="h-px w-12 bg-primary"></div>
-              <span
-                class="text-primary font-bold tracking-widest text-xs uppercase"
-                >Our Core Mission</span
-              >
-            </div>
-            <h1
-              class="text-primary tracking-tight text-[48px] md:text-[64px] font-bold leading-[1.1] mb-8"
-            >
-              Empowering Businesses Globally
-            </h1>
-            <p
-              class="text-muted-gray text-lg md:text-xl font-normal leading-relaxed mb-12"
-            >
-              Our mission is to bridge the gap between complex architectural
-              problems and elegant software solutions, driving digital
-              transformation across every continent.
-            </p>
-            <div class="grid grid-cols-2 gap-8 pt-4">
-              <div
-                class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >engineering</span
-                >
-                <p
-                  class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
-                >
-                  2000+
-                </p>
-                <p
-                  class="text-muted-gray text-sm font-medium uppercase tracking-wider"
-                >
-                  Engineers
-                </p>
-              </div>
-              <div
-                class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
-              >
-                <span class="material-symbols-outlined text-primary mb-2"
-                  >deployed_code</span
-                >
-                <p
-                  class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
-                >
-                  500+
-                </p>
-                <p
-                  class="text-muted-gray text-sm font-medium uppercase tracking-wider"
-                >
-                  Projects
-                </p>
-              </div>
-            </div>
-          </div>
+      </div>
+
+      <h1
+        class="text-primary tracking-tight text-[48px] md:text-[64px] font-bold leading-[1.1] mb-8"
+      >
+        Building Digital Products That Inspire
+      </h1>
+
+      <p
+        class="text-muted-gray text-lg md:text-xl font-normal leading-relaxed mb-12"
+      >
+        At <span class="text-primary font-semibold">CodendCoffee</span>, we design and develop innovative software solutions tailored to your business needs — from web applications to mobile apps, and from product strategy to deployment. Our mission is to turn ideas into high-quality, scalable digital products.
+      </p>
+
+      <!-- Services / Stats Cards -->
+      <div class="grid grid-cols-2 gap-8 pt-4">
+        <div
+          class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
+        >
+          <span class="material-symbols-outlined text-primary mb-2">code</span>
+          <p
+            class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
+          >
+            150+
+          </p>
+          <p
+            class="text-muted-gray text-sm font-medium uppercase tracking-wider"
+          >
+            Web & Mobile Projects
+          </p>
         </div>
-      </section>
+
+        <div
+          class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
+        >
+          <span class="material-symbols-outlined text-primary mb-2">support_agent</span>
+          <p
+            class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
+          >
+            50+
+          </p>
+          <p
+            class="text-muted-gray text-sm font-medium uppercase tracking-wider"
+          >
+            Satisfied Clients
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       <section
         class="relative py-40 overflow-hidden bg-white dark:bg-background-dark vision-grid"
