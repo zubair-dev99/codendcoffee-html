@@ -1,0 +1,1005 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Codendcoffee Software</title>
+    <link rel="stylesheet" href="./assets/css/about-us.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for social icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "gray-accent": "#919191",
+              "background-light": "#ffffff",
+              "background-dark": "#050505",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"], // Changed to Poppins
+              poppins: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "fade-in": "fadeIn 1s ease-out forwards",
+              "slide-up": "slideUp 0.8s ease-out forwards",
+              "slide-in-left": "slideInLeft 0.8s ease-out forwards",
+              "slide-in-right": "slideInRight 0.8s ease-out forwards",
+              "pulse-slow": "pulse 3s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(30px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              slideInLeft: {
+                "0%": { transform: "translateX(-30px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              slideInRight: {
+                "0%": { transform: "translateX(30px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-white dark:bg-background-dark text-[#101018] dark:text-white font-poppins"
+  >
+    <main>
+      <!-- Existing Hero Section (kept as is) -->
+     <section
+  class="flex flex-col md:flex-row min-h-[90vh] w-full items-stretch overflow-hidden"
+>
+  <!-- Left Image / Banner -->
+  <div class="w-full md:w-1/2 relative bg-gray-200">
+    <div
+      class="h-full w-full bg-cover bg-center bg-no-repeat grayscale-0 hover:grayscale transition-all duration-700"
+        style="
+background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+    background-attachment: fixed;
+  "
+    ></div>
+    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+  </div>
+
+  <!-- Right Content -->
+  <div
+    class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-20 py-20 bg-white dark:bg-background-dark"
+  >
+    <div class="max-w-xl">
+      <div class="flex items-center gap-2 mb-6">
+        <div class="h-px w-12 bg-primary"></div>
+        <span
+          class="text-primary font-bold tracking-widest text-xs uppercase"
+          >CodendCoffee Services</span
+        >
+      </div>
+
+      <h1
+        class="text-primary tracking-tight text-[48px] md:text-[64px] font-bold leading-[1.1] mb-8"
+      >
+        Building Digital Products That Inspire
+      </h1>
+
+      <p
+        class="text-muted-gray text-lg md:text-xl font-normal leading-relaxed mb-12"
+      >
+        At <span class="text-primary font-semibold">CodendCoffee</span>, we design and develop innovative software solutions tailored to your business needs — from web applications to mobile apps, and from product strategy to deployment. Our mission is to turn ideas into high-quality, scalable digital products.
+      </p>
+
+      <!-- Services / Stats Cards -->
+      <div class="grid grid-cols-2 gap-8 pt-4">
+        <div
+          class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
+        >
+          <span class="material-symbols-outlined text-primary mb-2">code</span>
+          <p
+            class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
+          >
+            150+
+          </p>
+          <p
+            class="text-muted-gray text-sm font-medium uppercase tracking-wider"
+          >
+            Web & Mobile Projects
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col gap-2 p-6 rounded-xl border border-gray-100 dark:border-gray-800 bg-background-light dark:bg-gray-900/50 hover:shadow-lg transition-shadow"
+        >
+          <span class="material-symbols-outlined text-primary mb-2">support_agent</span>
+          <p
+            class="text-primary tracking-tight text-3xl font-extrabold leading-tight"
+          >
+            50+
+          </p>
+          <p
+            class="text-muted-gray text-sm font-medium uppercase tracking-wider"
+          >
+            Satisfied Clients
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <section
+        class="relative py-40 overflow-hidden bg-white dark:bg-background-dark vision-grid"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50/10 to-transparent pointer-events-none"
+        ></div>
+        <div class="max-w-[1280px] mx-auto px-10 text-center relative z-10">
+          <h2
+            class="text-[#0000ff] text-[48px] md:text-[84px] font-bold font-black tracking-tight mb-8 leading-tight"
+          >
+            Innovating for a<br />Digital Future
+          </h2>
+          <p class="text-[#919191] text-xl max-w-3xl mx-auto font-medium">
+            We envision a world where technology doesn't just solve problems,
+            but anticipates them, creating seamless ecosystems for human
+            progress.
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== MISSION & VISION SECTION ========== -->
+      <section class="relative py-24 md:py-32 overflow-hidden animated-bg">
+        <div class="absolute inset-0 bg-grid-pattern opacity-[0.02]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+          <div class="text-center mb-20">
+            <span
+              class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4 tracking-wide animate-pulse-slow"
+              >OUR PHILOSOPHY</span
+            >
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6"
+            >
+              Driven by Purpose,
+              <span class="text-primary">Built for Impact</span>
+            </h2>
+            <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+            <!-- Mission Card -->
+            <div
+              class="mission-card bg-white dark:bg-gray-900/80 rounded-3xl p-8 md:p-12 shadow-2xl animate-slide-up opacity-0"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="grid md:flex items-start mb-8 text-center md:text-left"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto md:mx-0 md:mr-6 mb-4 md:mb-0"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl"
+                    >target</span
+                  >
+                </div>
+
+                <div>
+                  <span
+                    class="inline-block text-xs font-bold tracking-widest text-primary uppercase mb-2"
+                  >
+                    Our Mission
+                  </span>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white"
+                  >
+                    What Drives Us Forward
+                  </h3>
+                </div>
+              </div>
+
+              <p
+                class="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed"
+              >
+                To empower businesses worldwide with cutting-edge software
+                solutions that transform complex challenges into opportunities
+                for growth and innovation.
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-4 mt-1"
+                  >
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Deliver scalable, secure, and innovative digital solutions
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-4 mt-1"
+                  >
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Bridge the gap between business needs and technological
+                    possibilities
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="flex-shrink-0 w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center mr-4 mt-1"
+                  >
+                    <span class="material-symbols-outlined text-primary text-sm"
+                      >check</span
+                    >
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Foster a culture of continuous learning and excellence
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700"
+              >
+            <div class="grid md:flex items-center text-center md:text-left">
+  <div
+    class="w-12 h-12 rounded-full bg-primary 
+           flex items-center justify-center 
+           mx-auto md:mx-0 md:mr-4 mb-3 md:mb-0"
+  >
+    <span class="material-symbols-outlined text-white">
+      rocket_launch
+    </span>
+  </div>
+
+  <div>
+    <p class="font-bold text-gray-900 dark:text-white">
+      Since 2015
+    </p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      Driving digital transformation worldwide
+    </p>
+  </div>
+</div>
+
+              </div>
+            </div>
+
+            <!-- Vision Card -->
+            <div
+              class="vision-card bg-gradient-to-br from-white/80 to-primary/5 dark:from-gray-900/80 dark:to-primary/10 rounded-3xl p-8 md:p-12 shadow-2xl animate-slide-up opacity-0"
+              style="animation-delay: 0.4s"
+            >
+              <div
+                class="grid md:flex items-start mb-8 text-center md:text-left"
+              >
+                <div
+                  class="flex-shrink-0 w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto md:mx-0 md:mr-6 mb-4 md:mb-0"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    visibility
+                  </span>
+                </div>
+
+                <div>
+                  <span
+                    class="inline-block text-xs font-bold tracking-widest text-primary uppercase mb-2"
+                  >
+                    Our Vision
+                  </span>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white"
+                  >
+                    Where We're Heading
+                  </h3>
+                </div>
+              </div>
+
+              <p
+                class="text-gray-600 dark:text-gray-300 text-lg mb-8 leading-relaxed"
+              >
+                To create a world where technology anticipates challenges and
+                creates seamless ecosystems for human progress and innovation.
+              </p>
+
+              <div class="mb-10">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-gray-700 dark:text-gray-300 font-medium"
+                    >Global Reach</span
+                  >
+                  <span class="text-primary font-bold">95%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"
+                >
+                  <div
+                    class="bg-primary h-2.5 rounded-full animate-pulse"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="mb-10">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-gray-700 dark:text-gray-300 font-medium"
+                    >Innovation Index</span
+                  >
+                  <span class="text-primary font-bold">88%</span>
+                </div>
+                <div
+                  class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5"
+                >
+                  <div
+                    class="bg-primary h-2.5 rounded-full animate-pulse"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="flex items-center">
+                  <div
+                    class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 md:shadow-md shadow-none flex items-center justify-center mr-4
+         max-sm:bg-transparent"
+                  >
+                    <span class="material-symbols-outlined text-primary"
+                      >public</span
+                    >
+                  </div>
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Expanding to 30+ countries by 2026
+                  </p>
+                </div>
+                <div class="flex items-center">
+                 <div
+  class="w-10 h-10 rounded-full bg-white dark:bg-gray-800 md:shadow-md shadow-none flex items-center justify-center mr-4
+         max-sm:bg-transparent" 
+>
+  <span class="material-symbols-outlined text-primary">diversity_3</span>
+</div>
+
+                  <p class="text-gray-700 dark:text-gray-300">
+                    Building diverse, inclusive tech communities
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-10 pt-8 border-t border-gray-200 dark:border-gray-700"
+              >
+            <div class="grid md:flex items-center text-center md:text-left">
+  <div
+    class="w-12 h-12 rounded-full bg-primary/20 
+           flex items-center justify-center 
+           mx-auto md:mx-0 md:mr-4 mb-3 md:mb-0"
+  >
+    <span class="material-symbols-outlined text-primary">
+      auto_awesome
+    </span>
+  </div>
+
+  <div>
+    <p class="font-bold text-gray-900 dark:text-white">
+      Future Focused
+    </p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      Shaping tomorrow's technology today
+    </p>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative elements -->
+        <div
+          class="absolute top-10 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ========== LEADERSHIP SECTION ========== -->
+      <section
+        class="py-24 md:py-32 bg-white dark:bg-background-dark overflow-hidden"
+      >
+        <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div class="text-center mb-20">
+            <span
+              class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm mb-4 tracking-wide"
+              >MEET OUR TEAM</span
+            >
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6"
+            >
+              Leadership <span class="text-primary">That Inspires</span>
+            </h2>
+            <p
+              class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg md:text-xl"
+            >
+              Visionary leaders driving innovation and excellence across
+              continents.
+            </p>
+            <div class="w-24 h-1 bg-primary mx-auto rounded-full mt-8"></div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Leader 1 -->
+            <div
+              class="leadership-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl animate-slide-in-left opacity-0"
+              style="animation-delay: 0.2s"
+            >
+              <div class="relative h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                  alt="Alex Johnson - CEO"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute bottom-6 left-6">
+                  <h3 class="text-white text-2xl font-bold">Alex Johnson</h3>
+                  <p class="text-primary font-semibold">CEO & Founder</p>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  15+ years in tech leadership. Founded Codendcoffee with a
+                  vision to simplify complex digital transformation.
+                </p>
+
+                <div class="flex items-center space-x-4 mb-6">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-lg">mail</span>
+                  </a>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                  <div
+                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm"
+                  >
+                    <span class="material-symbols-outlined text-base mr-2"
+                      >location_on</span
+                    >
+                    Based in New York HQ
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div
+              class="leadership-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl animate-slide-up opacity-0"
+              style="animation-delay: 0.4s"
+            >
+              <div class="relative h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
+                  alt="Maria Chen - CTO"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute bottom-6 left-6">
+                  <h3 class="text-white text-2xl font-bold">Maria Chen</h3>
+                  <p class="text-primary font-semibold">
+                    Chief Technology Officer
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  Former Google engineer leading our global tech strategy.
+                  Passionate about scalable architecture and AI innovation.
+                </p>
+
+                <div class="flex items-center space-x-4 mb-6">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-lg">mail</span>
+                  </a>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                  <div
+                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm"
+                  >
+                    <span class="material-symbols-outlined text-base mr-2"
+                      >location_on</span
+                    >
+                    Based in Tokyo Tech Center
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div
+              class="leadership-card bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl animate-slide-in-right opacity-0"
+              style="animation-delay: 0.6s"
+            >
+              <div class="relative h-80 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                  alt="David Okonjo - COO"
+                  class="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                ></div>
+                <div class="absolute bottom-6 left-6">
+                  <h3 class="text-white text-2xl font-bold">David Okonjo</h3>
+                  <p class="text-primary font-semibold">
+                    Chief Operations Officer
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-8">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  Operations expert with 12+ years at Amazon and McKinsey.
+                  Drives operational excellence across global offices.
+                </p>
+
+                <div class="flex items-center space-x-4 mb-6">
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <span class="material-symbols-outlined text-lg">mail</span>
+                  </a>
+                </div>
+
+                <div class="pt-6 border-t border-gray-100 dark:border-gray-800">
+                  <div
+                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm"
+                  >
+                    <span class="material-symbols-outlined text-base mr-2"
+                      >location_on</span
+                    >
+                    Based in London European Hub
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Bar -->
+          <div
+            class="mt-24 bg-gradient-to-r from-primary/10 to-primary/5 dark:from-primary/20 dark:to-primary/10 rounded-2xl p-3 md:p-12"
+          >
+            <div class="grid grid-cols-2 md:grid-cols-4">
+              <!-- 1 -->
+              <div
+                class="text-center p-6 border-b-2 border-r-2 border-white md:border-b-0 md:border-r-2"
+              >
+                <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  15+
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                  Years Experience
+                </p>
+              </div>
+
+              <!-- 2 -->
+              <div
+                class="text-center p-6 border-b-2 border-white md:border-b-0 md:border-r-2"
+              >
+                <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  98%
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                  Client Satisfaction
+                </p>
+              </div>
+
+              <!-- 3 -->
+              <div
+                class="text-center p-6 border-r-2 border-white md:border-b-0 md:border-r-2"
+              >
+                <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  40+
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                  Countries Served
+                </p>
+              </div>
+
+              <!-- 4 -->
+              <div class="text-center p-6 border-white">
+                <p class="text-4xl md:text-5xl font-bold text-primary mb-2">
+                  50+
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                  Industry Awards
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ... (rest of your existing code remains unchanged) ... -->
+      <section
+        class="relative z-10 pb-16 overflow-hidden bg-white dark:bg-background-dark"
+      >
+        <div
+          class="max-w-[1280px] mx-auto px-10 relative z-20 mb-20 text-center"
+        >
+          <h2
+            class="text-[#0000ff] text-5xl font-extrabold tracking-tight mb-4"
+          >
+            Our Tech Ecosystem
+          </h2>
+          <p class="text-[#919191] text-xl max-w-2xl mx-auto">
+            We leverage the most advanced technologies to build scalable,
+            resilient, and future-proof digital experiences.
+          </p>
+        </div>
+        <div class="flex flex-col gap-16">
+          <div
+            class="flex whitespace-nowrap gap-12 floating-logo-1  transition-opacity"
+          >
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="React"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsLrSEg_tfQbqJcIJpcP1G92Sqizc8LmznMx2CIBvHldZawEv5hoNtDO8cisq4U8tu7StfPd_WvjbGaeQxxLHlBvT3_NjCad7Sz9YIXS1I7ccLqXmGzsCGEZiWyF4mCZEzMt1MQeST71MtkxotE50kizCGAvrYG0Pi2dFOQJF9tWYBJWw7EYGYus-wUJL-DJrdpwrR6wdtmmWHngQXgiu_3yqav5BQ86WwQvZoUqvt7Vgu7qOcroZYfmkU2n-1U4jcse3lcr2-PWsH"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >React</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="AWS"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4wl8yr8GMq6lia8jMk4zTIMA5L1nwnkBJa31pD73zp4FR9IpYyBA1lDDEKiPT_tcb7Eanl6CZ8ZEseaA6VceMexoq2LN8Ut2GWI3C1HaRR1QkoHA6FM3D26wy987riiWnSS8BgJeJvWVLJWsBfp5jLiM3FYco8xOnc9gC7FvKO_ibLhfiogLBVpSqgujxpgwRJ_CpxEN4XdzXj5ygcDx3uU4aPTqVHtUhv5rJxFblVK0B-KTkA7fchgekwwC72v6Qb7yNiR6xYt9N"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >AWS</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="Python"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuChCS6KAqcCeB6MUMNB2VKUvAIfxScUyfOn5lhv6yHCMDg-us30mgjj6HcgS5aZ4tWEtPKXS26cHNPEEPQ5TuFV9scWw3mdmFdCafhnAbA1uk45VMPaZtL98Au5thcipbB0P0LN9MOS9RqI562mV8i_Q3BB4Cnj5MgA5anUntQedVyee819NW5uZwSwU-pGZs8uF8cxKP2BlAnlEoDJmrD4SLSPaBif_Ux-aJ4vFbI4k7ZRrrc9YMcFSjNsytULIO4qvPfkSwPmny1I"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >Python</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="K8s"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrGlE6jDPOUZJNYelS7VOQzV6zOIyOsGIiYgM7WZcd4B-qlrFEx9ue2yR3b-4xP9NlDEUf2tVBAY-XEB0cBrGj3C-KnR9MazazQsgCqLzSOOx507rlYtCGqJGC9jWX5EAoNk0wenwGfOvOm92dAznQ9LxOTyIl4_WDwiWC6wElmTjSRIaQj_SpuMNVgpf-TA5OGBjE0UJ3HLIBg2Rm05AF4shK6uILNn6Tua90i2h3OhtUXLD6cdhy26G6pmJOb6F9o7vI2UAMiOzY"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >Kubernetes</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="TypeScript"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRbAHRB7F88KIjax_1M1juGDGGUY-ymHQb-1CrX30VCR7RfU0XmRh22Vqgn2gVqUA7xZb-Ro2E6ttylq1Vr9WrS24-oOHdPF_b2mzMg2hspqJA-zNr72161zLI9n-HgQKgXp9vDG8j8i0d6DfGw_ALw-ZuL5rR0aIDfQ92NDUTIsvCBN98azrrkg-UxVgJJi0bQL170rR9APr4Lte2mHU3kMNZRvnvBbCi9OcJPxDEn0qZvSuM3oDsvtFARF8dpAZ_uhrRQc-OcJdq"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >TypeScript</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex whitespace-nowrap gap-12 floating-logo-2  transition-opacity"
+          >
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="Golang"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDryG7Jmy5OHHSCAN7oMT3Z8-kc8ltQcoarBR-9_s56kLWAeXUF_KjBxaBakDKKN1BZKKhrNqJKHpV4NLW8JLKhs3DGj6EI-AH3u5lfq30Ep9yn9sy8ix_P5ppxkJvBJCRknMbJb4ughUz25b1HW-9BmRMUPyoT6_u3W-S3HOonQqS52Nt3Ib5gVU86AVNDBVyk49ZK9G9fe1LkNIgrv3Hq2jzyoydMG5X_X-2A-EQWOfs67IVHG5lb3k0l5dhJVdzfSvQjpZPb21jZ"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >Golang</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="Docker"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2oPsNq2AjU-TF75Ou3fYD8QqMGVv05wefwLb0Yu9nIW9zrzxG484BJ8KNZr9JBqUTyZVv_SMXRkFsiP4gKhddwVkYmpahCl3_8JYl2PiM6zlW1R07ZrPat2dXvh-GKPYKOEgNZgVHNcpkNHzr98HwQ4CEJDOYN2KhCBF1cItsTNYB_ubG8R5XxiJUi5E3dHnB--Hb7Z1g0aerv7hPWdmUIPHZqn5-ArohjpH9RvdkGlIJyqVCcHASJqObVUzlDfVj-PUb54IG0izE"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >Docker</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="Node.js"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDKUYljozNpQTXjxnNC41OoAn2dkXM8MHsEnNAd2tipTsu3jHQdoBvzP8VSf38DYpfA1Woe_P9s4IqW2Sws90l5nZ6h_VHjym55bY4CfmAEn9VTUKj3VaZV18EFF6gZxjcoPJpi8w6LpjCVrPTh1rU8fZYazb6jTqpIP_htexUj9NIom5IgEUx-SwrmgNxA35SzA0DmeBjBVCRnpZxZ8C6_e7dfdYxBCP0wiN25wrogaQnr1kpsFCkzZyAdsMx5x8UnxL4HvuSjwwj"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >Node.js</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-background-light dark:bg-gray-800/50 px-8 py-4 rounded-full border border-gray-100 dark:border-gray-700"
+            >
+              <img
+                alt="Postgres"
+                class="w-10 h-10"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh75ujKnKGVaH2M7AS1lCdTkW6MAgVaj_HzUFPIN1YxkJ7ewYJpUg5RtegI-BT_ynQzNLYHOLmetc91Wpux_Dsmy2V3WZJQLrQaKYmEPute47aiPgJ7-mDOlaStHGVrHQn8oONOfcEj-jen9bNiFP5JINsFLinUxyrO_ULfDtlwtKcuIm92TRrLiqmdwSACVTKTUGn7v5-8r9kA6b8LyN4URtt_QYUfFQBuyMyVFwGoHKn8p9xF0dFz-CR5OK-n8179aw4GlFlFhLT"
+              />
+              <span class="text-xl font-bold text-[#0c0c1d] dark:text-white"
+                >PostgreSQL</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Locations Section -->
+      <section class="bg-black">
+        <div
+          class="relative h-screen sticky top-0 overflow-hidden flex items-center justify-center group"
+        >
+          <div
+            class="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-1000"
+          >
+            <img
+              alt="New York Landmark"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb99UOqgkBhH6AThdNZKhM2H0HBSexUjnpkfk9neYVHjcHyjKenhTD8HW7gtQoqLIlSkWer6HKHROo7HEXWpxt1QTvZ_1OprG-obPWpyzwOJlYl4KNtu32aRh6qdxzTdAJmFA-PpGhpfLDwEYjN5xizNo4EnIaVCSuTIf6RZlWZrfck593FdbZ4llzIyp2k3zWCapsOOMD_aMOn9N93w_WTvVRsGYlLkpG2ZT_C72mj7oqKchHCzF1xWho6J-RF8rQ9v64_KSLjcU"
+            />
+          </div>
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div
+            class="relative z-10 text-center translate-y-10 group-hover:translate-y-0 transition-transform duration-700"
+          >
+            <h4 class="text-primary font-black tracking-widest text-xl mb-4">
+              HEADQUARTERS
+            </h4>
+            <h2 class="text-white text-7xl md:text-9xl font-black">NEW YORK</h2>
+            <div
+              class="mt-8 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300"
+            >
+              <p class="text-white/60 text-lg mb-8">
+                5th Avenue, Manhattan, NY 10001
+              </p>
+              <button
+                class="bg-primary px-12 py-4 rounded-full text-white font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-colors"
+              >
+                Contact US Hub
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative h-screen sticky top-0 overflow-hidden flex items-center justify-center group"
+        >
+          <div
+            class="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-1000"
+          >
+            <img
+              alt="London Landmark"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9yHAI1KTjy0jDWZmi4xAldFTR1r5a3pChSuDCUKsb1Q246XtkJUPijqv2yaFwQwf_jCQtW8gTK4WjHuB9OsFW8ZgxQBNqoLBOpmh5dx0weGq037pHSgX12SGH04rqVB2VCtHt74f0DHuGF7I6128Qf_kcVpTXjLaEODx2y_CbCkgEsScupp53iNd09_h6PK_7r3BWxqwRpzVrUC786kcvMmojFWFdV6iBCZTIp1ZKGyJjzV3UKrM70t_ullMS3lj2ERGmSVRVZAk"
+            />
+          </div>
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div
+            class="relative z-10 text-center translate-y-10 group-hover:translate-y-0 transition-transform duration-700"
+          >
+            <h4 class="text-primary font-black tracking-widest text-xl mb-4">
+              EUROPEAN HUB
+            </h4>
+            <h2 class="text-white text-7xl md:text-9xl font-black">LONDON</h2>
+            <div
+              class="mt-8 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300"
+            >
+              <p class="text-white/60 text-lg mb-8">
+                124 City Road, EC1V 2NX, UK
+              </p>
+              <button
+                class="bg-primary px-12 py-4 rounded-full text-white font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-colors"
+              >
+                Contact London Office
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="relative h-screen sticky top-0 overflow-hidden flex items-center justify-center group"
+        >
+          <div
+            class="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-1000"
+          >
+            <img
+              alt="Tokyo Landmark"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF1Yg2YPXQvQ9K8jWhjYGJTmCr8--MLEwVUUAcXBpD1GxYzZPTiF-O-9whXd90SSzxDObQ1L08Iq4PlUTTR1LQP1PbZtxbXRr303Ygf5NHvTu_kQHUBFIi49lwmDnYXnWfenUb6lq1TmEBHweJzJqDQIyOlOBIcCBf-rtsCRdjp8cq0OBYS92d6fnXFgyLWyjuTd2Z_SRW1kehfa1fkZzImcZpzd6HPoB-m7_f1drYOZMMjKBd_gCeC6a1HASy3SLC8KjMpL4Ec28"
+            />
+          </div>
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div
+            class="relative z-10 text-center translate-y-10 group-hover:translate-y-0 transition-transform duration-700"
+          >
+            <h4 class="text-primary font-black tracking-widest text-xl mb-4">
+              ASIA TECH CENTER
+            </h4>
+            <h2 class="text-white text-7xl md:text-9xl font-black">TOKYO</h2>
+            <div
+              class="mt-8 opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300"
+            >
+              <p class="text-white/60 text-lg mb-8">
+                Shibuya-ku, Tokyo 151-0053, Japan
+              </p>
+              <button
+                class="bg-primary px-12 py-4 rounded-full text-white font-bold uppercase tracking-widest hover:bg-white hover:text-primary transition-colors"
+              >
+                Contact Tokyo Office
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Animation trigger on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add animation classes when elements come into view
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+            }
+          });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document
+          .querySelectorAll(
+            ".animate-slide-up, .animate-slide-in-left, .animate-slide-in-right",
+          )
+          .forEach((el) => {
+            observer.observe(el);
+          });
+
+        // Add hover effect to leadership cards
+        const leadershipCards = document.querySelectorAll(".leadership-card");
+        leadershipCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
