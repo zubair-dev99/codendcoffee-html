@@ -1461,3 +1461,44 @@ function initFaqAccessibility() {
     }
   });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  window.addEventListener("load", function () {
+    const modal = document.getElementById("cookieModal");
+
+    // Show modal if not already accepted in session
+    if (!sessionStorage.getItem("cookiesAccepted")) {
+      setTimeout(() => {
+        modal.style.transform = "translateY(0)";
+        modal.style.opacity = "1";
+      }, 300);
+    }
+  });
+
+  document.getElementById("acceptCookies").addEventListener("click", function () {
+    sessionStorage.setItem("cookiesAccepted", "true");
+    closeModal();
+  });
+
+  document.getElementById("declineCookies").addEventListener("click", function () {
+    closeModal();
+  });
+
+  function closeModal() {
+    const modal = document.getElementById("cookieModal");
+    modal.style.transform = "translateY(100%)";
+    modal.style.opacity = "0";
+  }
+
+
