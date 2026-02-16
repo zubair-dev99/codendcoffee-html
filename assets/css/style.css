@@ -69,15 +69,23 @@
   top: 0;
   left: 0;
   right: 0;
+  padding: 8px 0;
   margin-top: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Enhanced Glass */
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+
+  /* Clean separation */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  /* Premium elevation */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+
   animation: headerSlideDown 0.3s ease-out;
-  background-color: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(10px);
 }
+
 
 .header-container:not(.header-fixed) {
   animation: headerFadeIn 0.3s ease-out;
