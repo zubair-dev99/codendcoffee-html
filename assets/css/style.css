@@ -61,7 +61,7 @@
 }
 .animate-gradient {
   background-size: 300% 300%;
-  animation: gradient-flow 6s ease infinite;
+  animation: gradient-flow 4s ease infinite;
 }
 
 /* Header Scroll Animation */
