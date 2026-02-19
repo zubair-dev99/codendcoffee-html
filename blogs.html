@@ -1,275 +1,543 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="light" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Corporate Insights &amp; Blog | Consultancy Group</title>
     <!-- Tailwind CSS & Plugins -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- Google Fonts - Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0000ff",
-                        "background-light": "#f8f8fc",
-                        "background-dark": "#0d0d1c",
-                        "card-bg-light": "#ffffff",
-                        "card-bg-dark": "#16162d",
-                        "accent-blue": "#0000ff",
-                    },
-                    fontFamily: {
-                        "display": ["Poppins", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0000ff",
+              "background-light": "#f8f8fc",
+              "background-dark": "#0d0d1c",
+              "card-bg-light": "#ffffff",
+              "card-bg-dark": "#16162d",
+              "accent-blue": "#0000ff",
             },
-        }
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
     <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      body {
+        font-family: "Poppins", sans-serif; /* Applied Poppins globally */
+      }
+      /* Hide scrollbar for filter chips */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Line clamp for article descriptions */
+      .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      @keyframes gradient-flow {
+        0% {
+          background-position: 0% 50%;
         }
-        body {
-            font-family: 'Poppins', sans-serif;  /* Applied Poppins globally */
+        50% {
+          background-position: 100% 50%;
         }
-        /* Hide scrollbar for filter chips */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
+        100% {
+          background-position: 0% 50%;
         }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        /* Line clamp for article descriptions */
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
+      }
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradient-flow 6s ease infinite;
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-[#0d0d1c] dark:text-[#f8f8fc] min-h-screen">
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-[#0d0d1c] dark:text-[#f8f8fc] min-h-screen"
+  >
     <div class="layout-container flex h-full grow flex-col">
-      
-        <main class="flex-1 max-w-[1280px] mx-auto w-full px-4 md:px-10 py-12">
-            <!-- Featured Article Section -->
-            <section class="mb-16">
-                <div class="flex flex-col gap-2 mb-6">
-                    <span class="text-primary font-bold tracking-widest text-xs uppercase">Editor's Pick</span>
-                    <h1 class="text-3xl md:text-5xl font-extrabold text-[#0d0d1c] dark:text-white leading-tight">Corporate Intelligence &amp; Beyond</h1>
+      <main class="flex-1 max-w-[1280px] mx-auto w-full px-4 md:px-10 py-12">
+        <!-- Featured Article Section -->
+        <section class="mb-16">
+          <div class="flex flex-col gap-2 mb-6">
+            <span
+              class="text-primary font-bold tracking-widest text-xs uppercase"
+              >Editor's Pick</span
+            >
+            <h1
+              class="text-3xl md:text-5xl font-extrabold text-[#0d0d1c] dark:text-white leading-tight"
+            >
+              Corporate Intelligence &amp; Beyond
+            </h1>
+          </div>
+          <div
+            class="p-0 overflow-hidden rounded-xl bg-card-bg-light dark:bg-card-bg-dark border border-[#e6e6f4] dark:border-[#1e1e3f] shadow-sm"
+          >
+            <div class="flex flex-col lg:flex-row items-stretch">
+              <div
+                class="w-full lg:w-3/5 bg-center bg-no-repeat aspect-video lg:aspect-auto bg-cover"
+                data-alt="Modern glass corporate skyscraper architecture against a clear blue sky"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAyWi7YPsfVW8sFDrZCPNUFTpsugeYJvvp-WTj6lEmtnh_Hk4_UECazaN_52mY6sjAHAxidvYBKEN4xYa2vVpW5L2vsVHZFB0NT4Eae3weaFILBTQnsfuS3C5f8PGcBQ8eZf8B0ewx1O_z26Tz4yDtW917AiF4toyIfxn_V9OOXYSfiEQOqGTPEL6AE3bHOwmSarOrzbxUuCXb7VYXbQH6bnumRfrppCp0223PPv6CT-7c6HcFfFEHBf8oRUSU1BE3zpND1FFkv1iMz&quot;);
+                "
+              ></div>
+              <div
+                class="flex w-full lg:w-2/5 flex-col justify-center p-8 md:p-12 gap-6"
+              >
+                <div class="flex gap-2">
+                  <span
+                    class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider"
+                    >Strategy</span
+                  >
+                  <span
+                    class="text-[#919191] dark:text-[#8b8bbd] text-xs font-medium pt-[4px]"
+                    >12 Min Read</span
+                  >
                 </div>
-                <div class="p-0 overflow-hidden rounded-xl bg-card-bg-light dark:bg-card-bg-dark border border-[#e6e6f4] dark:border-[#1e1e3f] shadow-sm">
-                    <div class="flex flex-col lg:flex-row items-stretch">
-                        <div class="w-full lg:w-3/5 bg-center bg-no-repeat aspect-video lg:aspect-auto bg-cover" data-alt="Modern glass corporate skyscraper architecture against a clear blue sky" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyWi7YPsfVW8sFDrZCPNUFTpsugeYJvvp-WTj6lEmtnh_Hk4_UECazaN_52mY6sjAHAxidvYBKEN4xYa2vVpW5L2vsVHZFB0NT4Eae3weaFILBTQnsfuS3C5f8PGcBQ8eZf8B0ewx1O_z26Tz4yDtW917AiF4toyIfxn_V9OOXYSfiEQOqGTPEL6AE3bHOwmSarOrzbxUuCXb7VYXbQH6bnumRfrppCp0223PPv6CT-7c6HcFfFEHBf8oRUSU1BE3zpND1FFkv1iMz");'></div>
-                        <div class="flex w-full lg:w-2/5 flex-col justify-center p-8 md:p-12 gap-6">
-                            <div class="flex gap-2">
-                                <span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider">Strategy</span>
-                                <span class="text-[#919191] dark:text-[#8b8bbd] text-xs font-medium pt-[4px]">12 Min Read</span>
-                            </div>
-                            <h2 class="text-2xl md:text-3xl font-bold text-[#0d0d1c] dark:text-white leading-snug">The Future of AI in Enterprise Architecture: A 2024 Global Forecast</h2>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-base md:text-lg leading-relaxed">
-                                As global markets shift towards automated governance, firms are restructuring their digital core to accommodate generative models at scale. Discover the three pillars of modern resilience.
-                            </p>
-                            <div class="flex items-center justify-between pt-4 border-t border-[#e6e6f4] dark:border-[#1e1e3f]">
-                                <div class="flex items-center gap-3">
-                                    <div class="size-10 rounded-full bg-slate-300 bg-cover" data-alt="Portrait of a professional business consultant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvm4KFbs_VuA7ETwnTbdhgov_H7Lu24XhoqdFMM2o6caL9ugq57KKrqmg6Zopwo2IfBIJDe3SEH2YcTeKpGpsIFbHsSrF7v3CSZJY7mdfO-ImhEMpK59lCuhkI39BsgqC0tAA3rVnqF3bB-dKIt6bxn0FzaDEz1f-5Um4PtXmFUvR0_9PW61IgkY28s0fj5Jav8zPAqqIbVNCkpjrbajZ0zW6qjsWv8x2I1DdySDJYSd0XOJjR7VX209prsRg3bnB8Kg8z6fJtdDzp");'></div>
-                                    <div class="flex flex-col">
-                                        <p class="text-[#0d0d1c] dark:text-white text-sm font-bold">Dr. Elena Vance</p>
-                                        <p class="text-[#919191] dark:text-[#8b8bbd] text-xs">Senior Partner, Technology</p>
-                                    </div>
-                                </div>
-                                <button class="flex items-center gap-2 text-primary font-bold text-sm group">
-                                    Read Full Insight
-                                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                                </button>
-                            </div>
-                        </div>
+                <h1
+                  class="text-[#0A2540] tracking-tight text-[38px] md:text-[40px] font-bold md:leading-[60px] leading-[50px]"
+                >
+                  Building Innovative Software
+                  <span
+                    class="bg-gradient-to-r from-[#0061ff] via-[#6b3eff] to-[#a855f7] bg-clip-text text-transparent bg-300% animate-gradient"
+                  >
+                    Solutions That Empower
+                  </span>
+                </h1>
+                <p class="text-[#919191] text-base md:text-lg leading-relaxed">
+                  At CodendCoffee, we explore how cutting-edge software, AI
+                  tools, and scalable digital solutions are transforming
+                  businesses worldwide. Dive into our blogs to discover
+                  insights, trends, and strategies for leveraging technology to
+                  drive innovation and growth.
+                </p>
+
+                <div
+                  class="flex items-center justify-between pt-4 border-t border-[#e6e6f4] dark:border-[#1e1e3f]"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="size-10 rounded-full bg-slate-300 bg-cover"
+                      data-alt="Portrait of a professional business consultant"
+                      style="
+                        background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBvm4KFbs_VuA7ETwnTbdhgov_H7Lu24XhoqdFMM2o6caL9ugq57KKrqmg6Zopwo2IfBIJDe3SEH2YcTeKpGpsIFbHsSrF7v3CSZJY7mdfO-ImhEMpK59lCuhkI39BsgqC0tAA3rVnqF3bB-dKIt6bxn0FzaDEz1f-5Um4PtXmFUvR0_9PW61IgkY28s0fj5Jav8zPAqqIbVNCkpjrbajZ0zW6qjsWv8x2I1DdySDJYSd0XOJjR7VX209prsRg3bnB8Kg8z6fJtdDzp&quot;);
+                      "
+                    ></div>
+                    <div class="flex flex-col">
+                      <p
+                        class="text-[#0d0d1c] dark:text-white text-sm font-bold"
+                      >
+                        Dr. Elena Vance
+                      </p>
+                      <p class="text-[#919191] dark:text-[#8b8bbd] text-xs">
+                        Senior Partner, Technology
+                      </p>
                     </div>
+                  </div>
+                  <button
+                    class="flex items-center gap-2 text-primary font-bold text-sm group"
+                  >
+                    Read Full Insight
+                    <span
+                      class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                      >arrow_forward</span
+                    >
+                  </button>
                 </div>
-            </section>
-            
-            <!-- Filters / Chips -->
-            <section class="mb-8">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#e6e6f4] dark:border-[#1e1e3f] pb-6">
-                    <div class="flex gap-3 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-primary text-white text-sm font-bold cursor-pointer">
-                            All Topics
-                        </div>
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all">
-                            Strategy
-                        </div>
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all">
-                            Technology
-                        </div>
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all">
-                            Operations
-                        </div>
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all">
-                            Leadership
-                        </div>
-                        <div class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all">
-                            Sustainability
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2 text-[#919191] dark:text-[#8b8bbd] text-sm font-medium">
-                        <span class="material-symbols-outlined">sort</span>
-                        <span>Sort by: Latest</span>
-                    </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Filters / Chips -->
+        <section class="mb-8">
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#e6e6f4] dark:border-[#1e1e3f] pb-6"
+          >
+            <div class="flex gap-3 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-primary text-white text-sm font-bold cursor-pointer"
+              >
+                All Topics
+              </div>
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all"
+              >
+                Strategy
+              </div>
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all"
+              >
+                Technology
+              </div>
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all"
+              >
+                Operations
+              </div>
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all"
+              >
+                Leadership
+              </div>
+              <div
+                class="flex h-10 shrink-0 items-center justify-center px-5 rounded-full bg-[#e6e6f4] dark:bg-[#1e1e3f] text-[#0d0d1c] dark:text-[#f8f8fc] text-sm font-medium hover:bg-[#d8d8ea] dark:hover:bg-[#2a2a4f] cursor-pointer transition-all"
+              >
+                Sustainability
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-2 text-[#919191] dark:text-[#8b8bbd] text-sm font-medium"
+            >
+              <span class="material-symbols-outlined">sort</span>
+              <span>Sort by: Latest</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Article Grid -->
+        <section class="mb-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Card 1 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Close-up of wind turbines in a lush green field"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDCiPZcAXd0kClt-Q29gudcX0fQwTBdPkpjnkkhlQC7vOnSNPUA6j1PWsJSz-1NakvtCgPQtGoB1R1uzMVKz71t5SOZ5YSyAbCngc2D6v50qh9KFLUvbSxoNYY3T5B1No2L4apAxmNEbZ9oOFGylGzxSfGgNsZHx6mJoAOfQL65u4Dl2OL0gqI14HEHOAbOHQBCwn-Z8R2RZDT50iX9gkyXpeQoN9xddUheTLg5bZ7C3_-wGniPFgs2KLdKVLpMT3rLmBUibwOOsOHE&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  ESG
                 </div>
-            </section>
-            
-            <!-- Article Grid -->
-            <section class="mb-16">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Card 1 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up of wind turbines in a lush green field" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCiPZcAXd0kClt-Q29gudcX0fQwTBdPkpjnkkhlQC7vOnSNPUA6j1PWsJSz-1NakvtCgPQtGoB1R1uzMVKz71t5SOZ5YSyAbCngc2D6v50qh9KFLUvbSxoNYY3T5B1No2L4apAxmNEbZ9oOFGylGzxSfGgNsZHx6mJoAOfQL65u4Dl2OL0gqI14HEHOAbOHQBCwn-Z8R2RZDT50iX9gkyXpeQoN9xddUheTLg5bZ7C3_-wGniPFgs2KLdKVLpMT3rLmBUibwOOsOHE");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">ESG</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 12, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>4 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">Navigating ESG Complexity: A Practical Framework for CEOs</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">Moving beyond compliance to create genuine value through sustainable operational shifts.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="High tech trading floors with many screens showing financial data" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9z4rc1M1yoioZomHqzUtf-rgbdqmrneV1Zw0ICECpJTUaK0rsj7ScvPxExO5MXrIDPKhZHNdyOce_1ZNwLHSAZ00ksxyIhm79-F4R_PW1cbyJH8h99R5zq6fT37WciPz1EWn4r6LYdVGxd2IrhW9IZmWe8NMgnDXWRkf_RiDpLCV_PRnAS5OahGyQ0OCa8Crnza2weR1hWt9X0xtBg0YOCW3cokKs53dV89CtOFthF4C-rIhEL2kewAIZ1Mr5dO0jWd-SxjiN07sm");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">Finance</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 10, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>6 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">Digital Transformation in Mid-Market Finance Firms</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">How automation is leveling the playing field for boutique investment houses.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 3 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Two professionals having a discussion in a bright modern workspace" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeRKTmfuFw8ScRSV3eonTW2HpixJgi8i2SC5RgBxJkhWmwhQVEz2CCkLwcW2QiE0d2CkmzJ9v5Ock_UcMqQZNtW2IEqEmGkgtd4tLB1Dx2a2VLFKO4-NgMfU2QM2SwaEdJuXYnKJW7irH0O0d6LprSypX6p82AE1cH10yb7GaeHruXXmfvkZRxKGA8B695xtryXDi9B2oH5LdnZWaFgVpWGPPL5WAMAOV1TwJ2JVdLY0vAewvoAMZ31kOW2jJtcfBorMBSvUYUpIv7");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">Leadership</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 08, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>5 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">The Rise of Hybrid Leadership: Managing Remote Excellence</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">Lessons from Silicon Valley's most successful distributed executive teams.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 4 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Large container ship at a busy industrial port during sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUTzAM_E4_vscfMivPEnVHGIyBaJ9Svp4OVl-14Dmd__Ehjf6il3naVlZ8ex0xDglDHOrlY-lom-2nvsn7V6D9GU3tX4QsoO7jNqzRnxA9Im08cJdTeiaz5pJ85SKdgKAXEw7JIKLtRkAwKFszJKYwdy9d8jxWvL4XASUn4iG8scw6vW9Q5x8IgOaGrOOo_OAHSq2SYhtLci76oM71S9QjEuUY3YgV5OWwb4edpbz5XXpvlS-l5RWwa0Zd5IXyPpING7GCCH2KoejY");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">Operations</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 05, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>7 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">Building Supply Chain Resilience in an Era of Volatility</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">Moving from "Just in Time" to "Just in Case" without sacrificing margins.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 5 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dark abstract representation of network nodes and cybersecurity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4RyNbhaZB8n3yoPOjM-zfK6ol0EBSjcduo1nLYtFo-1mFNTUHur13iXdncKGo7XXcnKwXiwXd89jPhfa5xlL70YMNSkCvDdECHLywmU5mwh-PG5FRcJvnK79mc5pxwKtROn5Peo55mZ-CNQX3MHaUBACzlDn8UytpBrI_CTC89qxXI4kkgE0fwrsOC9SlOcjdu2Ok66fDvkPfkuXiJ_zBKsX7z9jWvia_fdBoTrhAL5fEV4l-tOg8tBprCysxrIxS9EbL2TKbTLrV");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">Security</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 03, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>3 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">Cybersecurity for Executives: It's Not Just an IT Problem</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">How C-suite awareness can prevent 90% of modern social engineering attacks.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 6 -->
-                    <div class="group flex flex-col gap-5">
-                        <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
-                            <div class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dynamic shot of a busy urban intersection at night" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcHq8rw1nv6u4B_3noe434Tg1CPVHA5SdhrMJLA7KxjQDpO9n1ajQoXCtTgAAKzFzDvIbHgIuQyWgfyYMPSfNbxOsnvp26SVCPkmoMa--DvCwMQm7Dsz052oXut2W--EeG1341RImic4SNKMVVCNZIBOvpfzpjWplhglfvUa8WkUwItsFyxZhOAt8XcLdYnD6SSuMFVIv1yHsrSnC97vWk78qdfZoT_S4WxBiZtaTXuQ7xYGAOoYSAgaUmyqgijhwgCt3TikCpDmJc");'></div>
-                            <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary">Markets</div>
-                        </div>
-                        <div class="flex flex-col gap-3">
-                            <div class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium">
-                                <span>Jan 01, 2024</span>
-                                <span class="size-1 rounded-full bg-primary/40"></span>
-                                <span>8 min read</span>
-                            </div>
-                            <h3 class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer">Market Volatility Strategies: Hedging Against Global Shifts</h3>
-                            <p class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2">Advanced analysis of fiscal policy changes and their impact on global equity.</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 12, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>4 min read</span>
                 </div>
-            </section>
-            
-            <!-- Pagination -->
-            <section class="flex flex-col items-center gap-8 py-10">
-                <div class="flex items-center justify-center gap-2">
-                    <a class="flex size-10 items-center justify-center rounded-full border border-[#e6e6f4] dark:border-[#1e1e3f] hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f] transition-all" href="#">
-                        <span class="material-symbols-outlined text-lg">chevron_left</span>
-                    </a>
-                    <a class="text-sm font-extrabold flex size-10 items-center justify-center text-white rounded-full bg-primary" href="#">1</a>
-                    <a class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]" href="#">2</a>
-                    <a class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]" href="#">3</a>
-                    <span class="text-[#919191] px-1">...</span>
-                    <a class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]" href="#">12</a>
-                    <a class="flex size-10 items-center justify-center rounded-full border border-[#e6e6f4] dark:border-[#1e1e3f] hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f] transition-all" href="#">
-                        <span class="material-symbols-outlined text-lg">chevron_right</span>
-                    </a>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Navigating ESG Complexity: A Practical Framework for CEOs
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  Moving beyond compliance to create genuine value through
+                  sustainable operational shifts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="High tech trading floors with many screens showing financial data"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB9z4rc1M1yoioZomHqzUtf-rgbdqmrneV1Zw0ICECpJTUaK0rsj7ScvPxExO5MXrIDPKhZHNdyOce_1ZNwLHSAZ00ksxyIhm79-F4R_PW1cbyJH8h99R5zq6fT37WciPz1EWn4r6LYdVGxd2IrhW9IZmWe8NMgnDXWRkf_RiDpLCV_PRnAS5OahGyQ0OCa8Crnza2weR1hWt9X0xtBg0YOCW3cokKs53dV89CtOFthF4C-rIhEL2kewAIZ1Mr5dO0jWd-SxjiN07sm&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  Finance
                 </div>
-            </section>
-            
-            <!-- Newsletter Call to Action -->
-            <section class="mt-12 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/20 p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
-                <div class="flex flex-col gap-4 max-w-xl text-center lg:text-left">
-                    <h2 class="text-2xl md:text-3xl font-extrabold text-[#0d0d1c] dark:text-white">Stay at the forefront of change.</h2>
-                    <p class="text-[#919191] dark:text-[#a1a1c7] text-lg">Subscribe to our weekly Insight Briefing for curated intelligence on global strategy and technology.</p>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 10, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>6 min read</span>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
-                    <input class="flex-1 px-5 py-3 rounded-lg border-[#e6e6f4] dark:border-[#1e1e3f] dark:bg-[#16162d] focus:ring-primary focus:border-primary text-sm font-medium" placeholder="Email address" type="email"/>
-                    <button class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all">Subscribe</button>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Digital Transformation in Mid-Market Finance Firms
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  How automation is leveling the playing field for boutique
+                  investment houses.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Two professionals having a discussion in a bright modern workspace"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDeRKTmfuFw8ScRSV3eonTW2HpixJgi8i2SC5RgBxJkhWmwhQVEz2CCkLwcW2QiE0d2CkmzJ9v5Ock_UcMqQZNtW2IEqEmGkgtd4tLB1Dx2a2VLFKO4-NgMfU2QM2SwaEdJuXYnKJW7irH0O0d6LprSypX6p82AE1cH10yb7GaeHruXXmfvkZRxKGA8B695xtryXDi9B2oH5LdnZWaFgVpWGPPL5WAMAOV1TwJ2JVdLY0vAewvoAMZ31kOW2jJtcfBorMBSvUYUpIv7&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  Leadership
                 </div>
-            </section>
-        </main>
-        
-     
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 08, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>5 min read</span>
+                </div>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  The Rise of Hybrid Leadership: Managing Remote Excellence
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  Lessons from Silicon Valley's most successful distributed
+                  executive teams.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Large container ship at a busy industrial port during sunset"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBUTzAM_E4_vscfMivPEnVHGIyBaJ9Svp4OVl-14Dmd__Ehjf6il3naVlZ8ex0xDglDHOrlY-lom-2nvsn7V6D9GU3tX4QsoO7jNqzRnxA9Im08cJdTeiaz5pJ85SKdgKAXEw7JIKLtRkAwKFszJKYwdy9d8jxWvL4XASUn4iG8scw6vW9Q5x8IgOaGrOOo_OAHSq2SYhtLci76oM71S9QjEuUY3YgV5OWwb4edpbz5XXpvlS-l5RWwa0Zd5IXyPpING7GCCH2KoejY&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  Operations
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 05, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>7 min read</span>
+                </div>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Building Supply Chain Resilience in an Era of Volatility
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  Moving from "Just in Time" to "Just in Case" without
+                  sacrificing margins.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Dark abstract representation of network nodes and cybersecurity"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuA4RyNbhaZB8n3yoPOjM-zfK6ol0EBSjcduo1nLYtFo-1mFNTUHur13iXdncKGo7XXcnKwXiwXd89jPhfa5xlL70YMNSkCvDdECHLywmU5mwh-PG5FRcJvnK79mc5pxwKtROn5Peo55mZ-CNQX3MHaUBACzlDn8UytpBrI_CTC89qxXI4kkgE0fwrsOC9SlOcjdu2Ok66fDvkPfkuXiJ_zBKsX7z9jWvia_fdBoTrhAL5fEV4l-tOg8tBprCysxrIxS9EbL2TKbTLrV&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  Security
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 03, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>3 min read</span>
+                </div>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Cybersecurity for Executives: It's Not Just an IT Problem
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  How C-suite awareness can prevent 90% of modern social
+                  engineering attacks.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="group flex flex-col gap-5">
+              <div class="relative overflow-hidden rounded-xl aspect-[16/10]">
+                <div
+                  class="w-full h-full bg-center bg-no-repeat bg-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Dynamic shot of a busy urban intersection at night"
+                  style="
+                    background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBcHq8rw1nv6u4B_3noe434Tg1CPVHA5SdhrMJLA7KxjQDpO9n1ajQoXCtTgAAKzFzDvIbHgIuQyWgfyYMPSfNbxOsnvp26SVCPkmoMa--DvCwMQm7Dsz052oXut2W--EeG1341RImic4SNKMVVCNZIBOvpfzpjWplhglfvUa8WkUwItsFyxZhOAt8XcLdYnD6SSuMFVIv1yHsrSnC97vWk78qdfZoT_S4WxBiZtaTXuQ7xYGAOoYSAgaUmyqgijhwgCt3TikCpDmJc&quot;);
+                  "
+                ></div>
+                <div
+                  class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded text-[10px] font-bold uppercase text-primary"
+                >
+                  Markets
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div
+                  class="flex items-center gap-3 text-xs text-[#919191] dark:text-[#8b8bbd] font-medium"
+                >
+                  <span>Jan 01, 2024</span>
+                  <span class="size-1 rounded-full bg-primary/40"></span>
+                  <span>8 min read</span>
+                </div>
+                <h3
+                  class="text-xl font-bold leading-snug group-hover:text-primary transition-colors cursor-pointer"
+                >
+                  Market Volatility Strategies: Hedging Against Global Shifts
+                </h3>
+                <p
+                  class="text-[#919191] dark:text-[#a1a1c7] text-sm line-clamp-2"
+                >
+                  Advanced analysis of fiscal policy changes and their impact on
+                  global equity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pagination -->
+        <section class="flex flex-col items-center gap-8 py-10">
+          <div class="flex items-center justify-center gap-2">
+            <a
+              class="flex size-10 items-center justify-center rounded-full border border-[#e6e6f4] dark:border-[#1e1e3f] hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f] transition-all"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >chevron_left</span
+              >
+            </a>
+            <a
+              class="text-sm font-extrabold flex size-10 items-center justify-center text-white rounded-full bg-primary"
+              href="#"
+              >1</a
+            >
+            <a
+              class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]"
+              href="#"
+              >2</a
+            >
+            <a
+              class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]"
+              href="#"
+              >3</a
+            >
+            <span class="text-[#919191] px-1">...</span>
+            <a
+              class="text-sm font-medium flex size-10 items-center justify-center text-[#0d0d1c] dark:text-[#f8f8fc] rounded-full hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f]"
+              href="#"
+              >12</a
+            >
+            <a
+              class="flex size-10 items-center justify-center rounded-full border border-[#e6e6f4] dark:border-[#1e1e3f] hover:bg-[#e6e6f4] dark:hover:bg-[#1e1e3f] transition-all"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-lg"
+                >chevron_right</span
+              >
+            </a>
+          </div>
+        </section>
+
+        <!-- Newsletter Call to Action -->
+        <section
+          class="mt-12 rounded-2xl bg-primary/5 dark:bg-primary/10 border border-primary/20 p-8 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10"
+        >
+          <div class="flex flex-col gap-4 max-w-xl text-center lg:text-left">
+            <h2
+              class="text-2xl md:text-3xl font-extrabold text-[#0d0d1c] dark:text-white"
+            >
+              Stay at the forefront of change.
+            </h2>
+            <p class="text-[#919191] dark:text-[#a1a1c7] text-lg">
+              Subscribe to our weekly Insight Briefing for curated intelligence
+              on global strategy and technology.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 w-full max-w-md">
+            <input
+              class="flex-1 px-5 py-3 rounded-lg border-[#e6e6f4] dark:border-[#1e1e3f] dark:bg-[#16162d] focus:ring-primary focus:border-primary text-sm font-medium"
+              placeholder="Email address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-all"
+            >
+              Subscribe
+            </button>
+          </div>
+        </section>
+      </main>
     </div>
-</body>
+  </body>
 </html>

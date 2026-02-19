@@ -1057,16 +1057,16 @@ function initAOS() {
 const carouselData = [
   {
     id: 1,
-    title: "DE&I",
+    title: "Innovation",
     color: "text-[#0000ff]",
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
     content: `
       <div class="h-full w-full flex flex-col lg:flex-row items-center">
         <!-- Text Column -->
         <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Diversity, Equity, and Inclusion</h2>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Where Innovation Meets Authenticity</h2>
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
-            We are sustaining the right environment where people can be at their best, be authentic, and are treated with dignity and respect. This includes working every day to eliminate hate and bias from our industry.
+           At CodeNdCoffee, we create a workspace where creativity meets professionalism. Our team members are encouraged to stay authentic, showcase their unique style, and are always treated with respect and excellence. Every day, we strive to foster an inclusive environment, free from bias, where innovative software solutions and digital products thrive.
           </p>
           <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-blue-700 font-semibold transition-all duration-300 text-lg group">
             LEARN MORE
@@ -1090,16 +1090,16 @@ const carouselData = [
   },
   {
     id: 2,
-    title: "Environmental",
+    title: "Sustainable",
     color: "text-[#0000ff]",
     image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     content: `
       <div class="h-full w-full flex flex-col lg:flex-row items-center">
         <!-- Text Column -->
         <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Environmental Responsibility</h2>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Sustainable Innovation, Responsible Software</h2>
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
-            Committed to reducing our carbon footprint and promoting sustainable practices across all operations. We aim to achieve net-zero emissions by 2040 through innovation and renewable energy investments.
+            At CodeNdCoffee, we are committed to reducing our environmental impact and promoting sustainable practices across all our operations. By leveraging innovative technologies and supporting renewable energy initiatives, we aim to achieve net-zero emissions by 2040 while delivering cutting-edge software solutions.
           </p>
           <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-green-700 font-semibold transition-all duration-300 text-lg group">
             EXPLORE INITIATIVES
@@ -1123,16 +1123,16 @@ const carouselData = [
   },
   {
     id: 3,
-    title: "Innovation",
+    title: "Creativity",
     color: "text-[#0000ff]",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     content: `
       <div class="h-full w-full flex flex-col lg:flex-row items-center">
         <!-- Text Column -->
         <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Innovation & Technology</h2>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Creative Solutions</h2>
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
-            Driving progress through cutting-edge technology and creative solutions. Our R&D investments focus on sustainable materials, circular economy models, and digital transformation.
+            At CodeNdCoffee, we drive progress through innovative software solutions and creative digital products. Our R&D initiatives focus on sustainable technologies, smart digital transformations, and practices that support a circular economy.
           </p>
           <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-purple-700 font-semibold transition-all duration-300 text-lg group">
             VIEW PROJECTS
@@ -1163,9 +1163,9 @@ const carouselData = [
       <div class="h-full w-full flex flex-col lg:flex-row items-center">
         <!-- Text Column -->
         <div class="w-full lg:w-1/2 px-4 lg:px-8 flex flex-col justify-center order-2 lg:order-1">
-          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Safety & Well-being</h2>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0000ff] mb-4 md:mb-6 leading-tight">Prioritizing People, Safety, and Excellence</h2>
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
-            Ensuring the health, safety, and well-being of our employees, partners, and communities is our top priority. We maintain the highest safety standards across all facilities worldwide.
+            At CodeNdCoffee, the health, safety, and well-being of our employees, partners, and communities are our top priorities. We uphold the highest workplace standards and promote a safe, supportive environment across all our offices and operations
           </p>
           <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-red-700 font-semibold transition-all duration-300 text-lg group">
             SAFETY PROTOCOLS
