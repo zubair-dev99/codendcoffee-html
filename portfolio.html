@@ -45,6 +45,21 @@
       .font-poppins {
         font-family: "Poppins", sans-serif;
       }
+      @keyframes gradient-flow {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradient-flow 6s ease infinite;
+      }
     </style>
   </head>
 
@@ -53,14 +68,20 @@
       <!-- Headline Section -->
       <div class="max-w-3xl mb-12">
         <h1
-          class="text-4xl md:text-6xl font-bold font-poppins leading-tight mb-6"
+          class="text-4xl md:text-6xl font-bold font-poppins leading-[42px] md:leading-[58px] lg:leading-[65px] mb-6"
         >
-          Crafting digital experiences
-          <span class="text-primary">that matter.</span>
+          Crafting innovative software solutions
+          <span
+            class="bg-gradient-to-r from-[#0061ff] via-[#6b3eff] to-[#a855f7] bg-clip-text text-transparent bg-300% animate-gradient"
+          >
+            Software Development
+          </span>
         </h1>
+
         <p class="text-lg text-slate-500 leading-relaxed">
-          A showcase of our latest work in design, development, and brand
-          strategy for global startups and enterprises.
+          Explore our portfolio showcasing custom web and mobile applications,
+          AI-powered tools, and digital products designed for startups,
+          enterprises, and businesses seeking scalable, user-friendly solutions.
         </p>
       </div>
 
