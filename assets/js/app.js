@@ -1068,12 +1068,7 @@ const carouselData = [
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
            At CodeNdCoffee, we create a workspace where creativity meets professionalism. Our team members are encouraged to stay authentic, showcase their unique style, and are always treated with respect and excellence. Every day, we strive to foster an inclusive environment, free from bias, where innovative software solutions and digital products thrive.
           </p>
-          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-blue-700 font-semibold transition-all duration-300 text-lg group">
-            LEARN MORE
-             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
+          
         </div>
         
         <!-- Image Column -->
@@ -1101,12 +1096,7 @@ const carouselData = [
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
             At CodeNdCoffee, we are committed to reducing our environmental impact and promoting sustainable practices across all our operations. By leveraging innovative technologies and supporting renewable energy initiatives, we aim to achieve net-zero emissions by 2040 while delivering cutting-edge software solutions.
           </p>
-          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-green-700 font-semibold transition-all duration-300 text-lg group">
-            EXPLORE INITIATIVES
-             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
+        
         </div>
         
         <!-- Image Column -->
@@ -1134,12 +1124,7 @@ const carouselData = [
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
             At CodeNdCoffee, we drive progress through innovative software solutions and creative digital products. Our R&D initiatives focus on sustainable technologies, smart digital transformations, and practices that support a circular economy.
           </p>
-          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-purple-700 font-semibold transition-all duration-300 text-lg group">
-            VIEW PROJECTS
-            <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
+      
         </div>
         
         <!-- Image Column -->
@@ -1167,12 +1152,7 @@ const carouselData = [
           <p class="text-gray-600 leading-relaxed mb-6 md:mb-8 text-base md:text-lg">
             At CodeNdCoffee, the health, safety, and well-being of our employees, partners, and communities are our top priorities. We uphold the highest workplace standards and promote a safe, supportive environment across all our offices and operations
           </p>
-          <a href="#" class="inline-flex items-center text-[#0000ff] hover:text-red-700 font-semibold transition-all duration-300 text-lg group">
-            SAFETY PROTOCOLS
-             <svg class="w-5 h-5 ml-3 transform transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
+     
         </div>
         
         <!-- Image Column -->

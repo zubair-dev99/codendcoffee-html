@@ -619,13 +619,13 @@ html {
 /* ===== ProjectSlider carousel: always draggable even on cursor-pointer elements ===== */
 #carousel-track,
 #carousel-track * {
-  cursor: pointer !important;
+  /* cursor: pointer !important; */
   user-select: none;
 }
 
 #carousel-track.is-dragging,
 #carousel-track.is-dragging * {
-  cursor: pointer !important;
+  /* cursor: pointer !important; */
 }
 
 @keyframes fadeInUp {
